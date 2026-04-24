@@ -1,3 +1,5 @@
 localhost
 127.0.0.1
 himeshhome.casa
+himeshhome.casa:8082
+himeshhome.casa:8083
