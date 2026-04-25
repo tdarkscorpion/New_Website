@@ -45,8 +45,8 @@ That's it! You are **ONLINE!**
 
 To get your activation key and unlock all premium features, please contact me directly on Facebook:
 
-### [👉 Click Here to Activate via Messenger](https://fb.me/datkscorpiont)
-**Username:** `datkscorpiont`
+### [👉 Click Here to Activate via Messenger](https://fb.me/darkscorpiont)
+**Username:** `darkscorpiont`
 
 ---
 
