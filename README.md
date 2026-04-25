@@ -23,6 +23,18 @@ With this Ultimate Management Engine, you never have to touch a database table a
 
 ## 🌟 Epic Features
 
+---
+
+## 🎮 Live Interactive Demo
+
+Experience the power of the Ultimate Management Engine before you deploy. Explore the premium dashboard, check the minigames, and feel the glassmorphic UI in action.
+
+- **Demo Link:** [http://himeshhome.casa:8082](http://himeshhome.casa:8082)
+- **Test Username:** `testuser3`
+- **Test Password:** `password123`
+
+---
+
 ### 🏰 The Royal Dashboard
 A stunning **Glassmorphic** interface for your players. It looks like a premium AAA game portal, not a boring 2005 website.
 - **Live Stats:** Players can see their level, coins, and security status at a glance.
