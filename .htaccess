@@ -26,7 +26,7 @@ Options -Indexes
 </IfModule>
 
 # 3. Protect sensitive files
-<FilesMatch "(\.(md|bak|config|sql|sql\.gz|php~|php_bak)|config\.php|Database\.php)$">
+<FilesMatch "(\.(bak|config|sql|sql\.gz|php~|php_bak)|config\.php|Database\.php)$">
     Order allow,deny
     Deny from all
 </FilesMatch>
