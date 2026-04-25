@@ -1,0 +1,19 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+# Configuration and Secrets
+.env
+credentials.env
+*.env
+/include/config.php
+/config/
+
+# Backups and Temporary Files
+*.zip
+*.rar
+*.7z
+/uploads/donations/
+
+# Logs
+*.log
