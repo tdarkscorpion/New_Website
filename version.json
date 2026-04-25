@@ -1,0 +1,10 @@
+{
+    "version": "1.0.0",
+    "last_update": 1777100000,
+    "files": [
+        "Functions/License.php",
+        "Functions/UpdateHandler.php",
+        "dashboard.php",
+        "Actions/donations-manager.php"
+    ]
+}
