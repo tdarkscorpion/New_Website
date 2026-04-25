@@ -1,71 +1,85 @@
-# Talisman Web Management System (Premium Edition)
+# ⚔️ Talisman Online: Ultimate Management Engine ⚔️
 
-Welcome to the most advanced management panel for Talisman Online servers. This system is designed with a modern **Glassmorphic UI**, high security, and powerful administrative tools to help you manage your gaming community effortlessly.
+![Dashboard Preview](./assets/dashboard.png)
+
+Welcome, Adventurer! You have just discovered the most powerful **Management Engine** ever forged for Talisman Online servers. Stop living in the "Dark Ages" of database editing and **Level Up** your server management experience.
+
+---
+
+## 🛑 Stop the phpMyAdmin Headache!
+
+Are you still manually opening **phpMyAdmin**, searching for a player's account, and carefully typing numbers into the `gd` column just to send coins? 
+
+**That is the old way. It is slow, risky, and a massive headache.**
+
+### 💎 The Modern Way: One-Click Treasury Control
+With this Ultimate Management Engine, you never have to touch a database table again for daily tasks. 
+- **No More Manual GD Edits:** Use the **Vault Interface** to add T-Points or eCoins instantly.
+- **Bulk Rewards:** Want to give points to everyone online? Do it in one click.
+- **History Tracking:** Every point sent is logged. No more wondering "Did I send those coins?"
+- **Safety First:** No risk of accidentally deleting a row or breaking a table structure.
+
+---
+
+## 🌟 Epic Features
+
+### 🏰 The Royal Dashboard
+A stunning **Glassmorphic** interface for your players. It looks like a premium AAA game portal, not a boring 2005 website.
+- **Live Stats:** Players can see their level, coins, and security status at a glance.
+- **Security Guard:** Integrated **Google Authenticator (2FA)**. Hackers won't stand a chance.
+
+### 💰 The Global Exchange
+Whether your community calls them **T-Points** or **eCoins**, you can switch the entire website's branding in **one click**.
+- **Dynamic Branding:** Use the built-in presets to instantly change all labels, buttons, and messages across the entire site.
+
+### 🛡️ Administrative Vault (Staff Only)
+![Admin Tools](./assets/admin_tools.png)
+- **Economy Analytics:** See who the "Whales" are. Track the wealthiest players instantly.
+- **Donation Command Center:** Process PayPal and GCash donations with zero effort.
+- **Character Control:** Manage players, check logs, and maintain order without leaving the dashboard.
 
 ---
 
 ## 🌐 Choose Your Language / Pumili ng Wika / Elige tu Idioma
 
-- [English](#english)
-- [Tagalog](#tagalog)
-- [Spanish](#spanish)
+- [English](#english) | [Tagalog](#tagalog) | [Spanish](#spanish)
 
 ---
 
 <a name="english"></a>
-## 🇺🇸 English: About This Website
-This management system provides a complete suite of tools for both players and administrators:
-- **Player Dashboard:** Check balances, manage security, and view characters.
-- **Store & Donations:** Automatic PayPal integration and Manual GCash processing.
-- **Security:** Integrated 2FA (Google Authenticator) to protect accounts.
-- **Branding:** Easily switch between T-Points, eCoins, or custom currency names.
-- **Staff Tools:** Manage characters, ban accounts, track economy leaders, and more.
-
-### 🚀 Getting Started
-1. **Upload:** Upload all files to your PHP-enabled web server.
-2. **Database:** Edit `include/db_config.php` and enter your SQL Server details.
-3. **Activation:** This version requires domain whitelisting. Contact the creator below to activate your domain.
+### 🇺🇸 English: How to Deploy
+1. **Upload:** Drop these files onto your web server.
+2. **Connect:** Setup your database in `include/db_config.php`.
+3. **Ascend:** Contact **DarkScorpion** to activate your domain and start your journey!
 
 ---
 
 <a name="tagalog"></a>
-## 🇵🇭 Tagalog: Tungkol sa Website na Ito
-Ang management system na ito ay nagbibigay ng kumpletong tools para sa mga player at admin:
-- **Player Dashboard:** I-check ang balance, i-manage ang security, at tingnan ang mga characters.
-- **Store & Donations:** Automatic PayPal integration at Manual GCash processing.
-- **Security:** Mayroong 2FA (Google Authenticator) para protektahan ang mga account.
-- **Branding:** Madaling palitan ang pangalan ng currency (T-Points, eCoins, o kahit anong gusto mo).
-- **Staff Tools:** I-manage ang characters, mag-ban ng account, tingnan ang pinakamayayamang players, atbp.
-
-### 🚀 Paano Simulan
-1. **Upload:** I-upload ang lahat ng files sa iyong web server.
-2. **Database:** I-edit ang `include/db_config.php` at ilagay ang iyong SQL Server details.
-3. **Activation:** Ang bersyon na ito ay nangangailangan ng domain whitelisting. Mag-message sa creator sa link sa ibaba para ma-whitelist ang iyong domain.
+### 🇵🇭 Tagalog: Paano I-set up
+1. **Upload:** Ilagay ang mga files sa iyong web server.
+2. **Connect:** I-setup ang database sa `include/db_config.php`.
+3. **Ascend:** Mag-message kay **DarkScorpion** para i-whitelist ang iyong domain at magsimula!
 
 ---
 
 <a name="spanish"></a>
-## 🇪🇸 Spanish: Acerca de este sitio web
-Este sistema de gestión proporciona un conjunto completo de herramientas tanto para jugadores como para administradores:
-- **Panel del Jugador:** Consulta saldos, gestiona la seguridad y ve tus personajes.
-- **Tienda y Donaciones:** Integración automática de PayPal y procesamiento manual de GCash.
-- **Seguridad:** 2FA integrado (Google Authenticator) para proteger las cuentas.
-- **Marca:** Cambia fácilmente entre T-Points, eCoins o nombres de moneda personalizados.
-- **Herramientas del Personal:** Gestiona personajes, banea cuentas, rastrea líderes de la economía y más.
-
-### 🚀 Cómo empezar
-1. **Subir:** Sube todos los archivos a tu servidor web compatible con PHP.
-2. **Base de datos:** Edita `include/db_config.php` e ingresa los detalles de tu SQL Server.
-3. **Activación:** Esta versión requiere que tu dominio esté en la lista blanca. Contacta al creador a continuación para activar tu dominio.
+### 🇪🇸 Spanish: Cómo desplegar
+1. **Subir:** Coloque estos archivos en su servidor web.
+2. **Conectar:** Configure su base de datos en `include/db_config.php`.
+3. **Ascender:** ¡Contacta a **DarkScorpion** para activar tu dominio y comenzar tu viaje!
 
 ---
 
 ## 👨‍💻 Created By: DarkScorpion
 
-If you need to make a payment, whitelist your domain, or need technical support, please contact me directly:
+Level up your server's professional look today. For payments, activation, and whitelisting:
 
 - **Facebook:** [fb.me/darkscorpiont](http://fb.me/darkscorpiont)
 - **Developer:** DarkScorpion
 
 > [!IMPORTANT]
-> **Domain Whitelisting Required:** This website will only function on authorized domains. Contact DarkScorpion on Facebook to register your server's domain.
+> **Domain Whitelisting Required:** This engine is protected and requires an authorized domain. Contact DarkScorpion on Facebook to register.
+
+---
+
+*Forged with ❤️ for the Talisman Community by DarkScorpion.*
