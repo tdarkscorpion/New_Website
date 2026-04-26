@@ -17,6 +17,16 @@ Welcome to the most advanced, secure, and user-friendly web platform for **Talis
 
 ---
 
+## 🎮 Live Interactive Demo
+
+Experience the power of the Ultimate Management Engine before you deploy. Explore the premium dashboard, check the minigames, and feel the glassmorphic UI in action.
+
+- **Demo Link:** [http://himeshhome.casa:8082](http://himeshhome.casa:8082)
+- **Test Username:** `testuser3`
+- **Test Password:** `password123`
+
+---
+
 ## 🛠️ Noob-Friendly Installation (3 Steps)
 
 Setting up your website has never been easier! Just follow these simple steps:
