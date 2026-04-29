@@ -26,7 +26,7 @@ Open **`include/db_config.php`** and enter your MySQL host, username, and passwo
 
 ### 2️⃣ Run the Auto-Installer
 Open your web browser and navigate to:
-`http://your-domain.com/install/install.php`
+`http://your-domain.com/install/`
 
 The script will automatically:
 *   Verify your database connections.
