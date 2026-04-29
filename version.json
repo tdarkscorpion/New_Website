@@ -1,6 +1,6 @@
 {
-    "version": "1.5.9",
-    "last_update": 1777507000,
+    "version": "1.6.1",
+    "last_update": 1777508000,
     "files": [
         "version.json",
         "whitelist.env",
@@ -23,20 +23,18 @@
         "include\/action_register.php",
         "Actions\/system-update.php",
         "Actions\/user-2fa.php",
-        "Actions\/player-settings.php",
-        "install\/index.php",
-        "install\/talisman_master_setup.sql"
+        "Actions\/player-settings.php"
     ],
     "hashes": {
-        "version.json": "a27951c2bb3fcc2daae5a752627e901c",
+        "version.json": "54ad83a3ea4d94135c901c0d6edad5d7",
         "whitelist.env": "28a9d53c608f702d9f3cd8a3814c79f9",
         "credentials.env": "d5aa48862637afb4e584662deed6f348",
-        "dashboard.php": "30cdd6a1b7eff4b8962baa21bf222bb0",
+        "dashboard.php": "c140a9c420e95bc72953a2eabc0729e7",
         "index.php": "4f2975384e2206e724a864ef83be0900",
         "register.php": "64e7dc22b3efaee588a86a19fd089d33",
         "ranking.php": "edd61f92bf11c1f0fd02a2065e73f444",
         "download.php": "3ad961df814bdeb9693957ee9422624d",
-        "Functions\/UpdateHandler.php": "31d02951ce5b031b1ecffa655955d4a2",
+        "Functions\/UpdateHandler.php": "f9f53ac48ef13d69112e1a0c26eec6a5",
         "Functions\/DomainGuard.php": "d4c0a22e346f138b22763fdd250d4d87",
         "Functions\/Database.php": "cc95e3ded072bfe59aaa6507b17f7acf",
         "Functions\/Accounts-Characters.php": "1671003445456c9737124a67b44a15b8",
@@ -47,10 +45,8 @@
         "include\/db_config.php": "a4a4ca1e0269ec5e8f800f8702b071a0",
         "include\/action_login.php": "b3c8799246419fa2b7ed457ff9781bd7",
         "include\/action_register.php": "357ef38e1b2a35f1614dc679afd0291e",
-        "Actions\/system-update.php": "c867ad796de6de6ef7a67b172fd1c3e1",
+        "Actions\/system-update.php": "aeddf89c136f6fccfc819dc62ec778d2",
         "Actions\/user-2fa.php": "9d873037495c69ee0fd0cf3ea13673b0",
-        "Actions\/player-settings.php": "b7448f46d3566716139f44a85e780a9d",
-        "install\/index.php": "441c409d505d739dba832e726315b629",
-        "install\/talisman_master_setup.sql": "b56cd7ae3bbf47a37fec5e4a3d1ec708"
+        "Actions\/player-settings.php": "b7448f46d3566716139f44a85e780a9d"
     }
 }
