@@ -21,12 +21,18 @@ Welcome to the most advanced, secure, and user-friendly web platform for **Talis
 
 Setting up your website is simple! Follow these steps:
 
-### 1️⃣ Database Preparation
+### 1️⃣ Download the Suite
+First, clone the latest files directly from the repository to your web server:
+```bash
+git clone https://github.com/tdarkscorpion/New_Website.git .
+```
+
+### 2️⃣ Database Preparation
 1.  Open **`include/db_config.php`**.
 2.  Enter your MySQL **Host**, **Username**, and **Password**.
 3.  Ensure your MySQL user has permissions to create databases.
 
-### 2️⃣ Run the Web Installer
+### 3️⃣ Run the Web Installer
 Navigate to:
 `http://your-domain.com/install/index.php`
 
@@ -36,21 +42,8 @@ The installer will:
 *   Import the latest master SQL schema.
 *   Configure basic branding.
 
-### 3️⃣ Security Cleanup
+### 4️⃣ Security Cleanup
 **IMPORTANT:** Once the installation is successful, immediately **delete the `/install` folder** to prevent unauthorized access.
-
----
-
-## 👨‍💻 Developer Guide (Maintenance)
-
-If you are modifying the website files locally, use the provided pipeline to push updates to your clients:
-
-1.  **Edit Files**: Make your changes in the `decoded/` directory.
-2.  **Increment Version**: Update the version number in `decoded/version.json`.
-3.  **Run Build**: Execute `php build.php` from the root directory.
-    *   This will automatically encrypt your files into the `encoded/` directory.
-    *   It will generate fresh file manifests.
-    *   It will push the changes to both the Website and Installer repositories on GitHub.
 
 ---
 
