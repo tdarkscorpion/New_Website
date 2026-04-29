@@ -1,8 +1,8 @@
 {
-    "version": "1.4.0",
-    "last_update": 1777488000,
+    "version": "1.4.1",
+    "last_update": 1777490000,
     "files": [
         "version.json",
-        "Actions/manage-minigames.php"
+        "Functions/UpdateHandler.php"
     ]
 }
