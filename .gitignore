@@ -5,6 +5,7 @@
 # Configuration and Secrets
 .env
 credentials.env
+whitelist.env
 *.env
 /include/config.php
 /config/
