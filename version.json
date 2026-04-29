@@ -1,8 +1,8 @@
 {
-    "version": "1.5.7",
-    "last_update": 1777505000,
+    "version": "1.5.8",
+    "last_update": 1777506000,
     "files": [
         "version.json",
-        "Functions/DomainGuard.php"
+        "dashboard.php"
     ]
 }
