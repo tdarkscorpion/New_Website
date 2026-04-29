@@ -1,6 +1,6 @@
 {
-    "version": "1.6.6",
-    "last_update": 1777493397,
+    "version": "1.6.7",
+    "last_update": 1777494167,
     "files": [
         "version.json",
         "whitelist.env",
@@ -26,10 +26,10 @@
         "Actions/player-settings.php"
     ],
     "hashes": {
-        "version.json": "6c5f70b8837e83a6b046a9812cd9b8bd",
+        "version.json": "0af33fe7e0387e9a8b8a3987ee20be0d",
         "whitelist.env": "28a9d53c608f702d9f3cd8a3814c79f9",
         "credentials.env": "d5aa48862637afb4e584662deed6f348",
-        "dashboard.php": "ff1647acb0dcdd4c7218d46a00749e2f",
+        "dashboard.php": "f2d03df2ce16c5343cace4f464a48271",
         "index.php": "c78b8f89ecdad9f3edafe694b3672837",
         "register.php": "cbeb723b552d69698c15d2fb5e3fe6f8",
         "ranking.php": "de72a9deedc7eb0ffed0b20b465c2fe5",
