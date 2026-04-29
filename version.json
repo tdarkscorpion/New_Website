@@ -1,10 +1,11 @@
 {
-    "version": "1.4.2",
-    "last_update": 1777492000,
+    "version": "1.4.3",
+    "last_update": 1777493000,
     "files": [
         "version.json",
         "Functions/UpdateHandler.php",
         "Actions/manage-minigames.php",
+        "Actions/minigame-play.php",
         "dashboard.php",
         "Actions/manage-gm.php"
     ]
