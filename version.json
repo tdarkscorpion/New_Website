@@ -1,8 +1,9 @@
 {
-    "version": "1.3.4",
-    "last_update": 1777481000,
+    "version": "1.3.5",
+    "last_update": 1777482000,
     "files": [
         "version.json",
-        "dashboard.php"
+        "dashboard.php",
+        "Actions/system-update.php"
     ]
 }
