@@ -1,6 +1,6 @@
 {
     "version": "1.6.6",
-    "last_update": 1777492729,
+    "last_update": 1777492805,
     "files": [
         "version.json",
         "whitelist.env",
@@ -26,7 +26,7 @@
         "Actions/player-settings.php"
     ],
     "hashes": {
-        "version.json": "4fe1ef2c102b8a106ee6c1f07666d2ab",
+        "version.json": "57e0d17275d69c2fcd65b6d93f59e078",
         "whitelist.env": "28a9d53c608f702d9f3cd8a3814c79f9",
         "credentials.env": "d5aa48862637afb4e584662deed6f348",
         "dashboard.php": "ff1647acb0dcdd4c7218d46a00749e2f",
