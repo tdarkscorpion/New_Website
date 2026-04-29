@@ -27,10 +27,9 @@ First, clone the latest files directly from the repository to your web server:
 git clone https://github.com/tdarkscorpion/New_Website.git .
 ```
 
-### 2️⃣ Database Preparation
-1.  Open **`include/db_config.php`**.
-2.  Enter your MySQL **Host**, **Username**, and **Password**.
-3.  Ensure your MySQL user has permissions to create databases.
+### 2️⃣ Configure Connection
+Open **`include/db_config.php`** and enter your MySQL **Host**, **Username**, and **Password**. 
+*(Note: You do NOT need to create any databases manually; the installer will create them for you.)*
 
 ### 3️⃣ Run the Web Installer
 Navigate to:
@@ -38,7 +37,7 @@ Navigate to:
 
 The installer will:
 *   Verify your database connectivity.
-*   Automatically create `db_account`, `db_game`, and `db_misc` if they don't exist.
+*   **Automatically create** `db_account`, `db_game`, and `db_misc`.
 *   Import the latest master SQL schema.
 *   Configure basic branding.
 
