@@ -1,8 +1,9 @@
 {
-    "version": "1.4.6",
-    "last_update": 1777496000,
+    "version": "1.4.7",
+    "last_update": 1777498000,
     "files": [
         "version.json",
+        "whitelist.env",
         "Functions/UpdateHandler.php",
         "Functions/Database.php",
         "Functions/DomainGuard.php",
