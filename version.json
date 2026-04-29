@@ -1,8 +1,30 @@
 {
-    "version": "1.5.8",
-    "last_update": 1777506000,
+    "version": "1.5.9",
+    "last_update": 1777507000,
     "files": [
         "version.json",
-        "dashboard.php"
+        "whitelist.env",
+        "credentials.env",
+        "dashboard.php",
+        "index.php",
+        "register.php",
+        "ranking.php",
+        "download.php",
+        "Functions/UpdateHandler.php",
+        "Functions/DomainGuard.php",
+        "Functions/Database.php",
+        "Functions/Accounts-Characters.php",
+        "Functions/Permissions.php",
+        "Functions/TwoFactor.php",
+        "Functions/Settings.php",
+        "include/config.php",
+        "include/db_config.php",
+        "include/action_login.php",
+        "include/action_register.php",
+        "Actions/system-update.php",
+        "Actions/user-2fa.php",
+        "Actions/player-settings.php",
+        "install/index.php",
+        "install/talisman_master_setup.sql"
     ]
 }
