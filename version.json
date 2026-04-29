@@ -1,6 +1,6 @@
 {
-    "version": "1.6.1",
-    "last_update": 1777508000,
+    "version": "1.6.6",
+    "last_update": 1777510000,
     "files": [
         "version.json",
         "whitelist.env",
