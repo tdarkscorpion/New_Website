@@ -3,6 +3,9 @@
     "last_update": 1777490000,
     "files": [
         "version.json",
-        "Functions/UpdateHandler.php"
+        "Functions/UpdateHandler.php",
+        "Actions/manage-minigames.php",
+        "dashboard.php",
+        "Actions/manage-gm.php"
     ]
 }
