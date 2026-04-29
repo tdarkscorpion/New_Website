@@ -92,6 +92,7 @@ CREATE TABLE `t_account` (
   `google_2fa_recovery` text,
   `google_2fa_recovery_codes` text,
   `last_session_id` varchar(255) DEFAULT NULL,
+  `profile_photo` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`accountid`),
   UNIQUE KEY `name` (`name`),
   KEY `ll` (`ll`)

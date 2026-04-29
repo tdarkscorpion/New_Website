@@ -1,9 +1,10 @@
 {
-    "version": "1.2.0",
-    "last_update": 1777474000,
+    "version": "1.2.1",
+    "last_update": 1777475000,
     "files": [
         "version.json",
         "dashboard.php",
-        "Actions/update-profile-pic.php"
+        "Actions/update-profile-pic.php",
+        "db_patch_profile_photo.php"
     ]
 }
