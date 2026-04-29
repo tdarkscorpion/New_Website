@@ -1,6 +1,6 @@
 {
-    "version": "1.4.1",
-    "last_update": 1777490000,
+    "version": "1.4.2",
+    "last_update": 1777492000,
     "files": [
         "version.json",
         "Functions/UpdateHandler.php",
