@@ -1,10 +1,13 @@
 {
-    "version": "1.0.0",
-    "last_update": 1777100000,
+    "version": "1.1.0",
+    "last_update": 1777473000,
     "files": [
-        "Functions/License.php",
-        "Functions/UpdateHandler.php",
+        "version.json",
         "dashboard.php",
-        "Actions/donations-manager.php"
+        "Functions/UpdateHandler.php",
+        "Functions/License.php",
+        "Actions/system-update.php",
+        "Actions/manage-gm.php",
+        "Actions/player-settings.php"
     ]
 }
