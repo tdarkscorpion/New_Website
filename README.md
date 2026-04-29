@@ -1,61 +1,42 @@
-# ⚔️ Talisman Online: Ultimate Web Suite
+# ⚔️ Talisman Website - Production Source
 
-![Talisman Banner](images/banner.png)
+This repository contains the **Decoded Source** for the Talisman Website. It follows a modular architecture designed for high performance and premium aesthetics.
 
-## 🌟 Overview
-Welcome to the most advanced, secure, and user-friendly web platform for **Talisman Online**. Built for high-performance servers, this suite combines a stunning modern interface with powerful administrative tools.
+## 📁 Project Structure
 
----
+*   **`decoded/`**: The human-readable source code. **Only work in this directory.**
+*   **`encoded/`**: The distribution-ready build. Automatically generated via `build.php`.
+*   **`build.php`**: The build engine that obfuscates and prepares the code for distribution.
 
-## 🚀 Key Features
+## 🚀 Getting Started
 
-*   **💳 GCash Integration**: Full GCash payment support with automated QR code display and proof-of-payment submission.
-*   **🛡️ Advanced Security**: Integrated Google 2FA (Two-Factor Authentication) and robust account protection.
-*   **🎮 Player Dashboard**: Modern, responsive dashboard for players to manage characters, buy eCoins, and join events.
-*   **📦 One-Click Auto-Installer**: Setup everything—databases, settings, and branding—in seconds via the web browser.
-*   **⚡ Auto-Online Engine**: Optimized for reliability with automatic restart and database self-healing.
+### 1. Requirements
+*   **PHP 7.4+**
+*   **Docker & Docker Compose**
+*   **MySQL/MariaDB** (Triple-Database: `db_account`, `db_game`, `db_misc`)
 
----
+### 2. Installation
+1.  Ensure your Docker containers are running (`docker-compose up -d`).
+2.  Run the **System Diagnostics** to verify everything:
+    *   URL: `http://localhost:8082/setup_diagnostics.php`
+3.  Use the **Admin Dashboard** to configure your branding and payment gateways.
 
-## 🛠️ Noob-Friendly Installation (3 Steps)
+## 🛠️ Management Tools
 
-Setting up your website has never been easier! Just follow these simple steps:
+| Tool | Purpose |
+| :--- | :--- |
+| `setup_diagnostics.php` | **Health Check**: Verifies DB connections, tables, and folders. |
+| `fix_db.php` | **Schema Patcher**: Updates your database for new features. |
+| `build.php` | **Distribution**: Encodes the source for the public `encoded/` repository. |
+| `generate_master_sql.php` | **Snapshot**: Creates a clean `talisman_master_setup.sql`. |
 
-### 1️⃣ Configure Database
-Open **`include/db_config.php`** and enter your MySQL host, username, and password.
-
-### 2️⃣ Run the Auto-Installer
-Open your web browser and navigate to:
-`http://your-domain.com/install/`
-
-The script will automatically:
-*   Verify your database connections.
-*   Create missing databases (`db_account`, `db_game`, `db_misc`).
-*   Import all tables, settings, and branding snapshots.
-
-### 3️⃣ Security & Go
-Once the installation says **"Complete"**, please **delete the `/install` folder** from your server. 
-
-That's it! You are **ONLINE!**
-
----
-
-## 🔑 Website Activation
-**This website requires a unique activation key to function.** 
-
-To get your activation key and unlock all premium features, please contact me directly on Facebook:
-
-### [👉 Click Here to Activate via Messenger](https://fb.me/darkscorpiont)
-**Username:** `darkscorpiont`
+## ⚙️ PV (Permission Level) System
+The website uses a `pv` (Permission Value) system for security:
+*   **0**: Regular Player
+*   **1**: Donator
+*   **2-3**: Moderator
+*   **5-7**: Game Master (GM)
+*   **9+**: Administrator
 
 ---
-
-## 📸 Requirements
-*   **PHP**: 7.4 or higher
-*   **Database**: MySQL 5.7+ / MariaDB
-*   **Extensions**: PDO, OpenSSL, CURL
-
----
-
-**Developed with ❤️ for the Talisman Online Community.**
-*For support or custom development, reach out via the Facebook link above.*
+*Maintained by the Talisman Development Team.*
