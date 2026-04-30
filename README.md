@@ -19,29 +19,25 @@ Welcome to the most advanced, secure, and user-friendly web platform for **Talis
 
 ## 🛠️ Quick Installation Guide
 
-Setting up your website is simple! Follow these steps:
+Setting up your website is a 3-step process:
 
 ### 1️⃣ Download the Suite
-First, clone the latest files directly from the repository to your web server:
+Clone the latest files directly from the repository to your web server:
 ```bash
 git clone https://github.com/tdarkscorpion/New_Website.git .
 ```
 
-### 2️⃣ Configure Connection
-Open **`include/db_config.php`** and enter your MySQL **Host**, **Username**, and **Password**. 
-*(Note: You do NOT need to create any databases manually; the installer will create them for you.)*
-
-### 3️⃣ Run the Web Installer
-Navigate to:
+### 2️⃣ Run the Web Installer
+Navigate to the following URL in your browser:
 `http://your-domain.com/install/index.php`
 
-The installer will:
-*   Verify your database connectivity.
-*   **Automatically create** `db_account`, `db_game`, and `db_misc`.
-*   Import the latest master SQL schema.
-*   Configure basic branding.
+The installer will ask for your MySQL credentials and then:
+*   **Automatically create** the required databases (`db_account`, `db_game`, `db_misc`).
+*   **Import** the latest master SQL schema.
+*   **Generate** your security credentials and admin account.
+*   **Configure** your website connection automatically.
 
-### 4️⃣ Security Cleanup
+### 3️⃣ Security Cleanup
 **IMPORTANT:** Once the installation is successful, immediately **delete the `/install` folder** to prevent unauthorized access.
 
 ---
