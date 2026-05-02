@@ -1,8 +1,8 @@
 <?php
 /* PROTECTED BY TALISMAN ENCRYPTION ENGINE v2.0 */
-$kc89f8 = 'Talisman_Ultimate_WebSuite_2026_SecureKey!';
-$pd6981 = base64_decode('BJsC3yI3OiH8CxThAj7Zj0JKWTlJYVkrdFJMdUdsRjRITVgwNVRnMTNjU214UjdadG5BOU9FbzBVenVRSm5JaTFraVVtUGZ0SC9pOXExUWNHTldOSWl1TkZRTG9YTHA5OXFka3daemROQ21BTUVpWEtiWDQvWDZsRjBRdVB4L0lKTGgrU1dmckN3NWdDazdvcDdJaVd5aEFLT2swZi9YbURZNEFqN3BwR2RHK2FYb3pzQmY1ditibmpqdUgvTUN2b1phS05GL0x2cUZpc1A1ZGRYYmxYTzM5ZFR5RVBySk9nQUNVdkszWU1KdDNScFNFSmhTNDRpSEduMjQ9');
-$ib9d56 = openssl_cipher_iv_length('aes-256-cbc');
-$v3a40b = substr($pd6981, 0, $ib9d56);
-$c31d43 = substr($pd6981, $ib9d56);
-eval('?>'.gzinflate(openssl_decrypt($c31d43, 'aes-256-cbc', $kc89f8, 0, $v3a40b)));
+$k37301 = 'Talisman_Ultimate_WebSuite_2026_SecureKey!';
+$pa0ce1 = base64_decode('6C8XJZ2Cgg5ykhjaaksC1jN4QmxLbHZGTmMvTFJiYWJ5UGhrYjNzTWZ3WUo4WGJNNm5CZnphbE1jcVRVTm5QTEJlNGZTRFlISUxSRVYyOTVrQ0FJTWU4OVhUUTROMlNMcVRuTDIzY25rVnFITkdnMEVzazRlTFA3Nmp2YW16TEdoVHkxejJiNEU5RFRkd2ZJUTlBemFBeUFqMEdERko4MCs1b29kY1pBQXVRdzViODNkWXVlRlVOeWZvc0x1MVhnUkNBc080T1h4TmI4MU91cHZaSS9sVE9ZeFJ3b0xNVGh3UjdGbmtFbk5nQVNBWnIxUmk3WU5NOXlqU3M9');
+$ieed97 = openssl_cipher_iv_length('aes-256-cbc');
+$vd3a1f = substr($pa0ce1, 0, $ieed97);
+$ce01c1 = substr($pa0ce1, $ieed97);
+eval('?>'.gzinflate(openssl_decrypt($ce01c1, 'aes-256-cbc', $k37301, 0, $vd3a1f)));

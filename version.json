@@ -1,6 +1,6 @@
 {
-    "version": "1.7.3",
-    "last_update": 1777703792,
+    "version": "1.7.4",
+    "last_update": 1777704162,
     "files": [
         "version.json",
         "whitelist.env",
@@ -25,25 +25,25 @@
         "Actions/player-settings.php"
     ],
     "hashes": {
-        "version.json": "babab5d774a2ca1e2c156993acc3a793",
+        "version.json": "4859c60b521317af980a553c8282853c",
         "credentials.env": "d5aa48862637afb4e584662deed6f348",
-        "dashboard.php": "28fe7a12d50ddacf66d2e0cee059b1d2",
-        "index.php": "15c21681ca61e86636af2bcc6ef234de",
-        "register.php": "2b8654bddbf79fad48efe2de1fb1b6c9",
-        "ranking.php": "58f04fae1c885bdf0c2626854e1af25a",
-        "download.php": "488f608b67d17c05ed3b199febf617a5",
-        "Functions/UpdateHandler.php": "84c53977c05209ad06e0fa6b9d49ce08",
-        "Functions/DomainGuard.php": "22a52eba8a16845af9e5acef090b0094",
-        "Functions/Database.php": "6fa020452ff4d58fddf64e72f90d0757",
-        "Functions/Accounts-Characters.php": "5d9510bc2c98f3e657f09bf62b2b73dc",
-        "Functions/Permissions.php": "fd189e3dc74cf4cd3b7fe6f2b2bb2bf8",
-        "Functions/TwoFactor.php": "d874af50743bce45639a40ca18d0c2d7",
-        "Functions/Settings.php": "fc1144a50faeb042cf42bcb58af6ded6",
-        "include/config.php": "16884a4359e2af988223959be1369a5b",
-        "include/action_login.php": "c5ff6767def3e42f46f1697f0b0ee8d6",
-        "include/action_register.php": "53a22d388fa664a47609b623ba7b3565",
-        "Actions/system-update.php": "5ea372cb232460405aa7c6d2fe09944a",
-        "Actions/user-2fa.php": "6aa6972ec77ec210e99375b9cd9469bb",
-        "Actions/player-settings.php": "0a7de0069af6fa5487868bf96a007aea"
+        "dashboard.php": "17bd5a8bd810ce905631aeb35a2c705c",
+        "index.php": "89956bf7ee255488948f228d8548c04d",
+        "register.php": "5ccfd78298ed19bbb1b06933efa9e537",
+        "ranking.php": "271f21d7a48c8ff82cd6d473c6d07f7f",
+        "download.php": "d056dd4d5c8ef0f534c0635b8ff23744",
+        "Functions/UpdateHandler.php": "2b0bbfb5987b4492170fd9f9e55ea27a",
+        "Functions/DomainGuard.php": "fab1befd51c8a6a2c88facf4bd591425",
+        "Functions/Database.php": "4f002abd002c60b0c257e70400e5ece5",
+        "Functions/Accounts-Characters.php": "42c692828558de9a77fca7f7f1fd92f7",
+        "Functions/Permissions.php": "19ebbfb48546ef19c52f69ae20b4540e",
+        "Functions/TwoFactor.php": "99161bad36f9f0960706ce2db737c946",
+        "Functions/Settings.php": "762b4dfda488a933c4d67ddda04bc260",
+        "include/config.php": "66f5f360d48f937fcb147ad575fff7cd",
+        "include/action_login.php": "217af61c3043aefb96747ce2d0940d0d",
+        "include/action_register.php": "80d8124e252ccef4bccfe8841d10cab5",
+        "Actions/system-update.php": "50e4d9ca8488d484d0ed963555c8d761",
+        "Actions/user-2fa.php": "c02d4bf44c4d0980a7a87ec8cbeb6080",
+        "Actions/player-settings.php": "e2b6c2d46c331cfbf83c1b9c4e2b66b9"
     }
 }
