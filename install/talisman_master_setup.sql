@@ -895,7 +895,7 @@ CREATE TABLE `t_donation_messages` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `donation_id` (`donation_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Structure for table `t_donations`
 CREATE TABLE `t_donations` (
@@ -1026,7 +1026,7 @@ CREATE TABLE `t_password_resets` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `uq_token` (`token`),
   KEY `idx_account` (`account_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Structure for table `t_payment_packages`
 CREATE TABLE `t_payment_packages` (
@@ -1272,7 +1272,7 @@ CREATE TABLE `t_smtp_settings` (
   `setting_key` varchar(100) NOT NULL,
   `setting_value` text,
   PRIMARY KEY (`setting_key`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Data for table `t_smtp_settings`
 
