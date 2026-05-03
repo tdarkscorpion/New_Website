@@ -15,7 +15,12 @@
 </FilesMatch>
 
 # 2. Custom Error Pages
+ErrorDocument 400 /400.php
+ErrorDocument 401 /401.php
 ErrorDocument 403 /403.php
+ErrorDocument 404 /404.php
+ErrorDocument 500 /500.php
+ErrorDocument 503 /503.php
 
 # 3. Disable Directory Indexing
 # This prevents hackers from seeing the list of files in your folders
