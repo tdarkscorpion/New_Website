@@ -187,10 +187,35 @@
         document.querySelectorAll('[data-dds-src]').forEach(renderDdsElement);
     }
 
+    // Run immediately on script load (synchronous inline scripts fire after DOM is ready)
+    initDdsAutoRenderer();
+
+    // Also run on DOMContentLoaded in case script is in <head>
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initDdsAutoRenderer);
-    } else {
-        initDdsAutoRenderer();
+    }
+
+    // Safety net: re-scan after full page load (images, iframes settled)
+    window.addEventListener('load', function() {
+        setTimeout(initDdsAutoRenderer, 100);
+    });
+
+    // Watch for dynamically injected canvases (e.g. PHP-rendered content inside iframes)
+    if (window.MutationObserver) {
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(m) {
+                m.addedNodes.forEach(function(node) {
+                    if (node.nodeType !== 1) return;
+                    // Check the node itself
+                    if (node.hasAttribute && node.hasAttribute('data-dds-src')) {
+                        renderDdsElement(node);
+                    }
+                    // Check descendants
+                    node.querySelectorAll && node.querySelectorAll('[data-dds-src]').forEach(renderDdsElement);
+                });
+            });
+        });
+        observer.observe(document.body || document.documentElement, { childList: true, subtree: true });
     }
 
     window.renderDdsElement = renderDdsElement;
