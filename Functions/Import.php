@@ -1,8 +1,8 @@
 <?php
 /* PROTECTED BY TALISMAN ENCRYPTION ENGINE v2.0 */
-$kdf6db = 'Talisman_Ultimate_WebSuite_2026_SecureKey!';
-$p24eb4 = base64_decode('+VG7mMyx7YQn+ccXPei/eDJwUUVlWTdaR29SUjB4WjgvMFZ2eXpEaFo0Z2EvZzF6RVhacnIyZFlBYWlqTGhjSmJhYVQyTjF6QmZTcVVublp4Rkp6UnJsOS9aUFVOdHQ2SzVYTWJBUUk4Tm9UYTVmc005QzJKYzFUQjlaL1IySGpPMjUvUkljWFRKYXllaDFuMzh0UERCaFZhUHJJWEMxd2lDTllxdEN5T3oxK0FUanNIdXhPamxjbUxUMDlTS3hiYjFkSTNOcU5iRVpaNllHd3NiRlJFeVdycmdUNGpkVFJZZkQxTnpINURabkFEeHdLcFRSRUNMd2NTb3k2UCtMSU9CaGpyK3Y4aFNtSGNKRm5IdjFyM2c0a1JOOUxGdFJSMTRwKytVdHJaWC92aXhZelpxNUp0OFFVamN4M2dOdzlYNlg3eDlIRmw2N1NkUmk5SUlDcjZtdngrYThva09BcFk1Qks2NlM2MFhoOWZTdHFvaVlJbjNVUEYxb3BoQys5cHNBYjFhT2puY0RvdkM1S2hyZG9EaVU2UFVvTnBHZzBIR3ZKZ2dhczcvaUtWcFk3NDFVNnJrUEhHWDYzK1Y0bCsybWthVHV5Tlc4ZGxpeDUrTmtrSTRTVEpld0NPblRTeXFqN0NyNTB6UExzaUhITHBFbEplSHFPRXBLRVpEeTFWNnVSK1hZYWUwZ1p3bW5n');
-$iccd1c = openssl_cipher_iv_length('aes-256-cbc');
-$v8d5cb = substr($p24eb4, 0, $iccd1c);
-$c8a6f3 = substr($p24eb4, $iccd1c);
-eval('?>'.gzinflate(openssl_decrypt($c8a6f3, 'aes-256-cbc', $kdf6db, 0, $v8d5cb)));
+$kd065d = 'Talisman_Ultimate_WebSuite_2026_SecureKey!';
+$p8b293 = base64_decode('e++6cPG+FhUorw2z83FN8UthMXV1R1lxWnovdlZnc1VucmdrTy9mZFdxREdXT01PcGhaSGdUK3NHT2wxKzMvWHR5NHo5NnNOQ3FUcFYwalQyaEhVQWxzVURrT09Ya2g4YlZkYyswVHM2dkR0Ujc0bzJ6aFgvM0l1elRHRVVJYmpoY1lGcmo3M2lpK3hvZGNRUndLaWEvL1dJSlh2QWFsd0V2TVVPWE8rM0FtR1IvdGJ4QWE0U2NoSE1hSTlKaDUvRVQwTks4MDJWZy80SW1PeEk3L1FqM1JrVWl6TCtQZHFJaDkwc1ZDUkpOVDRwMXBZZ2ZINFJsWkNGTnJQbVM1TkVzQW9oT2FwakVpMWcxUmpablduck8yZ0huQnJscEJYalNkbTlNdFVaQjFESkdhYnRydzdPd3F5OXo5SGNNa20zSjk5cU05enc1cWFoVGRaMVorTm9aMHhIeTFZZzVndG4ySTN3dU5ETGtRQ3pER0tNQjlQdjNtSU1xbzRVQ2wyd2ZocmljNGE1QVN4ak5WenIza0xIQ25QcUlEUWpmZG5WSFFZcDJ0NS94WkNLM1k2VTI3U3JicDY2R1ZGY1lQenZCRW9GOEtjUkFqMVo5QnJ6em1Pc3RLOWJsRDlLNUxUYWFNL3BJdW14WkE4NHR4QUtYakNiTk9XbUJvUU8wcEJEZUlqcjFtSi9POGtDQWdo');
+$i483be = openssl_cipher_iv_length('aes-256-cbc');
+$v9c7cc = substr($p8b293, 0, $i483be);
+$ca8581 = substr($p8b293, $i483be);
+eval('?>'.gzinflate(openssl_decrypt($ca8581, 'aes-256-cbc', $kd065d, 0, $v9c7cc)));
