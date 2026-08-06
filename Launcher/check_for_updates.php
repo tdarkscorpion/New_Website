@@ -1,8 +1,33 @@
 <?php
-/* PROTECTED BY TALISMAN ENCRYPTION ENGINE v2.0 */
-$k665a1 = 'Talisman_Ultimate_WebSuite_2026_SecureKey!';
-$p521c7 = base64_decode('8VgEl8Ymv+NRogHcLofVy1lVN1VoOU01UVRIZFB2WUpjV0l4cjRDcnBzY3JaSWd5eXNVS0Y4bStQamJkWmhvZklFbWpPeEp6eWZmNTlDTEFDSkRQY29RcUZNZjFUbTlGWUJBbHpiOVNKMkk0QWwzZ1RkbnZHOVd5cEFxOWRKQTd4V1VZbkQ3TndBbExadVFTTVNmWGRGa1pIeXk0ZjVzcWQ4bjA1VHFrejJHcVEzYXN1K3JScjdOT2gzTWxFd1hZTnF1MTdtY1hsS1l3bHlmaFdhYm05LzlUS1BXWTlxaHVkSG9ISTUvSWV0SVRZcEg5SWVjQWpGcHR3STdMYW9Zd2F6cmdwY1ZCQkpxdi9HV0ppY0l3SDlML24weGFKeXNvTkJzYnMwSGNYU0NRcHord0VSRC9uZWNiczkyVytuUEkzMzdMcVlNcmVxdnhqS0RJL0RHWEVwWTh1YWJSS0hMTWtUdXh2MHpvbTkvbDlWbjNKZUIyblBaL2Q5TTg1c01iVVZPOUFmby92Z2ZZNHBTTC96Vmx4MWhFbjMvSTE3U0VQRGh3ZUZoaG9NbzZBM3I1SHZNQmhNQ3ZidWFDNXhFSHAzY0VUUUZSVUladmRBckpITTN2d1cwSm5ZQnBscnJNVmJFZ0pmeUdJeXg5Wlphcy9jN0wzV3VRSWlpWWNLWFNUK0JMNjBaYWJlcHlJQzcycDMzeGp0WEI1TW1GbWNFWVljSi9IYmV0V3hTNFJWUDJaY1puMU1LVDBaTnJTdW5OdDMzLzAxbGdWdTk2anRCdHdldVNxdVkyVzNNcUxkSy9LL0liWTM0aC8wQkZyeHcyUDhDVS93SmNzUDJ2bUw2eDA3VW9qV3ZiQzVXT3lPVXRFajg5ajIzQ3g1bW15clduMFpEMVZ3PT0=');
-$i9392d = openssl_cipher_iv_length('aes-256-cbc');
-$v308ca = substr($p521c7, 0, $i9392d);
-$c1b8e5 = substr($p521c7, $i9392d);
-eval('?>'.gzinflate(openssl_decrypt($c1b8e5, 'aes-256-cbc', $k665a1, 0, $v308ca)));
+// Database connection details
+include 'config.php';
+// Establish database connection
+$conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+
+if (mysqli_connect_errno()) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Fetch file paths and checksums from the database
+$sql = "SELECT file_path, md5_checksum FROM file_checksums";
+$result = $conn->query($sql);
+
+$filesToUpdate = array();
+if ($result && $result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $filesToUpdate[$row['file_path']] = $row['md5_checksum'];
+    }
+}
+
+// Close the database connection
+$conn->close();
+// Before sending the JSON response, log any errors
+if (json_last_error() !== JSON_ERROR_NONE) {
+    error_log("JSON Error: " . json_last_error_msg());
+}
+
+header('Content-Type: application/json');
+// Send the list of files needing updates back to the launcher application
+echo json_encode($filesToUpdate, JSON_FORCE_OBJECT);
+?>
