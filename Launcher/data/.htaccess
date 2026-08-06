@@ -1,0 +1,10 @@
+# Allow launcher patch files to be downloaded from data directory
+<FilesMatch ".*">
+    <IfModule mod_authz_core.c>
+        Require all granted
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Allow from all
+    </IfModule>
+</FilesMatch>
