@@ -1,8 +1,187 @@
 <?php
-/* PROTECTED BY TALISMAN ENCRYPTION ENGINE v2.0 */
-$k291b2 = 'Talisman_Ultimate_WebSuite_2026_SecureKey!';
-$p4d222 = base64_decode('j6vnMm4vCviwdK5NlPdaM0xOVnRYcndhWndFWFV4RGQ3a2tPODZjUHBjb3pBWEVLOG9NNll1SmVBbjBiTHJQWnd5SlNmdnJEQWZHWHJXTkE0ZW5OS1NHenJ4bXZkeGZDczdobWhTZXBnY3hlbHdoUVNvbjRCT2VBcllTRFp3Wmh4NFIvSUFoTnFMTVp6ZUVhdVU0YjhETUZhNzUzSzN1cDk5bG5aanZTUDRlSS9ub21MUVdGWjVKaW5jRlNCSnJSVDB5KzZQTGlNOWNsUkVUdFZyd0NQcVBxWGh0Ry85UERTT3VSM2t3cCs2TmFhT2FlcjdBZFZGNU9BbXRMbjBGT0prWUhIUTdmWnJTUXRFeUx2dTZ3TTkxa05RSmNDMlhXK1loU0VkWlBBZWNINWVSSVdYdkZuLzQzYXVhV21pa2RzbE1iQ0NXWWU1SHlGOGFaMVRUU2xZSHdGTGhXNmJKU1JxVGgzN3pkTjJtS3RDU2RNOXU5bDFUZWJDNGRXc2dac0dqT1ZDS0dTemd5UXRTdFZwdXcrTUljMlB6dDlRWGllWjhZaTJ5TnB1UzdMa1Qyamc2MDRLNWtCVFZwbnUzNUN0aVlwNytPVG5aT2dxWElkVXUrSmtZZlJ4Y0lLVnN3RlpQTzVKRUUzblRsdkdmWlYyNDlRdFBSMXZzMDdVcWlpeExTOGNkbzUxOEh3Z0s2TjFWSVoza2xlaVdHMFRHTzZrNHRSVTdudnhoaVIzRlJSTkY5K00vMjhuL01EMitIRlVjbnNrY2k3ZE5MRlRBQUJUSGVWanIzVVE2STBpdFg4YUtpL3lseVZidHpHVS93dkJGTlRERDdNMFVNeU5rd1d5VmdRZk5KakxQMWZmbEcweExPQ2hNZGlxcStIeTV4QkNxZ0YvbGVTQUsyN1NEL1BiS2dMZStqSnFNR0ZtR09ROEh4NjNMWWh3YUhEL1JKRm9RU1Bmc2M5VGdBNm54RUhxRE5iR080cVhGV2NFcHFMMnc4bTg5VjRsTTJENHNuajJXa2R0bTBsRlIyVUxqRms2Rzhza3RDR1c1REtkUGJJK3hLbXg1MFEweDk3Q0QyYUZhZ3NYN2ZTQ2ZWV3V0MGNVUGpyZHFqalFSZm5vc2JYaHdxOUcySkRKTjAyK2JUZ2t5MzJNb2dhUjdVNG01RExqUDZES1ljZU5jMUg4anBGQlRYdEcwTnRMQlNmcG04K09Jb2p1Y1l1Q2dnT0srQjgvVnVRTTRHT1NNdUxGVndGSmsyZGU1RGJIaEdQbW4vSFhra25wZFREK2JnQkptVnR3enJ0RkE2REpnSlRneEhyWllEeGdEZFI5a0xHV2J2M3VqM2tBR1BKQ0MweDR0dVoranBtWWFVUE04MzhrRk15UWNvRWpxVjU3REJlUm5vYVhpcitxU1Y2NGpVS2xocERhYWk4em84TlFNa1BSaHJlWmdRK0hoandWVmoyWit4d3pGdkhTUVgvOGw3QlNKa2QzY1pmRDR6ejFWY25tYXVxcGRiWUdmdGtUcXYvdDRndmJ5OEdhOVMzRUZJa1c4a0hFZzRlY1N2UE9IOXUvbTdHbFhtSzA1eUhybnlRRUJvWDFtMHZFeG5CaDJSSjl3dHZWQkpIcEZGK0Rrczk0ZmhWMHRQaS96djYrUWFjYUtZVFNYamJzT0ZkNnlobHlrWEs4MytndTBSMG1iQjl3MWc2c2oxOGxTTzgwa2lJb0dycElja0FGbmQvNWhJT2FpTTB5NGVXK3VGankvTk1lOWIzOE9GSUhqNm9kOCtLSDVicHBxRjBSQW9FL0o3c1oyV3dOOEVZNi81ajJkZ2NCc1hteE4rTDQrRVdVM0ppY0dCeFNKdnUyWHNiWWZBTWFHQU9FZ3o2eGZpZzk5d2Q5UHFONGxGMDR2cUtLa25hNTNDUlp0Z205NGNZMjNuK3AwcmcwcGFPMGN6dU5jNGtLblBIdjJ1VmJxQ3ZEQjZucDVJQ1RHUno5UXM3Rzk1YjVna3pKZXNVZndKKzZTanltemlDekozQ0pBU3B6M2QweDhjUnk3WUExN1VKUTlFYUdneTVSYWpHQmk1dEFuQ1pRY1ZIZzhkNTRhNHBpVkhQL1BrN0JUd2RFR1B3Ky91MEErMEpOblh6azl3bVNzSWdreXJsSC9PRldNOGp1MExRMG9YZmRRZjFKbVBlN1FNRktKTEpjd055ZnRTcWFVRmwvY3NGT0hteW5DdEVIK3dncXk3OWg5a0l4QllmMUpSRVlRWWZ3S2dQci9nN29zS2dXNHZzbHpUNHlJRXkvQnEwZkRkcWRpczFrS0tQdXJ2STVrZGFSbmNZamFDWFJCd3pkSEMyZmZ3Qlh1OTdSTWVjRnYrcmtkaGlyeUVYTVRXVEFBdW1MY0JoL0hYMlNWS041UDhDTmFhYVdUbFNuak5Ed2JuVTlHNjdUMW5Gdko5ZU5JZzN1blJBNC9keXlacmV4RWxYSzJLejVEQVE0cTdHQk9MZGtYendmby9yRjBaTkRZaGlQaitobmJmaVRZWEsvOHh0RFVUOXNKWkpaWGNXWnpBOFhrekNLRlpTaXExaFZQeFVXbWgyeW1XZktpM0hMdTVZZUIxUmkxRnNGaStBVHdJMmJNV1BXU3kycWVNdi9qVktrdjZJRS9GM1pzNVNHQUUrYXNBSlUwQ1VLQW5SUjV4ek9zblZWWEx6cDZ3eHVtWEhnQmVmT1UzaSs4RGNRdkRYMEpxSExEYjdIRDBNMFV3YWpWRUZGRWlQZzhJSFUwSHJqcHBaK2VoeUhMYXlQWWdJalNMYUtNUHhmTGhldGtQUm9MNWJ4U0pFNWlRQnNQTU9aT0VPMzVMMTVHOUdneWVuVFExZGJFc3dXTTgwWlhER2ROeks4NU4reTBrRU1MOGJoeCs5YjBhaThicXNrbkd1ZERYTnVEVTBrREN5QUdsVEpSSm9CYkt6NEp2d0o0Y0RFMmlyZllPa0lVc3JUZ1hUcE54aUppa0FBZXZSTjcxcE9iU21CVUt2SGZNYU9naWlCVEFHMmhMS3A5QjJYenFWNmh1c2xON0Zid29XRm5hS2NSY0lOVzhVSDN0R2R6Y1B1ZG02NHg2dWZjOWplZjNicnA2cDY3SEVXSmlKRnl1VElvSjJNRHgrS0ZNZitTUG94NC9MbXpmdzIxU2lKR2Y0T3o0M1phbHpUbkd0VnpoUzBsZGFEeVB5a2tERmFvMmFOMkp2VVdqR1ZLNzkvODdmNi9VK2o0VjY5TWIxaWJqZHZGTFR2OS8wdW1OcUZnQUJNam53TWx5dENQS2RHYnFJbkhCNkk2bHhIQkxoREpFRndJbHp6VXI4L0lrdit4VFM5SkxSWjNBM0FzQTRGbHRodEx6RVV0VDM4RWtYeHlzWjFZTVVnVlVDYTQ2YkZWdHk2WG5XcWZQZjR2VEYrbFY0d21EaVY2Qk9Fb2JpMXUxR3Nic01vOFZEbUJGWFFscnNiNGhkdXhLQW45Nmt1T3d2ZzZ6R0V6Vkw3WHdaVGprbzljUXl2OE43N1Q3ZzNnNm9QQkV5OWJRWTFrUUhhUGxBQUtvVnlxOTBFcDJUK2pYdkMySW5rN0JDSlVvQ1BFSlErdE1sQkk5TXgySVlCUEJTdGVwelB4RW9sckc1MWFsWjNlZDZFQXZiMmttUWZNSjl4RkxzdXF2am5sbFQ1K1RMbTZUbVFXT2dPanNETkNsMk5JS3N5VjdWMVNnaWMrOU1UWHZac2hUN2ZEZ2Zsek5xaEg2SWttUVlOYSsrc3lqbDZSTnBRcmVMZnQ5N3hiZDM2cmdueG9lKzdGVUJ2TTY0NFg4bTEzbmtlZVVNN2IwUlVBcEVkSFQvRXgzY1BjdmhpSmppSTR6WVJGcmZqaVhHZkREUk02ZjQwWTB5aEhoNU8xT1I1NUp3b2RScWc2RytXam1TOVJ5SGlrSzQ1TTZaTnpxUlpkOXNYT00yc0JGZmxSVENGblhSRXdzYk8yNzl4ZVdQYTRQb2VRNmRVVmZPajJ2SVluemlodDViUUlSSTZxcWI3M0xEdDdTYXRxK25GbGZlL3haUlVsQlA1WU1oZmhTOTJBZWsrZEFNcFQ0ZTJaSVpyUzE5RENBeldDcE13aGExZXdiaGlvRkgvTWdQM2kyTmsrY1N5WGhoeklHS2k4bFJlSHJxY3k3WHhLdFlUZmp3OE1NR0VEaEErQzQxUFN6TURiYkFSR3BGbG9jcUVReWdpczhzMmNneTZ5d3Zad0JYWi9RWklNK3ZZNGxDN0ZNNEo0UFRiWmRNejZDTGdxcERQTjBIRDZsNDVrOWhPaysvODFjc0J6eElhOEdmajRwNlJsaERDQk0wM09lOFBSci9vSjFyalUxMmpwRE1OU3lWd1JTaDZabFJSUFJIa2x1TXlWeEE1Z2lPNUhVNVpWQUVBS0dKa3hIa2pYemZhQ2dCSFM5QmJ5azI4VnUrNm5DT3owdEpFbTV0bWFQTWNXbzN6ODlrODBLVXB6WUNUc0JOTzNvWmlLYk9uU0ZYMFRyYmZyd0J4K3BXZmRaeWhiVFp4SFIrOFVYaFJ0ek5MVzVnZz09');
-$ifc332 = openssl_cipher_iv_length('aes-256-cbc');
-$vbd753 = substr($p4d222, 0, $ifc332);
-$caa197 = substr($p4d222, $ifc332);
-eval('?>'.gzinflate(openssl_decrypt($caa197, 'aes-256-cbc', $k291b2, 0, $vbd753)));
+if (!isset($_SESSION['username']) || !IsAdministrator()) {
+    die("Access Denied");
+}
+
+$data_dir = __DIR__ . '/../Launcher/data/';
+$message = '';
+$message_type = 'success';
+
+// Ensure the directory exists
+if (!is_dir($data_dir)) {
+    mkdir($data_dir, 0755, true);
+}
+
+// Handle Form Submissions
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['action'])) {
+        
+        // --- DELETE FILE ---
+        if ($_POST['action'] === 'delete' && !empty($_POST['filename'])) {
+            $filename = basename($_POST['filename']);
+            $target_file = $data_dir . $filename;
+            
+            if (file_exists($target_file)) {
+                if (unlink($target_file)) {
+                    $message = "File '" . htmlspecialchars($filename) . "' has been deleted.";
+                } else {
+                    $message = "Error deleting file.";
+                    $message_type = 'error';
+                }
+            } else {
+                $message = "File not found.";
+                $message_type = 'error';
+            }
+        }
+        
+        // --- SYNC CHECKSUMS ---
+        elseif ($_POST['action'] === 'sync') {
+            global $db_misc;
+            
+            if (!$db_misc) {
+                $message = "Sync failed: Database connection error.";
+                $message_type = 'error';
+            } else {
+                // Function to get md5 recursively
+                function getChecksumsLocal($dir, $baseDir, $db) {
+                    $checksums = array();
+                    $files = glob($dir . '/*');
+                    
+                    if (is_array($files)) {
+                        foreach ($files as $file) {
+                            if (is_file($file)) {
+                                $relativePath = ltrim(str_replace($baseDir, '', $file), '/');
+                                $checksum = md5_file($file);
+                                
+                                // Check if exists
+                                $stmt = $db->prepare("SELECT md5_checksum FROM file_checksums WHERE file_path = ?");
+                                $stmt->execute([$relativePath]);
+                                $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                                
+                                if ($row) {
+                                    if ($row['md5_checksum'] !== $checksum) {
+                                        $checksums[$relativePath] = $checksum;
+                                    }
+                                } else {
+                                    $checksums[$relativePath] = $checksum;
+                                }
+                            } elseif (is_dir($file)) {
+                                $checksums = array_merge($checksums, getChecksumsLocal($file, $baseDir, $db));
+                            }
+                        }
+                    }
+                    return $checksums;
+                }
+                
+                try {
+                    $checksumsToUpdate = getChecksumsLocal($data_dir, $data_dir, $db_misc);
+                    
+                    if (!empty($checksumsToUpdate)) {
+                        $stmt = $db_misc->prepare("INSERT INTO file_checksums (file_path, md5_checksum) VALUES (?, ?) ON DUPLICATE KEY UPDATE md5_checksum = VALUES(md5_checksum)");
+                        foreach ($checksumsToUpdate as $filePath => $checksum) {
+                            $stmt->execute([$filePath, $checksum]);
+                        }
+                        $message = "Checksums synchronized! (" . count($checksumsToUpdate) . " files updated)";
+                    } else {
+                        $message = "Checksums are already synchronized. No updates needed.";
+                    }
+                } catch (Exception $e) {
+                    $message = "Sync failed: " . $e->getMessage();
+                    $message_type = 'error';
+                }
+            }
+        }
+    }
+}
+
+// Get list of current files
+$files = array();
+if (is_dir($data_dir)) {
+    if ($dh = opendir($data_dir)) {
+        while (($file = readdir($dh)) !== false) {
+            if ($file !== "." && $file !== "..") {
+                $files[] = array(
+                    'name' => $file,
+                    'size' => filesize($data_dir . $file),
+                    'time' => filemtime($data_dir . $file)
+                );
+            }
+        }
+        closedir($dh);
+    }
+}
+// Sort files by name
+usort($files, function($a, $b) {
+    return strcmp($a['name'], $b['name']);
+});
+
+function formatBytes($size, $precision = 2) {
+    $base = log($size, 1024);
+    $suffixes = array('', 'K', 'M', 'G', 'T');   
+    return round(pow(1024, $base - floor($base)), $precision) . ' ' . $suffixes[floor($base)];
+}
+?>
+
+<div class="glass-card">
+    <h2 class="section-title"><i class="fas fa-upload text-info"></i> Launcher Updates Management</h2>
+    <p style="color: rgba(255,255,255,0.7); margin-bottom: 20px;">Synchronize your checksums so players can automatically download the latest updates.</p>
+
+    <?php if ($message): ?>
+        <div style="background: <?php echo $message_type === 'error' ? 'rgba(231, 76, 60, 0.2)' : 'rgba(46, 204, 113, 0.2)'; ?>; border: 1px solid <?php echo $message_type === 'error' ? 'rgba(231, 76, 60, 0.4)' : 'rgba(46, 204, 113, 0.4)'; ?>; padding: 15px; border-radius: 8px; margin-bottom: 20px; color: #fff;">
+            <i class="fas <?php echo $message_type === 'error' ? 'fa-exclamation-triangle' : 'fa-check-circle'; ?>"></i> <?php echo $message; ?>
+        </div>
+    <?php endif; ?>
+
+    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 20px;">
+        
+        <!-- Upload Form -->
+        <div class="glass-card" style="background: rgba(0,0,0,0.2);">
+            <h3><i class="fas fa-sync-alt"></i> Sync Checksums</h3>
+            <p style="font-size: 0.85rem; opacity: 0.8;">After deleting files or manually adding patches to the <code>Launcher/data</code> folder, you must sync checksums to notify the launcher of the changes.</p>
+            <form action="" method="POST">
+                <input type="hidden" name="action" value="sync">
+                <button type="submit" class="btn-glow" style="background: #2ecc71 !important; width: 100%;">Sync Now</button>
+            </form>
+        </div>
+
+        <!-- File List -->
+        <div class="glass-card" style="background: rgba(0,0,0,0.2);">
+            <h3><i class="fas fa-folder-open"></i> Current Patch Files</h3>
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>File Name</th>
+                            <th>Size</th>
+                            <th>Last Modified</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (empty($files)): ?>
+                            <tr>
+                                <td colspan="4" style="text-align: center; padding: 20px; opacity: 0.5;">No files found in data directory.</td>
+                            </tr>
+                        <?php else: ?>
+                            <?php foreach ($files as $f): ?>
+                                <tr>
+                                    <td><strong><?php echo htmlspecialchars($f['name']); ?></strong></td>
+                                    <td><?php echo formatBytes($f['size']); ?>B</td>
+                                    <td><?php echo date('Y-m-d H:i:s', $f['time']); ?></td>
+                                    <td>
+                                        <form action="" method="POST" style="margin: 0; display: inline-block;" onsubmit="return confirm('Are you sure you want to delete <?php echo htmlspecialchars($f['name']); ?>?');">
+                                            <input type="hidden" name="action" value="delete">
+                                            <input type="hidden" name="filename" value="<?php echo htmlspecialchars($f['name']); ?>">
+                                            <button type="submit" style="background: rgba(231, 76, 60, 0.8) !important; padding: 6px 12px !important; font-size: 0.8rem; border-radius: 6px !important;"><i class="fas fa-trash-alt"></i></button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
