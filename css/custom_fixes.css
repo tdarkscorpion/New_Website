@@ -84,11 +84,10 @@ nav ul li {
 /* --- 7. Hero Side-by-Side Section --- */
 .hero-main-layout {
     display: grid;
-    grid-template-columns: 380px 1fr;
-    gap: 30px;
-    max-width: 1350px;
-    margin: 40px auto 40px auto;
-    padding: 0 4%;
+    grid-template-columns: 360px 1fr;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
     width: 100%;
     box-sizing: border-box;
 }
@@ -101,13 +100,13 @@ nav ul li {
 }
 
 .hero-left-card {
-    background: rgba(15, 23, 42, 0.75);
-    padding: 35px;
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    background: rgba(15, 23, 42, 0.85);
+    padding: 30px;
+    border-radius: 16px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -115,9 +114,10 @@ nav ul li {
 
 .hero-right-slider {
     min-width: 0;
-    border-radius: 20px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5), 0 0 25px rgba(44, 164, 191, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(44, 164, 191, 0.15);
 }
 
 /* --- 8. Home Section Containers (News & Streamers) --- */
