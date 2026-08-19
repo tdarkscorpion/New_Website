@@ -81,22 +81,26 @@ nav ul li {
     background: transparent;
 }
 
-/* --- 7. Hero Side-by-Side Section --- */
-.hero-main-layout {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
+/* --- 7. Unified Homepage Main Grid (Hero + Slider + News + Streamers) --- */
+.home-main-grid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
     gap: 30px;
     max-width: 1350px;
-    margin: 40px auto 50px auto;
+    margin: 40px auto 60px auto;
     padding: 0 4%;
     width: 100%;
     box-sizing: border-box;
 }
 
+@media (max-width: 1024px) {
+    .home-main-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
 .hero-left-card {
-    flex: 0 0 380px;
     background: rgba(15, 23, 42, 0.75);
     padding: 35px;
     border-radius: 20px;
@@ -110,18 +114,16 @@ nav ul li {
 }
 
 .hero-right-slider {
-    flex: 1;
     min-width: 0;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5), 0 0 25px rgba(44, 164, 191, 0.15);
 }
 
-/* --- 8. Home Separate Section Container --- */
+/* --- 8. Home Separate Section Container (Grid Cell) --- */
 .home-section-container {
-    max-width: 1350px;
-    margin: 40px auto 60px auto;
-    padding: 30px;
+    margin: 0;
+    padding: 28px;
     background: rgba(15, 23, 42, 0.75);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -129,13 +131,15 @@ nav ul li {
     border-radius: 20px;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 .section-header-title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 800;
     color: #fff;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 12px;
