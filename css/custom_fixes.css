@@ -81,20 +81,20 @@ nav ul li {
     background: transparent;
 }
 
-/* --- 7. Unified Homepage Main Grid (Hero + Slider + News + Streamers) --- */
-.home-main-grid {
+/* --- 7. Hero Side-by-Side Section --- */
+.hero-main-layout {
     display: grid;
     grid-template-columns: 380px 1fr;
     gap: 30px;
     max-width: 1350px;
-    margin: 40px auto 60px auto;
+    margin: 40px auto 40px auto;
     padding: 0 4%;
     width: 100%;
     box-sizing: border-box;
 }
 
 @media (max-width: 1024px) {
-    .home-main-grid {
+    .hero-main-layout {
         grid-template-columns: 1fr;
         gap: 25px;
     }
@@ -120,10 +120,11 @@ nav ul li {
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5), 0 0 25px rgba(44, 164, 191, 0.15);
 }
 
-/* --- 8. Home Separate Section Container (Grid Cell) --- */
+/* --- 8. Home Section Containers (News & Streamers) --- */
 .home-section-container {
-    margin: 0;
-    padding: 28px;
+    max-width: 1350px;
+    margin: 0 auto 40px auto;
+    padding: 30px;
     background: rgba(15, 23, 42, 0.75);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -131,15 +132,14 @@ nav ul li {
     border-radius: 20px;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+    width: 92%;
 }
 
 .section-header-title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     display: flex;
     align-items: center;
     gap: 12px;
