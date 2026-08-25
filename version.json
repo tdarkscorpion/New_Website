@@ -1,6 +1,6 @@
 {
-    "version": "1.7.119",
-    "last_update": 1787630307,
+    "version": "1.7.120",
+    "last_update": 1787647567,
     "files": [
         "version.json",
         "Actions/Proplayer.php",
@@ -180,7 +180,7 @@
         "whitelist.txt"
     ],
     "hashes": {
-        "version.json": "6aebfaa0dc40b8c4004e013b150b4d1b",
+        "version.json": "e8e9a3ebe7959d5c2bba9f51d8f6d8fb",
         "Actions/Proplayer.php": "cedb96ff1f976a4b1789ab62d5a29659",
         "Actions/Screenshots.php": "b0fb165e48318ac6a062901be41409a9",
         "Actions/Time_Played.php": "ada932e98b506d9e20b4b52a9d6be72f",
@@ -256,14 +256,14 @@
         "Actions/refer.php": "7d7510f10f4d253188205d31aaba922c",
         "Actions/reflog.php": "a1f0f5fa5692ec5ae05245b485365f71",
         "Actions/remove-slider-image.php": "17e2af66db0f513a595593804186a519",
-        "Actions/reset-profile-pic.php": "49b3d4acedc504d1e1e6f2ef9638d5dc",
+        "Actions/reset-profile-pic.php": "3e8f1d6f8ff94d8a7f62be7fdfc5f8cc",
         "Actions/smtp-settings.php": "b37b796e5f1390174219294d0685fcc2",
         "Actions/staff.php": "ba6610f929f610ca40a2db64e17e747e",
         "Actions/submit-donation.php": "61a40e5acd59f2366f5967601da92e4b",
         "Actions/system-settings.php": "aa638f7b00ff42d01d8fa173137f574c",
         "Actions/system-update.php": "2d88abb117e5ac1a893fa753f8914d66",
         "Actions/undelete-character.php": "5648b4027a037796e7216d1dc1c8c9cd",
-        "Actions/update-profile-pic.php": "bf82f76027e23cac64495dc805438abb",
+        "Actions/update-profile-pic.php": "389140bcb7d13b75e0489857c7e12f86",
         "Actions/upload-base-files.php": "509f80a00f953483fb31d632f3defdcc",
         "Actions/user-2fa.php": "0484c1132c1a791d0167a9415b4357f7",
         "Actions/view-case.php": "1bab0eb141179ca94f9d0c886f1d605f",
@@ -323,7 +323,7 @@
         "css/image/Untitled design3.png": "dac36b844bb8d116944b16c7b956f050",
         "css/image/logo.png": "ff7caef461cb9d36fffc5d40a4ff83e9",
         "css/style.css": "bca35a5c386b3445cb494660a0783ec6",
-        "dashboard.php": "0e6c076653870d9eafb3585e9f616d8c",
+        "dashboard.php": "97f0f17462551e9e64c0069b2f076091",
         "download.php": "63ef017e8891ed0be0fd0eb5848d1c1d",
         "forgot-password.php": "e55dd94541da8482faee5528f693167c",
         "images/banner.png": "cab6cacee2e5c7b9442d4b16c5da92f9",

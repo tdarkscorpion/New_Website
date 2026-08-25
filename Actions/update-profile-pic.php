@@ -1,8 +1,98 @@
 <?php
-/* PROTECTED BY TALISMAN ENCRYPTION ENGINE v2.0 */
-$ke2bc9 = 'Talisman_Ultimate_WebSuite_2026_SecureKey!';
-$pb7788 = base64_decode('763H2mxfYuFwnSb293IjNkhheXU1bW9vejJEaVJmazE0emN4bldnR2hLdDRQanRaWkgzOHhZcFlnak5BYi91cU5IOHBWdEovQTNOd2NKWFFXNGFHcUtTc2lCanEybCtvOVhFdElVeE4zU0MycHMzdjhqVFJvakNmSVlUZmh5S1poZ1luVjYyS2VNV3d3NXdXYUFIcUZXYVg4bzdCWW0xMGIvVWhiMndBOFlZQXlaTmYzb1pJM2ZQa3prRGlRZVdjZG5rRHc1YW9NSUFFMllqZnFDWHNlbVBDekwyRi9FbHg4NS80T3dPNDZ1MTExSG05eXZibkRUVVZtVGZtN0cvQk80ZUN6N1VlNGVUbEZ0OVJ1SjBLREdlSDdOaGprb3pUY3hYZ056cHpSTkNRSVV1YmVKemkxbGJjdjJFVnY5bzZsSzc5LzQrZjVvTlQrY25XSzJiNXlOSlBoOWpHWWppNzdLTXFWM2l0WmJ3dGpxREJZMVJCcjc0d2ZTUzFxVFBrTFRLT3ZBbnJpZkh3SEo5ellRQnl4RGFKUldmemZFeGN6d3VUNG4xYmd2NlNDZlhCSFdUMk1vSVRyaFpwc1hyaUgwcGxZdG96Umt6V2pKdjFIbFVzeG00NGZEblQxQ3MvUXlDdS9ldHdjYVoxNExQVi9uck4vNGNudmNLNjJRR2pMcHhQamdlV0M0Y3NXYnZhK1V5YlVKTnROZ1QvRURIRFRYK05vMnJRZzNoamo2S2FNU1ZFU3UwOVJNMkRjbmV1TTFWbGFwbGZvSitnMFNkd3lCT1gwTk94KzBxOFNFVFYwZUdmdU84ZGhwVUZ3SUJFMHNYZGIzNUthb2E1VFRLTW14YmJUc3lQcXlZVU03NUhzL2pPSjJ3T3VXU2xCU1JoeWJydVVjckQzTHpleGg4bHFleE9UY0R4NVk3OGJlZGpvemd1TXBUaFoyTXhaUEtvODhtTlpPU1U2K2VFY3MvZjBnLzIxQ2srbUs5dHFQNHFRUWxnb2Mwb1V3K2JvejRkcExTNVRDd2lpOFF4ejV0ZXFGRjZVaDlBM1RYTGppRUljS29wbXF0N2JjaVpMdG9wNzNDTHIzekZGaUpjU1I3OVVJQ2QxdHdrTVRWdUxsdEtkQjZYd0RmY3VDYTZFbEZuNHh1VUl5TkM5bFZHN0xpNUZNZVcwOGxCbERNbnphbWdCZEVXbDB4WWtEajg0N0xGQUs5OSsxeEhvc0xtbWFIVXd3SEFIWXIyMFVucFgvR2ZRRzFUY3ZXK1MvaG9ET0ZBcysrRG42M3o0OFNZNlNXa01WcmxFUk8xVElCREEvakpULzk4bmpZWUxuaGhCWGc0eVpFYncxcVdwbXBNU3dSQU53MG1zdEtTYmdHVS9VUlM2L3VNZVA5V3NaVER2SmNETlNTU3JPdlVudlFUa202Y2NXcXZFV0loWXkxRCsvRW9xdjNuYjJPd2R1ejdTeVB2Y2VIWjRNMlRQb0hqc0xtTnR6UFdzQT09');
-$i25a14 = openssl_cipher_iv_length('aes-256-cbc');
-$v55870 = substr($pb7788, 0, $i25a14);
-$cd5e53 = substr($pb7788, $i25a14);
-eval('?>'.gzinflate(openssl_decrypt($cd5e53, 'aes-256-cbc', $ke2bc9, 0, $v55870)));
+require_once __DIR__ . '/../include/config.php';
+
+header('Content-Type: application/json');
+
+if (!isset($_SESSION['logged']) && !isset($_SESSION['username'])) {
+    echo json_encode(['status' => 'error', 'message' => 'Not logged in.']);
+    exit;
+}
+
+$username = $_SESSION['username'] ?? null;
+$accountid = $_SESSION['accountid'] ?? null;
+
+if (!$accountid && $username) {
+    try {
+        $db = Connection('db_account');
+        $stmt = $db->prepare("SELECT accountid FROM t_account WHERE name = ?");
+        $stmt->execute([$username]);
+        $accountid = $stmt->fetchColumn();
+        if ($accountid) {
+            $_SESSION['accountid'] = $accountid;
+        }
+    } catch (Exception $e) {}
+}
+
+if (!$accountid) {
+    echo json_encode(['status' => 'error', 'message' => 'Account ID not found.']);
+    exit;
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['profile_pic'])) {
+    $file = $_FILES['profile_pic'];
+
+    if ($file['error'] !== UPLOAD_ERR_OK) {
+        $error_messages = [
+            UPLOAD_ERR_INI_SIZE   => 'The uploaded file exceeds the upload_max_filesize directive in php.ini.',
+            UPLOAD_ERR_FORM_SIZE  => 'The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form.',
+            UPLOAD_ERR_PARTIAL    => 'The uploaded file was only partially uploaded.',
+            UPLOAD_ERR_NO_FILE    => 'No file was uploaded.',
+            UPLOAD_ERR_NO_TMP_DIR => 'Missing a temporary folder.',
+            UPLOAD_ERR_CANT_WRITE => 'Failed to write file to disk.',
+            UPLOAD_ERR_EXTENSION  => 'A PHP extension stopped the file upload.'
+        ];
+        $msg = $error_messages[$file['error']] ?? 'Unknown upload error.';
+        echo json_encode(['status' => 'error', 'message' => $msg]);
+        exit;
+    }
+
+    $ext = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+    $allowed_extensions = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+    if (!in_array($ext, $allowed_extensions)) {
+        echo json_encode(['status' => 'error', 'message' => 'Invalid file extension. Only JPG, JPEG, PNG, GIF, and WEBP allowed.']);
+        exit;
+    }
+
+    $max_size = 2 * 1024 * 1024; // 2MB
+    if ($file['size'] > $max_size) {
+        echo json_encode(['status' => 'error', 'message' => 'File too large. Max 2MB allowed.']);
+        exit;
+    }
+
+    $upload_dir = __DIR__ . '/../uploads/profiles/';
+    if (!is_dir($upload_dir)) {
+        if (!mkdir($upload_dir, 0755, true)) {
+            echo json_encode(['status' => 'error', 'message' => 'Failed to create upload directory.']);
+            exit;
+        }
+    }
+
+    $filename = 'profile_' . $accountid . '_' . time() . '.' . $ext;
+    $target_file = $upload_dir . $filename;
+
+    if (move_uploaded_file($file['tmp_name'], $target_file)) {
+        try {
+            $db = Connection('db_account');
+
+            // Delete previous profile photo if it exists
+            $stmt_old = $db->prepare("SELECT profile_photo FROM t_account WHERE accountid = ?");
+            $stmt_old->execute([$accountid]);
+            $old_photo = $stmt_old->fetchColumn();
+            if ($old_photo && file_exists(__DIR__ . '/../' . $old_photo)) {
+                @unlink(__DIR__ . '/../' . $old_photo);
+            }
+
+            // Update database
+            $stmt = $db->prepare("UPDATE t_account SET profile_photo = ? WHERE accountid = ?");
+            $stmt->execute(['uploads/profiles/' . $filename, $accountid]);
+
+            echo json_encode(['status' => 'success', 'message' => 'Profile picture updated!', 'path' => 'uploads/profiles/' . $filename]);
+        } catch (Exception $e) {
+            echo json_encode(['status' => 'error', 'message' => 'Database error: ' . $e->getMessage()]);
+        }
+    } else {
+        echo json_encode(['status' => 'error', 'message' => 'Failed to move uploaded file. Check folder permissions.']);
+    }
+} else {
+    echo json_encode(['status' => 'error', 'message' => 'No file uploaded.']);
+}

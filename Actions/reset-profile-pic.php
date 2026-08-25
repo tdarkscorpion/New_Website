@@ -1,8 +1,46 @@
 <?php
-/* PROTECTED BY TALISMAN ENCRYPTION ENGINE v2.0 */
-$kf0eab = 'Talisman_Ultimate_WebSuite_2026_SecureKey!';
-$p43180 = base64_decode('jiXY9ec+zmUvfGZg/eoVHy83L1lrRWVHZlVyWXFTd1JZaUEycjZ4R1BQYkxjakF1WngxK3NVaUdFaHZtV3UwMkVaRFJNbVZGRVNPSW5QNUJWODhsZkE5cDl2cC9lK1NUYnBTM2RIYnNLMTlkajlYSlVTanNpTHd5cXhRWStENnVXc1crT09wZ29saTJTQXZHZzM2cFYrejFoSGFOQ3BBcUZCVkdaU0Y1OEVOQ1BkMmVDZkhNMW52NnBEUm5lalNTK0VpSTIzQlF2alAwc3pSa3cvU2ZRWlpyQUVBY3JnVmtzcVFOTWJnQnZBWVBiTkh6aUcyNUJSemhlUDNLNzRUdFBIL0xMazA1YWtTTHlvMEtZTzZBSy9GUFk1U0d3V0NIT25yeUpMRm1tN3hGSDB3SmFEU3lkMlZjSXh4S2pPVDFCS1VEcG9Bc2x4ejA3QTNzMVlLMlVITFl6YStaT0J4b2drNXM0L1hGZ0l3cTdma0hzaFhHU09tdk9aRkN4M3hOZkVDSE5IS2xPSFVwekhsUW9BbjJuVXJ1ZkVBcno5T2N1ZStjQndGVURrcHpjeC9PZ2FHNmxWMnZSV0hRRnhmMklVeUIrbk5kaDYzV2tGalgwODBlTTY4MXVFbk01d0NFRjF1VHpHS0JHV0NDTmdtUXBpOFZweElORHNrPQ==');
-$ie8cb8 = openssl_cipher_iv_length('aes-256-cbc');
-$v27a49 = substr($p43180, 0, $ie8cb8);
-$c4f2f1 = substr($p43180, $ie8cb8);
-eval('?>'.gzinflate(openssl_decrypt($c4f2f1, 'aes-256-cbc', $kf0eab, 0, $v27a49)));
+require_once __DIR__ . '/../include/config.php';
+
+header('Content-Type: application/json');
+
+if (!isset($_SESSION['logged']) && !isset($_SESSION['username'])) {
+    echo json_encode(['status' => 'error', 'message' => 'Please login first.']);
+    exit;
+}
+
+$username = $_SESSION['username'] ?? null;
+$accountid = $_SESSION['accountid'] ?? null;
+
+try {
+    $db = Connection('db_account');
+    
+    if ($accountid) {
+        // Delete old profile photo file if it exists
+        $stmt_select = $db->prepare("SELECT profile_photo FROM t_account WHERE accountid = ?");
+        $stmt_select->execute([$accountid]);
+        $old_photo = $stmt_select->fetchColumn();
+        if ($old_photo && file_exists(__DIR__ . '/../' . $old_photo)) {
+            @unlink(__DIR__ . '/../' . $old_photo);
+        }
+
+        $stmt = $db->prepare("UPDATE t_account SET profile_photo = NULL WHERE accountid = ?");
+        $stmt->execute([$accountid]);
+    } else if ($username) {
+        $stmt_select = $db->prepare("SELECT profile_photo FROM t_account WHERE name = ?");
+        $stmt_select->execute([$username]);
+        $old_photo = $stmt_select->fetchColumn();
+        if ($old_photo && file_exists(__DIR__ . '/../' . $old_photo)) {
+            @unlink(__DIR__ . '/../' . $old_photo);
+        }
+
+        $stmt = $db->prepare("UPDATE t_account SET profile_photo = NULL WHERE name = ?");
+        $stmt->execute([$username]);
+    } else {
+        echo json_encode(['status' => 'error', 'message' => 'User session invalid.']);
+        exit;
+    }
+
+    echo json_encode(['status' => 'success', 'message' => 'Profile picture reset successfully.']);
+} catch (Exception $e) {
+    echo json_encode(['status' => 'error', 'message' => 'Database error: ' . $e->getMessage()]);
+}
