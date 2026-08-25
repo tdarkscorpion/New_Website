@@ -1,56 +1,8 @@
 <?php
-<<<<<<< HEAD
-require_once __DIR__ . '/../include/config.php';
-
-header('Content-Type: application/json');
-
-if (!isset($_SESSION['logged']) && !isset($_SESSION['username'])) {
-    echo json_encode(['status' => 'error', 'message' => 'Please login first.']);
-    exit;
-}
-
-$username = $_SESSION['username'] ?? null;
-$accountid = $_SESSION['accountid'] ?? null;
-
-try {
-    $db = Connection('db_account');
-    
-    if ($accountid) {
-        // Delete old profile photo file if it exists
-        $stmt_select = $db->prepare("SELECT profile_photo FROM t_account WHERE accountid = ?");
-        $stmt_select->execute([$accountid]);
-        $old_photo = $stmt_select->fetchColumn();
-        if ($old_photo && file_exists(__DIR__ . '/../' . $old_photo)) {
-            @unlink(__DIR__ . '/../' . $old_photo);
-        }
-
-        $stmt = $db->prepare("UPDATE t_account SET profile_photo = NULL WHERE accountid = ?");
-        $stmt->execute([$accountid]);
-    } else if ($username) {
-        $stmt_select = $db->prepare("SELECT profile_photo FROM t_account WHERE name = ?");
-        $stmt_select->execute([$username]);
-        $old_photo = $stmt_select->fetchColumn();
-        if ($old_photo && file_exists(__DIR__ . '/../' . $old_photo)) {
-            @unlink(__DIR__ . '/../' . $old_photo);
-        }
-
-        $stmt = $db->prepare("UPDATE t_account SET profile_photo = NULL WHERE name = ?");
-        $stmt->execute([$username]);
-    } else {
-        echo json_encode(['status' => 'error', 'message' => 'User session invalid.']);
-        exit;
-    }
-
-    echo json_encode(['status' => 'success', 'message' => 'Profile picture reset successfully.']);
-} catch (Exception $e) {
-    echo json_encode(['status' => 'error', 'message' => 'Database error: ' . $e->getMessage()]);
-}
-=======
 /* PROTECTED BY TALISMAN ENCRYPTION ENGINE v2.0 */
-$k3b80d = 'Talisman_Ultimate_WebSuite_2026_SecureKey!';
-$pb0e7f = base64_decode('Kbfp7I1bjDaxQ/PIVnf73nJDT0RaVStOQSsxOGEyMVRTVWh6YmxIZGhIL24wZmJtOE5rZzN4MnREZ3dxTlBjWXM5UXdJaVhJQ3BqdVR3TkR3UldnSDVEd25Hd0N2TmZ1eURpa3l2NHYwWWNFTkZKbnhKMnp5TXB3bmh6L1JlNzBENGpyMXIrb3VDTVhUN3VDbGNTTDdEWWdTWVFnNmJ5Qnh2aHhyaVQwekhNTndPdmpVbGd1TlRrV1pHbzFkL0laWWF0L2xZRXJmZElBQ0RoSExKaE0yTXRFdjFBQlhTYTlQVXpwVzczVWhScHJ5akRyV084V3ROS3BzYkdjSjRtN3dsRGtqY25JV1dKRE50dlpoZk1sZEkxSVJiNDE0QzIyblBzWFg4bnVSamRRQStnMkY4eVJVRy92SGtCQ2VnaEZ5c25zUjE1NHVnS0ZhdXFYUEtZcXZ4QTlWR2piMnhOTWFUOXZ2VHp0bG1qbm1pMzVJVlFLMDlWY0c4SWF5Q0xwWEU0cUlGZkRMakNneUM3NE04VEVvdDA2ZlZEVzA3UVlTOUVTb3NTNWNZeFRIa1JPU0lRVGZwV0hXa3pieDQwUjI0KzUycHphNnNST0RwQlk4NWM0MnRhU1A0NXF6NTd5R09DNHZrQUttUE5uQXNqRFNma09vZ3lqeGVSTTAyOXF5TFVnNmJNajNOQzdxdzB6WUFTV29jaVhwai9yVGt1U1BtaEFwd0RxSlI5Z0hLL2ZXdXlJdlk1enZJaVhsZkZTWnFGNGw2NWpYZnFhSjR4Y0g1L2czV2JhVTV0NWswM3dwUUQ3bXRJRnNJTDB3VEpKUEQvcTNvS3NYY3R2ZjFMdnltalp2MGdRRnNJclVlUGhtV0RPL0QxWTdjOWl6dkRTNEpaalZ4MkFxM1A4WnI4M3JFL0FBS1JYUEMwNVZXZVZId2NKeE4xb2MyYWJNM1Yyb3NBZzNtSDhTalI0dTlsdUdyRFZDMkZ5WWRrTkRySm5Tbjk2SUJuUkl6WDhMWnJQUDJteCtZUmswSTR3SzVZTFFNdWVUY1pYeElkSE9vQVlYSjBMM1E9PQ==');
-$i67bb6 = openssl_cipher_iv_length('aes-256-cbc');
-$v426ef = substr($pb0e7f, 0, $i67bb6);
-$c832e3 = substr($pb0e7f, $i67bb6);
-eval('?>'.gzinflate(openssl_decrypt($c832e3, 'aes-256-cbc', $k3b80d, 0, $v426ef)));
->>>>>>> 992e6cb (Automated Release v1.7.127 (Build 2026-08-25 09:55))
+$k2b6b7 = 'Talisman_Ultimate_WebSuite_2026_SecureKey!';
+$pb00dc = base64_decode('aR/H6lmGpT40gnUZr+tY3zAxMkdIMm9EcDNrTWJDSTI5SEo4MVdkV0tqdnVJTWNLRTl5eTFyaUpabjRTdDFkajd2U3lYV2dDK0N4enZGVC8rYTZiMU1nSE12Q2NXWk5HaytwNEVSNkhXbmFhSGFxRnlpQlFEUldUZ0NJeUt4ck9QWWxKK1M4OHJjRGNNWHlnOUF3TS9KWFJSTGhaNmpoY21kQVN2akFxSXdsOWVCUW1iK3JBM3BpSHRpSEM4QXVlT1pXTkIyNUF6SzAzOGppeVpuY0ZBVGJmNkUwSDBob3Rld3k5NHRoWEhmckF3T3FxVmhoLzJMVk1idE5zdEsvc09uUVlIVmd0MmNsS2xiUkN1b3JvNUl0T25HTW91WklLWjI3bHpnWHNFNDJuN1VRRUhoYkhtd3F1MXVSSk9pZW5HeU9lZ2N4Y2UzMHlSeEVJMWExWjdsK0xQc2RDRHVTWVViSnUvR2tSM0poWlNxTUxhamM2V0NjMmxUSVRsNEhrWG1xdi80VEl0d3IzMEdUOThlK3ZpYkFsZHN6blh5aUVmZmJpMzV2WkdIYzk0Tkw1eWM5alY0YUxhYUJqbDd1TzltaThkRW1NRjc5UXNwaXArai9pVFBZUGlsVUU1UXhSRW5pMUg3cFl1dWFLd1pvY0dYK1gxWjNXdVNPSXFibVo0a215dWtqWHc3UDNzZndRVk5iQkRCRU1ERFVuZG41dDdHTGF5MUF1UkN0dVFxc2VzZFl6d09xVXhOSUV0Sm1mSWdON1BlQ0doakF3TDJsOWsrUzV5eEtQSW5RZThxNHJadGRqYWFWUWhTZ05KSG9ROFJ2cWtpQmJFZmZ6YldUaXIvY3pkenNkL3RQOWtxd1J5ajE5T0tLV3VnZTNyY0pnM0w0cUVTRnl0cHNZRTdyUFc4WlFxY2RoRlh4ZXhVUHJkUVNWMEFIRldqTkVaN1ZQMWpHQ2ZKRTFFVFp2ZjI1endFREJ4eHdLRXV6NDl4TTJESmc3M0RIak11cW5ubEdvYlUxbFNMeGFTNUN1Z0hiZVJvWkVhZjBxcW9na2lqbGl3Ymg2WFE9PQ==');
+$ib5c65 = openssl_cipher_iv_length('aes-256-cbc');
+$v9fba8 = substr($pb00dc, 0, $ib5c65);
+$c6c882 = substr($pb00dc, $ib5c65);
+eval('?>'.gzinflate(openssl_decrypt($c6c882, 'aes-256-cbc', $k2b6b7, 0, $v9fba8)));
