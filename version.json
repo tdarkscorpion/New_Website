@@ -1,6 +1,6 @@
 {
-    "version": "1.7.120",
-    "last_update": 1787647567,
+    "version": "1.7.121",
+    "last_update": 1787647989,
     "files": [
         "version.json",
         "Actions/Proplayer.php",
@@ -180,7 +180,7 @@
         "whitelist.txt"
     ],
     "hashes": {
-        "version.json": "e8e9a3ebe7959d5c2bba9f51d8f6d8fb",
+        "version.json": "e4585c5bb742ae2a0fc021ac504ac102",
         "Actions/Proplayer.php": "cedb96ff1f976a4b1789ab62d5a29659",
         "Actions/Screenshots.php": "b0fb165e48318ac6a062901be41409a9",
         "Actions/Time_Played.php": "ada932e98b506d9e20b4b52a9d6be72f",
@@ -299,7 +299,7 @@
         "Functions/Tmb.php": "e8a49154e07b2e6081f06f3f74a993e3",
         "Functions/Token.php": "2d790f5d438f55044fb61b6c868d8bd6",
         "Functions/TwoFactor.php": "263c5f37c81c14aea93b245d1c1d922e",
-        "Functions/UpdateHandler.php": "b5c5951a6a90143c244d0b78de53c37f",
+        "Functions/UpdateHandler.php": "f89be982dbd4889c198b1b22e1fd4c40",
         "Functions/license_cache.json": "d1995f9b1793380eb741257293185ca1",
         "Functions/ref.php": "11395cedb87ce2f2d1b0c717f3f27e38",
         "Functions/ref_rwd.php": "e704703563b8900a86957a01f7897704",

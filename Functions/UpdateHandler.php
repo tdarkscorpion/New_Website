@@ -1,8 +1,250 @@
 <?php
-/* PROTECTED BY TALISMAN ENCRYPTION ENGINE v2.0 */
-$kf312f = 'Talisman_Ultimate_WebSuite_2026_SecureKey!';
-$p720be = base64_decode('izmy/ibRWTFtIkTcFGRj+VAweVl3RWE4c1RnNHc2YjRiZDlKYU1XOVA2cUQ3OW4rcFd4QjNZYTRlaWtlZHlleHJ3WXF6Wkw2SEJBNjIxR3BoN3Vtb3VBRVg4Z3dRSk5VWlQ4SHZ1aWsvNDd4WldzZlI3S1VhMDE2RHFVT3QyVXZUZVhvYVFTMVFzeDhMYVZFRWEvemJ1UW9BaE0raXIvWFNiY0ZPQ09HVzduMzZNK2MweXdlazQ2UHBUUXU4SDZaNk1DMnNsL0d6b1ZuUHR4MUF6L2ZGTzNqNjVUVnNQTTZ6bEhGSzM5YVFRaksyeXRtaS9IVHk3aUJhZmpma210OTU4VkQ3NFI5bll5eWRab1BDQnJLVXVIcjVNNC8wQ3RDN2lsbk9TUFJaLyt6UXFXRGU0STF0WElqZ2VlUWJkby9jZ2FIUjBGWXdvOHVJSnFCWng1TlNLeWtjaGFSQllNdTVJNFl6MC9DVmEzd2F0YlRQYUpaLzNLNVRBSEJlbngyZmVWejN1WkNhSXpQb296cVpFNjR2ZXZhRjZvUEsxU0tiUUFSUEhmY0x2NFd1Y1c0OGZVMzNPSGpqWjNoNHZiZGlyT2cvdllubDN4NzNNNDAwa3NKNDNXMmplN0R2ajFGanowZ3lPU2xaVzR4VlhRSHlzb2FtaFY1WjR2Mit5dmRRd2NhQUN5TlZteUVjUjZWeWZ0L0oxY2xNQ3dNbWRiOGtueVBsQ3VIdWVocnUzTTlVTTNYT0h2blo4eFQ3SUZIcVRrZ3BLbW12c1RvZHlaYWNWNm4rT01LV0J5ZTdJRDNHdVRlaFd4VE9QSkV5SEYrUlhIcXNxMGhXQU1KQXpkb0ttd0xPaDM1amJNei8yY3pKVGtZRmFuVm9RbVVuRi9TRUJSNXM0N3FQdjF0UVJNUG0wWE04bWNUUEtXaGlLREZwUTBPK2lUM3IwZzBZYU1LVmNoTk0vbXkvMEVRTEUwK2ZQN01lbFpFdEdCSnN4b1AwQlJ1Y3crRmwxd1YrQVF3RkQ5SGREaVJGZWpieTF2RGVFY2dERFp5WjEzczB6NzV2Y3lTTE95NU5yeUtCSk0wVEtoNGJ0Qmt2bVhKck5QV214Y1NRODVySDBnaFVVWjA4NDVBU1l1NmVaV21UNVBxQmEvRFNMMWQ4SURwTmtzUmRjSTdVT3RqcFFuV2ZKd1cwZkZyekNBSTRmVUlIeHVVWjhOWVJkZndOS09vK3ZnVWNJM2k1U1dUK0hldkV5dGNwb0ZUdTd2SnVuQ1dUcVJlSlpESnVxaGFjd09keUo1VU82eWtoYmxNWHF3bEt5bHhPcEcxd1R2eFBYeVRTMWNGR29zQVhuUmpCVG9qaWxTczNONnVyYmtyNEJsZlVBQ3NISnBwMk5XYnFEbTRiMXIyWi85RitYcVFwTE8zYXcybEVvZVB6UU5DeGpzZjBwWVBEZ1djTE5yTXVxVUJXVGM1Q1phRm5RUE9hV0ZmNVBGSG9oOEM5dytDUWJWYk1heWhuWGpNbW5EWXppdENrMlpLb3BBNlVPRzdLcUx6ZjdNTDFJc1dNeDdCZEc5Wnl6TXF3TkVNbG1Wc2RQdGE4bmJOcHIyYzY5QVBjb3hBa0dzdmpTRFF5QVkwa1ZaZmY2c0lKU2pyK3RFQlZzdjNLT1A0SUt2ZnJyQjdBRVlRRStKRERkdVIxRGYwOUFDRlJVUTZuV2lJRVhRY0dXRURudFd6SWhLbUJtVW8waEV0SDR6UUw2ejhiTk01RGVuVHkwaDByaGdrQ3BUaFdzTFpqRHVrR3Z1aGdLaGJYTzY1N0pwbHJmNFZVVGZqMFhUSHNReEFpeGVDMHF3RTN5K1lXVG1nL0FkVnRXWklEZFVrQnJ1bmllbDF2aG9SdnAvVVZFTzFHaVIxS0d3bzl0eE9LRVpoeDNhSkZSQUV6NUptb0pWYk81Z2crWHY4TUFKWUNLZExyaEJRNzFHQ296MVBBNElQY21MVk50dnFxUVNkMGZ0S0t6U0lUWUE2bktocDFJZVBxeWVvTWE3aHRxNys0L3owbHcrWjQydkdqT2xZcUdtRXZJTHQ4c002eXlmd0tObWtiaUFmSWt0Qy84ZjcxaG9saThqZ2t3TFh0SSs1Nll6b2xDUytRVnBCN0pKajZoS1VFdnZjRVRMMjYwOWdKVFdsazRBKzlRVWJTUG1Vb3lyR1NKRHlDUXJJYldSdG0waVA1VDA1TkRUWWlDc0MzNEhNRExqQlptUnVZN3EyalFaK0FreDVhZCtVSEVLbkFJWWRiZjI1aG9sLzIxRzJ0eTNHQXQ0dUUrRGxGbVZMY1YvK2NIeU5JenI3d2RKL3hDK3c0aS9WS1ZFaGF2RHVzdjdJL0huZHV2RlpKSC9PanRkS1VScHRxNEluRFQ5TkVJNmt0QjRvM3I1dGliUmtmSExieDZJQi9lc3MxMGJlSTNJaEMxMVp1Y09LNzB6TGpoeDI2VXhHUmdOSkZ3MVJPZE8wajZnM2JoMWNPclZYSzFmUDJzajJlQ3RRaEZTYkFXUStHUTZnQ0l6aHRXRWtIRWpMMlpDTU5DN3daWEtSeDJMeEVnc05oNi9uMFMzZUtmZXVOZVVPMXE5VDc4MjM4TFZLVlByNm12MHNsd3pmS004aEE4NjdQbkhybFQ4SXFHUldHNGVpU3ptbmR6WmRpbEk3KzVQZG02ZmF2QkcxTHNNTmJ6dlA1QkxrUFpRTnpmMVlrNnkzMENJTlZaV2RuR1ZsVkpJNWRPcGV2b0FnSVJGcjFzbkE0ZDFUNjhSOFpwaFdLcWxBcG5uYjd5SlFzTG9ueSs4NUdzS1RUQUdDN0V6dUFyNU9aRERwRVpZc2ZrZDl4YjFaN2J6bG5jbUhVbWdtK1VLcHp4VFBsZURpai93YnhEMmJFazhXZCtuUmd6MDErWWdIdjZUanVDUDZXemFpbUk0YU1xdnR1NGxrSGpxSWVDU25qcDJKN2RaNjVpRmxkZDRkbG1ickViTisySnkvR1hDZjIxWno2Mmp1bjlwbXBtaVRmWFIwZjJqZHpHaVRhbmxRcXpLMm52R3E5Y0Z3bnZBSi9zcWVLYm9ZQkZaVnpsbW90dFFuM1hqUE1vbGpDTEEydm91NXhMRXRDYll0MmlVd085SjNneVhiUVg1dHg5d0xkVFlQNkNVeXF4bWFNRTdpN3I4aERhMUJ1MUpXOFozWGVXRlJJblpRdDhZWkJOVGltUjVPUktZVHlmTXREZjNlUlI1d29zY3ZkTmxEakZXL2YzTnZBK2d4MHAzOTBWSFl1VW50ZFFIUHFLR01BRktlb0ZBRlRveVRGTE5odWJ1WVFzdFZWMUxhRWNoczQ5UkY1STJWY0U5WUlMbmpiamdyREZsRXFwbVFjbzFkT1hqM1RUcVdlaW5FdjRXVTlMMXNyN1l1Z0hRN3YxajdOWUFwcE5UTDgrMnBFZEQ1UEN6VG9iZmVpTkI2OG92OFQvbFE4NXFXVjcvWkZoRE94alIvZi9xV1BtL0FpbWF5R2ZhWFdtQUdOVXZhUlN1Tk9jSis5Z1JBM0c2NVlGRWZEZDVGMDhrcEFwdU5TQVdqWjdWZFcvT2VmYTJGcllzdlRHbzNYbmtkZDlFa0pDQ0ZEbVhmZ1h2c0lBYUM1Q29HZzgyYTRMeGg0cEFBZmYxMTk5OG44VjJ0ZWhaUG5Pc2NqekNEMGhrbW9FZUcyQ1NSZVdTZG5mOVFlR1paZ21hMHdRbUxteUNTY3VQcXVsY0I3U090VElyeG5pdTMvV3JBVnE5UEFacWJzZ0RWekdRSktpbDlVUXZHSkpDYmtWMFFjUCtsU2gxOTIvUXpOTG14SENaUm1aOFBzUnF3UW5FQTNneENuK0s2SFBDbC81NTNxZEt5NThYK0lZZGRyc0ZQaTJNNG9wR29IcS9VdTBLMXVJOG5aUlFoTWNQUDZ6WGhsQjQ1NHV5cFpTTEdBUVF2K0luOXBGeC9pMHlRZitzK1dPYm9rN1QybVpZVUpyVlRBZzNlZkpNMHcxUnkxOHI4RFhxOXJUY1h0RHJNdEJJR01UdXdtN2FEYmJjQ3hiY2FIR2pzMHRDa2RqRGRPOGRaN2JRZThGWlB0cFhqeTVNcEQwOHJJZzBqTTg4dWttakd0RGIxNkVlYS9Yam9iaWhGYlo3bG1ENFhtUFNnTys5WUhYNVZoQXZXN0Y5cGxLaXNWREdpalBhZzVtVS94cFQzYTFIeHQxTWtTOGdNc1B0cUNTS3hmTS9vZnRsYVFqcGpXeDhTQkFlUU1yd1JQanAzNUR6SDJLYUZ6MVZqYWVsOURsNjl6eGJDOEI2azFMY1hVbDRaS3RGZFZWdndqSG9tMTd1Tmx1anlweTRwQWcrOFhUV0diS1VUdmtpL1g0cUhHUUNFdFE9PQ==');
-$i20d79 = openssl_cipher_iv_length('aes-256-cbc');
-$v81836 = substr($p720be, 0, $i20d79);
-$cf26cc = substr($p720be, $i20d79);
-eval('?>'.gzinflate(openssl_decrypt($cf26cc, 'aes-256-cbc', $kf312f, 0, $v81836)));
+
+/**
+ * Talisman Auto-Update System
+ * Automatically synchronizes local files with the GitHub master branch.
+ */
+
+class UpdateHandler {
+    private static $repo_user = 'tdarkscorpion';
+    private static $repo_name = 'New_Website';
+    private static $branch    = 'main';
+    
+    // Remote URLs (Pointing to the PUBLIC 'New_Website' repo)
+    private static $version_url = 'https://raw.githubusercontent.com/tdarkscorpion/New_Website/main/version.json';
+    private static $update_url  = 'https://raw.githubusercontent.com/tdarkscorpion/New_Website/main/';
+    
+    // Local version file
+    private static $version_file = __DIR__ . '/../version.json';
+
+    /**
+     * Check for updates and apply them if available.
+     * This is designed to be called by LicenseHandler to avoid excessive requests.
+     */
+    public static function GetUpdateStatus() {
+        $local = self::GetLocalVersion();
+        $remote = self::GetRemoteVersion();
+
+        if (!$remote) return ['status' => 'error', 'message' => 'Could not reach update server.'];
+
+        $available = version_compare($remote['version'], $local['version'], '>');
+        return [
+            'status' => 'success',
+            'available' => $available,
+            'local_version' => $local['version'],
+            'remote_version' => $remote['version'],
+            'files' => $remote['files'] ?? []
+        ];
+    }
+
+    public static function GetRemoteUpdateData() {
+        return self::GetRemoteVersion();
+    }
+
+    public static function RunUpdate($remote_data) {
+        return self::ApplyUpdate($remote_data);
+    }
+
+    private static function GetLocalVersion() {
+        if (!file_exists(self::$version_file)) {
+            return ['version' => '0.0.0', 'last_update' => 0];
+        }
+        return json_decode(file_get_contents(self::$version_file), true);
+    }
+
+    private static function GetRemoteVersion() {
+        // Add timestamp to bypass GitHub's raw content cache
+        $url = self::$version_url . '?t=' . time();
+        $ctx = stream_context_create(['http' => ['timeout' => 5, 'header' => "User-Agent: Talisman-Updater\r\n"]]);
+        $data = @file_get_contents($url, false, $ctx);
+        return $data ? json_decode($data, true) : false;
+    }
+
+    private static function ApplyUpdate($remote_data) {
+        @set_time_limit(0);
+        $files = $remote_data['files'];
+        $hashes = $remote_data['hashes'] ?? [];
+        $fail_count = 0;
+        $skip_count = 0;
+        $ok_count   = 0;
+        $unchanged_count = 0;
+        $errors = [];
+
+        // Files that should never be overwritten by the auto-updater
+        $protected = [
+            'include/config.php', 'include/db_config.php',
+            'include/item_desc.csv', 'include/item.csv',
+            'version.json',
+        ];
+
+        // Re-use single cURL handle for persistent HTTPS connection
+        $ch = function_exists('curl_init') ? curl_init() : null;
+
+        foreach ($files as $file) {
+            $file = str_replace('\\', '/', $file);
+
+            // Skip protected / upload paths
+            if (in_array($file, $protected)) { $skip_count++; continue; }
+            if (strpos($file, 'install/')  === 0) { $skip_count++; continue; }
+            if (strpos($file, 'uploads/')  === 0) { $skip_count++; continue; }
+            if (strpos($file, 'assets/icons/') === 0) { $skip_count++; continue; }
+            if (preg_match('/\.(zip|7z|rar|exe|gz|tar)$/i', $file)) { $skip_count++; continue; }
+
+            $local_path = __DIR__ . '/../' . $file;
+
+            // SMART DIFFING: Skip download if local file exists and MD5 matches remote hash
+            if (isset($hashes[$file]) && file_exists($local_path)) {
+                if (md5_file($local_path) === $hashes[$file]) {
+                    $unchanged_count++;
+                    $ok_count++;
+                    continue;
+                }
+            }
+
+            $content = self::FetchFile($file, $ch);
+            if ($content === false) {
+                $fail_count++;
+                $errors[] = "Download failed: $file";
+                continue;
+            }
+
+            $dir = dirname($local_path);
+
+            if (!is_dir($dir)) {
+                if (!@mkdir($dir, 0755, true)) {
+                    $fail_count++;
+                    $errors[] = "Cannot create dir: " . dirname($file);
+                    continue;
+                }
+            }
+
+            if (@file_put_contents($local_path, $content) === false) {
+                $fail_count++;
+                $errors[] = "Permission denied: $file";
+            } else {
+                $ok_count++;
+            }
+        }
+
+        if ($ch) {
+            curl_close($ch);
+        }
+
+        // Write version.json to mark update as applied
+        $version_written = @file_put_contents(
+            self::$version_file,
+            json_encode(array_merge($remote_data, ['applied_at' => time()]), JSON_PRETTY_PRINT)
+        );
+
+        // Run Database Auto-Migration / Auto-Creation
+        if (function_exists('EnsureAllDatabaseTablesExist')) {
+            EnsureAllDatabaseTablesExist();
+        }
+
+        if ($fail_count === 0) {
+            $updated_cnt = $ok_count - $unchanged_count;
+            return ['success' => true, 'message' => "Updated & Database Synchronized successfully ({$updated_cnt} files updated, {$unchanged_count} unchanged, {$skip_count} skipped)"];
+        }
+
+        // If at least half succeeded, treat as partial success so version.json gets written
+        $total_attempted = $ok_count + $fail_count;
+        if ($ok_count > 0 && $fail_count <= 3) {
+            return [
+                'success'  => true,
+                'message'  => "Updated with {$fail_count} minor warning(s). {$ok_count} files applied.",
+                'warnings' => $errors
+            ];
+        }
+
+        return [
+            'success' => false,
+            'message' => "Update failed: {$fail_count} file(s) could not be applied out of {$total_attempted}.",
+            'errors'  => $errors
+        ];
+    }
+
+    /**
+     * Check local file integrity against manifest hashes
+     */
+    public static function VerifyIntegrity() {
+        $remote_data = self::GetRemoteUpdateData();
+        if (!$remote_data || !isset($remote_data['hashes'])) {
+            return ['status' => 'error', 'message' => 'Could not fetch integrity manifest from GitHub.'];
+        }
+
+        $results = [];
+        $hashes = $remote_data['hashes'];
+        $total = count($hashes);
+        $matches = 0;
+
+        foreach ($hashes as $file => $expected_hash) {
+            $file = str_replace('\\', '/', $file);
+            if ($file === 'version.json') continue; // Skip self-verification to avoid recursive hash mismatch
+            
+            $local_path = __DIR__ . '/../' . $file;
+            $status = 'missing';
+            $current_hash = '';
+
+            if (file_exists($local_path)) {
+                $current_hash = md5_file($local_path);
+                
+                if ($current_hash === $expected_hash) {
+                    $status = 'match';
+                    $matches++;
+                } else {
+                    $status = 'outdated';
+                }
+            }
+
+            $results[] = [
+                'file' => $file,
+                'status' => $status,
+                'local_hash' => substr($current_hash, 0, 8),
+                'remote_hash' => substr($expected_hash, 0, 8)
+            ];
+        }
+
+        return [
+            'status' => 'success',
+            'summary' => [
+                'total' => $total,
+                'matches' => $matches,
+                'issues' => $total - $matches
+            ],
+            'details' => $results
+        ];
+    }
+
+
+    private static function FetchFile($path, $ch = null) {
+        $cleanPath = str_replace('\\', '/', $path);
+        $parts = explode('/', $cleanPath);
+        $encodedParts = array_map('rawurlencode', $parts);
+        $url = self::$update_url . implode('/', $encodedParts) . '?t=' . time();
+
+        if (function_exists('curl_init')) {
+            $created_handle = false;
+            if (!$ch) {
+                $ch = curl_init();
+                $created_handle = true;
+            }
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+            curl_setopt($ch, CURLOPT_USERAGENT, 'Talisman-Updater');
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+            $content = curl_exec($ch);
+            $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            if ($created_handle) {
+                curl_close($ch);
+            }
+            if ($code === 200 && $content !== false) {
+                return $content;
+            }
+        }
+        $ctx = stream_context_create(['http' => ['timeout' => 30, 'header' => "User-Agent: Talisman-Updater\r\n"]]);
+        return @file_get_contents($url, false, $ctx);
+    }
+}
