@@ -55,8 +55,7 @@ class UpdateHandler {
     private static function GetRemoteVersion() {
         // Add timestamp to bypass GitHub's raw content cache
         $url = self::$version_url . '?t=' . time();
-        $ctx = stream_context_create(['http' => ['timeout' => 5, 'header' => "User-Agent: Talisman-Updater\r\n"]]);
-        $data = @file_get_contents($url, false, $ctx);
+        $data = self::FetchFile($url);
         return $data ? json_decode($data, true) : false;
     }
 
@@ -217,10 +216,14 @@ class UpdateHandler {
 
 
     private static function FetchFile($path, $ch = null) {
-        $cleanPath = str_replace('\\', '/', $path);
-        $parts = explode('/', $cleanPath);
-        $encodedParts = array_map('rawurlencode', $parts);
-        $url = self::$update_url . implode('/', $encodedParts) . '?t=' . time();
+        if (strpos($path, 'http://') === 0 || strpos($path, 'https://') === 0) {
+            $url = $path;
+        } else {
+            $cleanPath = str_replace('\\', '/', $path);
+            $parts = explode('/', $cleanPath);
+            $encodedParts = array_map('rawurlencode', $parts);
+            $url = self::$update_url . implode('/', $encodedParts) . '?t=' . time();
+        }
 
         if (function_exists('curl_init')) {
             $created_handle = false;

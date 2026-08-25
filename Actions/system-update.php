@@ -1,8 +1,85 @@
 <?php
-/* PROTECTED BY TALISMAN ENCRYPTION ENGINE v2.0 */
-$k4761c = 'Talisman_Ultimate_WebSuite_2026_SecureKey!';
-$p2eb50 = base64_decode('LzdSiR46P5kDvluo2rTHtkwzbkJWOTRla1J3T2NyT3pGV2RIdmo3dCtlNlFQMFNIZElsVjg0em5NZUg3K3d2eUdZUG5FSTIrdHl5VHl5Vlo1VGRDcEYrbVR5NzFqWlhmT0gxUDhvN1lTNU9DOEJtU1Y1YWNxTHN0ZlNSQ2N1am44TjBFOU10MGJnRmE0ak1KOUxKM2ZTV2VVVUFTOGlYUm1BYXNrQnI1ajlFdTkvZWtKeEVGaW4vTTdOSGdzODVwT1B3TkFYSWViUm9rcmQrNy91UmE2TUNNTkxkWndkM1A3M1V4UUtxNDBWOXdlSndRcStJVk1BN0w2ZXk0SUhId1B1dHo4Y2ZVK2RqdHpGbDZoTEZKcSt3cFIxUDlyZ2krUCswV3FCTlZuRnRVMk0vMXk3aU9HTk5rTGoyejdSa0hFWUVmWGZXZUE4aDJBc3RML2RhazBrVm4xNitwaldBWVJycFZCMGlSSFFvMlNvY1dxWVdiY1VSeHRWd3lZdnR0RFJ1c2ZyaXd3b0lhMzFQOE9lR1NMN2JZaUpNbjM3eFJzRU1CRWxGdm1RM0Y1SVE3THRUSG9pSzN0bXEyUVZpZDB4QnhQQjd2ZzBvODF0cldvWkZwZFM3aFU5WjFsdnJmc1hvZ3JhblNEaHFpeUpWYWhLL2t1TkJ6akZSLzNtaHNHbkF6Zytvb2MxbjhVNDh4RzdQRjF1bUJHZ2xSR0d6cSs3UGhuTzhPY0owWm1qbE85b0YxVGFhZHFCMkpuYU5pUEJ4aytNN244K3kxcTFvYjNkL2RHeFNRc1RJR09JQTVTMmRxMXlKUlVoOGM1dmJFQVFFdllOVWlWMmNNbXE3ZWVWZUwwQ3JDcXBXMTFSZEVUM0t5UUVDb1VwRlNUTFE5WlQ4ZGsvRzU4SkNMZ0IwOVJ3N3lYL3BjZ05FTU5SSm9VbGRVcXVXZ3ZVVWhNUlRYZmFnYTB5Qks3Q082U2JZL051T2RkY2FMb2VBM2psSEM3MmVXWHNRSXhka01ieUxUTDl4dy96YjNOTDBJRWhGSEdpTC9HYzhEeVgwVTlpcjlzV0QyQ2I5T280dmNYS24rMDd6TmozNWh3UWV4eTl5dXlkQ2pVd2lnZlpGSUV3c3ZsSCtpeU9YUlR5cVd4Y1VtNE8xRC83S1dGRExEZ1U2MG5LZWNtTmFXcGNocUorQ294UVpGakExcmNJd1hKb2lqYWJhMmhLT0ZsUzEwVjAyS2lnZjk4cVBFNk8vditsY0t0dWdZZk9ieUdURGI2YUdVWmUxUkFOOEdET0xmR0tHQjNtdHlwejduYldjSmdUNHJpbE5vaVJtTkpWbXR2V0RyeHIwdGJuNW9LalVYZ2Ric2NUdHF6SWhmb21xWS9QUURHNjhKY3FvbkRraSt5TzY1cXZ4cTJtaWtNRlVzVVNlZ0VKbzVpMGNqN212UzRxWlcyeE9lNzlERk4rc2U0c2ZpSGp2bGUvd2JpZmN2WDdsUXM3OGp4QzVKb0dYQkhTbDVoSm1iVkJ2aVF6elpobHNFcVYrZERCOFFWWngzQ2VGWDZUMDdvM1RaWjlJRDZxOWh0YjQ3TkE9PQ==');
-$i34f52 = openssl_cipher_iv_length('aes-256-cbc');
-$v767b6 = substr($p2eb50, 0, $i34f52);
-$cfaa0e = substr($p2eb50, $i34f52);
-eval('?>'.gzinflate(openssl_decrypt($cfaa0e, 'aes-256-cbc', $k4761c, 0, $v767b6)));
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
+require_once __DIR__ . '/../include/config.php';
+require_once __DIR__ . '/../Functions/UpdateHandler.php';
+
+header('Content-Type: application/json');
+
+// Only allow Administrators (PV 9) to perform system updates
+if (!IsAdministrator()) {
+    echo json_encode(['status' => 'error', 'message' => 'Unauthorized access.']);
+    exit;
+}
+
+$method = $_GET['method'] ?? 'check';
+
+switch ($method) {
+    case 'check':
+        $status = UpdateHandler::GetUpdateStatus();
+        if ($status['status'] === 'error') {
+            echo json_encode([
+                'status' => 'error',
+                'message' => $status['message'] ?? 'Could not reach update server.',
+                'current_version' => $status['local_version'] ?? 'unknown'
+            ]);
+        } else if ($status['status'] === 'success' && $status['available'] === true) {
+            echo json_encode([
+                'status' => 'update_available',
+                'current_version' => $status['local_version'],
+                'latest_version' => $status['remote_version']
+            ]);
+        } else {
+            echo json_encode([
+                'status' => 'up_to_date',
+                'current_version' => $status['local_version'] ?? 'unknown'
+            ]);
+        }
+        break;
+
+    case 'update':
+        $remote_version_data = UpdateHandler::GetRemoteUpdateData();
+        if ($remote_version_data) {
+            $result = UpdateHandler::RunUpdate($remote_version_data);
+            if ($result['success']) {
+                if (isset($_GET['redirect'])) {
+                    header("Location: ../index.php?update=success");
+                    exit;
+                }
+                echo json_encode(['status' => 'success', 'message' => 'System updated successfully!']);
+            } else {
+                echo json_encode([
+                    'status' => 'error', 
+                    'message' => $result['message'],
+                    'errors' => $result['errors']
+                ]);
+            }
+        } else {
+            echo json_encode(['status' => 'error', 'message' => 'Could not fetch update data.']);
+        }
+        break;
+
+    case 'verify':
+        echo json_encode(UpdateHandler::VerifyIntegrity());
+        break;
+
+    case 'db_sync':
+        if (function_exists('EnsureAllDatabaseTablesExist')) {
+            $ok = EnsureAllDatabaseTablesExist();
+            if ($ok) {
+                if (isset($_GET['redirect'])) {
+                    header("Location: ../dashboard.php?page=admin&action=systemSettings&db_sync=success");
+                    exit;
+                }
+                echo json_encode(['status' => 'success', 'message' => 'Database tables and schemas updated successfully!']);
+            } else {
+                echo json_encode(['status' => 'error', 'message' => 'Failed to synchronize database tables.']);
+            }
+        } else {
+            echo json_encode(['status' => 'error', 'message' => 'Migration handler not found.']);
+        }
+        break;
+
+    default:
+        echo json_encode(['status' => 'error', 'message' => 'Invalid method.']);
+        break;
+}
