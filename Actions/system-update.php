@@ -1,5 +1,5 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) { session_start(); }
+if session_status() === PHP_SESSION_NONE) { session_start(); }
 require_once __DIR__ . '/../include/config.php';
 require_once __DIR__ . '/../Functions/UpdateHandler.php';
 
@@ -20,7 +20,8 @@ switch ($method) {
             echo json_encode([
                 'status' => 'error',
                 'message' => $status['message'] ?? 'Could not reach update server.',
-                'current_version' => $status['local_version'] ?? 'unknown'
+                'current_version' => $status['local_version'] ?? 'unknown',
+                'latest_version' => $status['remote_version'] ?? 'unknown'
             ]);
         } else if ($status['status'] === 'success' && $status['available'] === true) {
             echo json_encode([
@@ -31,7 +32,8 @@ switch ($method) {
         } else {
             echo json_encode([
                 'status' => 'up_to_date',
-                'current_version' => $status['local_version'] ?? 'unknown'
+                'current_version' => $status['local_version'] ?? 'unknown',
+                'latest_version' => $status['remote_version'] ?? ($status['local_version'] ?? 'unknown')
             ]);
         }
         break;
