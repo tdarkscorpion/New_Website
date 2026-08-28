@@ -1,6 +1,23 @@
-/* custom_fixes.css - Resolution for margins and overlapping elements */
+/* 1. Global Navbar Spacing & Master Stacking Context */
+header {
+    position: relative !important;
+    z-index: 100000 !important;
+}
 
-/* 1. Global Navbar Spacing */
+nav {
+    position: relative !important;
+    z-index: 100001 !important;
+}
+
+.home-section-container,
+.hero-left-card,
+.hero-right-slider,
+.glass-card,
+.left {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
 nav ul li {
     margin: 0 12px !important; /* Reduced from 40px to resolve desktop crowding */
 }
@@ -32,6 +49,21 @@ nav ul li {
 
 /* 5. Mobile Adjustments */
 @media (max-width: 992px) {
+    nav .menu.mobile-active {
+        display: flex !important;
+        flex-direction: column !important;
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important;
+        width: 300px !important;
+        height: 100vh !important;
+        z-index: 9999999 !important;
+        background: rgba(15, 15, 26, 0.98) !important;
+        backdrop-filter: blur(25px) !important;
+        -webkit-backdrop-filter: blur(25px) !important;
+        box-shadow: -15px 0 50px rgba(0, 0, 0, 0.9) !important;
+        overflow-y: auto !important;
+    }
     nav ul li {
         margin: 10px 0 !important;
     }
