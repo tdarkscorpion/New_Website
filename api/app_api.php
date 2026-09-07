@@ -53,13 +53,60 @@ function verifyToken($token, $secret) {
 }
 
 function getBearerToken() {
-    $headers = getallheaders();
-    if (isset($headers['Authorization'])) {
-        if (preg_match('/Bearer\s+(.*)$/i', $headers['Authorization'], $matches)) {
-            return trim($matches[1]);
+    $token = null;
+
+    // 1. Check all headers case-insensitively (apache_request_headers / getallheaders)
+    $headers = function_exists('apache_request_headers') ? apache_request_headers() : (function_exists('getallheaders') ? getallheaders() : []);
+    if (is_array($headers)) {
+        foreach ($headers as $k => $v) {
+            if (strcasecmp($k, 'Authorization') === 0) {
+                if (preg_match('/Bearer\s+(.*)$/i', $v, $matches)) {
+                    $token = trim($matches[1]);
+                    break;
+                }
+            }
         }
     }
-    return $_REQUEST['token'] ?? null;
+
+    // 2. Check server environment headers (Apache FastCGI / CGI / Proxy / mod_rewrite)
+    if (!$token) {
+        $serverEnvKeys = [
+            'HTTP_AUTHORIZATION',
+            'REDIRECT_HTTP_AUTHORIZATION',
+            'REDIRECT_REDIRECT_HTTP_AUTHORIZATION',
+            'X-HTTP_AUTHORIZATION',
+            'HTTP_X_AUTHORIZATION'
+        ];
+        foreach ($serverEnvKeys as $envKey) {
+            if (!empty($_SERVER[$envKey])) {
+                if (preg_match('/Bearer\s+(.*)$/i', $_SERVER[$envKey], $matches)) {
+                    $token = trim($matches[1]);
+                    break;
+                } else {
+                    $token = trim($_SERVER[$envKey]);
+                    break;
+                }
+            }
+        }
+    }
+
+    // 3. Check $_GET / $_POST / $_REQUEST query parameters
+    if (!$token) {
+        $token = $_REQUEST['token'] ?? $_GET['token'] ?? $_POST['token'] ?? null;
+    }
+
+    // 4. Check JSON raw payload body
+    if (!$token) {
+        $raw = @file_get_contents('php://input');
+        if (!empty($raw)) {
+            $parsed = json_decode($raw, true);
+            if (is_array($parsed) && !empty($parsed['token'])) {
+                $token = trim($parsed['token']);
+            }
+        }
+    }
+
+    return $token;
 }
 
 function requireAuth($secret) {

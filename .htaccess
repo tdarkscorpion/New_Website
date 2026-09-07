@@ -22,6 +22,16 @@ ErrorDocument 404 /Error/404.php
 ErrorDocument 500 /Error/500.php
 ErrorDocument 503 /Error/503.php
 
+# Preserve Authorization header for Mobile REST API
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP:Authorization} ^(.*)
+    RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+</IfModule>
+<IfModule mod_setenvif.c>
+    SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+</IfModule>
+
 # 3. Disable Directory Indexing
 Options -Indexes
 
