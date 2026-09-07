@@ -1,8 +1,87 @@
 <?php
-/* PROTECTED BY TALISMAN ENCRYPTION ENGINE v2.0 */
-$k5c566 = 'Talisman_Ultimate_WebSuite_2026_SecureKey!';
-$p045ec = base64_decode('xb0orqdKqxOMQDK2dXwmmlNpZmxNQ3YraWJXdWdaN2JxbWJ1TVRRT0dXcGMza3A3YjArQXFmTjhabGE2L21PUXkzbEpvOUNReldIazAxWHJDcjI2bkhEb1ZFSFA3U01VRHpWU1FTSmJGNVJzU2kwSlVuQ25zd1kyeXVsOHV5VWtpbSt4dFErWGxhelBUekYxTzFEdkkwRHVlOTdMRWlodENpV3lPTkVZbTdnZk4yYXhVTzRuRnZibUY2UEVsVXgvaXIzYVZqYVN6N3huTzkyQkNBa1JQUjBobllxanAydmlpeEh5V2xhQnpjazU4djBqWEQ1MkFOSXpKa0t0TCtSWUYwWExBbHBwa0VlU0NLVmE4cW1hTUQvRFZpT0xIZjAxdjNkSnplL2ppQlBEZ2pPWVZoczlCQWk4bkxkcHR4OWFUSlQ0NUVMUTE3NGJISDQ2MVczdDNGY0poRjhZZE1UeFJxOWZMdEF5Y0pBNXFMbnVWVXNPTnpLcmVCUW1TMVBMaFZ1eUFGOFZmcURUSkNYNkJTWGtSM1hRVTRTVFozcjRwbGlCLzdvVEhJOFFab01JK29YL0k3aFQ2ZVR5WjAvSWJtZ3BqdU9nRGphZklvQXhSY0lac05OUXhKSHZUK3dpOWhKMHdpVVVsV09JRGs0bWNhS1JCa1d5Z1Jtd1B5ajVtaFN1WHd2alppK255LzlPUi9WaExHZWo1M0sxaENVZTZhZythMm9NZ3VlM0tJbGZXdU01RytFSGw4NHZpeVViekdXSDhUcWR3L0FyeGJGcTd5QzVJY0psNHB0NkcyT0krMTRjSyt3WHJIUkpsdXdjNW5JTklyS0tWTVI1NSt1dlBTUEgwN2d1SDRZNUNTTDd1QjdNbFF0UjEyOThzQkp2SllUS3NmK1MzN0RBdytaMHl1aGZudEo4U200bFR2Ly9BQ3ZYRW91ZTMxQzk1czZBZ2xVYTJXMGo5bWtEOTBkQ2txcTUxZlVxWFUreGNFVjZRejA0dXN3bmpSWVJpMEV2QUNNaElFUEhyVXZMaVBaelFrSWlZcUpMa1pad2owN0J6OWM5elN5elptbGlnVUpockNsZDBIb0htQ3Z2R1JmZm9mb1UxMk9aUGdYNzhXRTJyYTBzYnYwR0tVQWxYa016NlRZaUxBSHdDd09WcDZUVDdOQjluR0hqTDRUMXNscGFEN1dTTUZnS1J0VklFYTcyUjlXd0Evc0svdytEZGtjUkZseGFwL1pVTGlUdVlVMlhJVmcvWUVWekxhb3pRdVhqdGJHMFNKNGt0UnRtcFFqeHVxcmU3WDBvUTBWNTVXb2FLU085M2MydHRpZklQczFmaTVqYVUrWksrZnBKSWw4WGFweFNZRkc4dU5HdVRITUVvUUxFRGdNTGtqZ3dpckkrQ1BBY3Z3Zm5jRGNmVUVKcTQ2ZFpiNUt3OWNUeHJMdDhaVUQ3SWpCRmp0KzgvK3JuL2dvWkVLLytHeCt6SlNPNXFGSDlzK1JVd1JOcHAvUFZUbElzYVR5c2d6OHZOWXZ3THEzUjh3aHVnZkt0Q2Vkcm43bndOSUpvWWo3YXVWVnZPZUVvemcvQjNJYnhJVWdIL1QzV1ZYektyMVpjMVJ5UGhzOWNNT0JpNWJzUFpCYmJIZmpEeG9rdFI4bFM1aUhVZGVnanU2cExaeFZyQUJsSy9BWktPNm1scFZVU2xEOUpLdEVrK1MvNmJ6SDRWWnhJTzdQNGdRS3hhaGVYdlRKWW1VU1J4QnBVVE9OdVIrRElzRjB5UWZRbFV6eWQxU0twbHo2bndLOFlVaHU3YmwyZ0dZL2hFaTI3cE1vM1RqTWZyS3hTdWxoTEY2SFRqbjY3aWJEeEpTamFkeXhWQWVHL1NON1cycW1oenZJUnlpRzdvQ0hvOU10YkdRVWFiREF5R1pyOGR3PT0=');
-$i07b71 = openssl_cipher_iv_length('aes-256-cbc');
-$v2442a = substr($p045ec, 0, $i07b71);
-$c7beaa = substr($p045ec, $i07b71);
-eval('?>'.gzinflate(openssl_decrypt($c7beaa, 'aes-256-cbc', $k5c566, 0, $v2442a)));
+
+       
+$loadedSettings = array();
+try {
+    $db = Connection('db_misc');
+    if ($db) {
+        $settings = $db->query('SELECT * FROM t_settings')->fetchAll(PDO::FETCH_ASSOC);
+        if ($settings) {
+            foreach ($settings as $_setting) $loadedSettings[$_setting['setting']] = $_setting;
+        }
+    }
+} catch (Exception $e) {
+    // Database connection failed or offline; continue with empty settings
+}
+
+       function GetSettingValue ( $setting , $parseType = null ) {
+              global $loadedSettings ;
+              $data = $loadedSettings ;
+              if ( ! is_null ( $parseType ) ) {
+                     if ( $parseType === 'Bool' ) {
+                            if ( $data [ $setting ] [ 'value' ] === "true" ) return true ;
+                            if ( $data [ $setting ] [ 'value' ] === "false" ) return false ;
+                     }
+              }
+              return isset($data[$setting]['value']) ? $data[$setting]['value'] : null;
+       }
+
+        function SetSettingValue ( $setting , $value ) {
+               global $loadedSettings ;
+               $db = Connection ( 'db_misc' ) ;
+               
+               // Use INSERT ... ON DUPLICATE KEY UPDATE to ensure setting is created if missing
+               $query = $db->prepare ( 'INSERT INTO t_settings (setting, value, title, `use`) 
+                                       VALUES (:setting, :value, :title, :use) 
+                                       ON DUPLICATE KEY UPDATE value = :value2' ) ;
+               
+               $title = isset($loadedSettings[$setting]['title']) ? $loadedSettings[$setting]['title'] : $setting;
+               $use = isset($loadedSettings[$setting]['use']) ? $loadedSettings[$setting]['use'] : 'Input';
+               
+               $success = $query->execute ( array ( 
+                      ':setting' => $setting, 
+                      ':value' => $value,
+                      ':title' => $title,
+                      ':use' => $use,
+                      ':value2' => $value
+               ) ) ;
+               
+               if ($success) {
+                      $loadedSettings[$setting]['value'] = $value;
+                      $loadedSettings[$setting]['setting'] = $setting;
+                      $loadedSettings[$setting]['title'] = $title;
+                      $loadedSettings[$setting]['use'] = $use;
+               }
+               return $success;
+        }
+
+       function SettingValueEqualsWith ( $setting , $eqWith ) {
+              return GetSettingValue ( $setting ) === $eqWith ;
+       }
+
+       function GetWebsiteOption($option) {
+              try {
+                     $db = Connection('db_misc');
+                     if (!$db) return null;
+                     $query = $db->prepare('SELECT option_value FROM t_website_options WHERE option_name = ?');
+                     $query->execute([$option]);
+                     $rows = $query->fetchAll(PDO::FETCH_ASSOC);
+                     if (empty($rows)) return null;
+                     $last = end($rows);
+                     return $last['option_value'];
+              } catch (Throwable $e) {
+                     return null;
+              }
+       }
+
+       function SetWebsiteOption($option, $value) {
+              try {
+                     $db = Connection('db_misc');
+                     if (!$db) return false;
+                     $db->exec("CREATE TABLE IF NOT EXISTS t_website_options (option_name VARCHAR(255) PRIMARY KEY, option_value TEXT)");
+                     $ins = $db->prepare('INSERT INTO t_website_options (option_name, option_value) VALUES (?, ?)');
+                     return $ins->execute([$option, (string)$value]);
+              } catch (Exception $e) {
+                     return false;
+              }
+       }

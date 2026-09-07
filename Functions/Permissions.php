@@ -1,8 +1,83 @@
 <?php
-/* PROTECTED BY TALISMAN ENCRYPTION ENGINE v2.0 */
-$kfa678 = 'Talisman_Ultimate_WebSuite_2026_SecureKey!';
-$p1dfc7 = base64_decode('mgMhwQEemIT7S7CPvQF72jNZUnhyYSs3bGN5VDBRK2RqQncrK0pPRVRMN0hLRit1SHlqc1QrbkJ5UHNGU3pGWjI4U28yU0YxZUl3ZTdXVHBwaEsrMjAwUHFmcStROVkrd1p6bXB0ck02YkpXdnpEVjBOanY0SGZicHlpL2Q2MDByMWhIZDBoeERuU3J1Tk9vUTF2RkN2M3JUU0MwR2xBWDVpS2R5Q1pZa2FQQ0FrdzRvV3I1YU8zZ0Q4MGRGcFZ2UWF3WFpJeE04empQSFc4Q2pSWGVVR0ZCL1FNNDNtR0FSZ0N5bUl1WTc3dTJHZ0ZxTmNrWTJPY214aFZpS1R1UjR3OFg5NGdMQVdNZEIrbzAvRVpaY3pmbHJJMHZyazJFVEJTZ3FkVkxCUzJsTmFPaW1raEV6SitQc2pQZi9WNHJyNnpyR0U5YzF5WDEvWjI5WU1Rb0EzNzlZVlU2Wm9qaVhuUktydW85S0l5M01UemQ3RlQwRVI0MTdGeEw5YnZBZFRVcjIvZGhpTy9ha0ROZUhaNlNVYlMxNU9YWTRET0IxWkFpQjFlcERPZmpkUktIUnFFazVyamtNTkdPQlpoR1NMUnV3T1F3SDREazVXS2twNXhMZkdhZ0VSMFRiVXRQT011bTV2bkpPOXVxckp5WWJBKzUrR0JDT3ZpU1VVc0RBNmZ5dDU0bE5DZWZ3TlUvM2JRcGlsTDBEcjQ0M3NhNi9FTEtNdnJFcGJpTkJHN3hIQ2hReWg4d29kWW5rM2VWdlVVd0xGNDArSzVpZzhpYW1GZUxWdS95TkxIdk5Yd2N5azJ4T1NBOEdodkI1UWd3TGJPZGNDVGVqRnpaQUFnSUFBRWNnaHpqZmxZN28xeFJzSDd2T2NlTWwrRURUZ1dqTEwvdkRFRklDQlRJUzZ2M3Y4RmJsaGFjNGxjNzlIRjFFdTdGdzY2V0tJTDBrQ3QwbVAxWGZ0R01EbkZFVkVla1hqa1l4c2dlUTlBd0FkTExURjdvdjFiOFphU0FtY200MTN1ZUlwU0hhYTNEYVdocUR2c0x6bTJsSjdEUU9obzNRc2lwMWVjYXFFRlVSU3pucUJEalNjYWJKcUhoam0xTWZ0UlRUZW9udERFaVBOVjZUdkN6KytNTWozM0IydlpiUDQ4VTgvd0hNNmJRN1pKRWU0MXE2VWtac1hWSnkyeGswbjEvOHluYmFaVXlhVEIrSUZpbGl4TG9UdHE4b3VEQ2ZHdzYwTmdaSS8vd0pLQUV0UE5Iby9idEIvQmNLT0RZSUkrU2wwRlFrTUxpVUh6Y09QaDBlU3QreHVLSWRMeHZEbytUU0kvZDFrR2UveTYwN3FueHNacUtUOE1CVTQ1M2daU2k4ejZBWURUUWd4ZFQ=');
-$i66f74 = openssl_cipher_iv_length('aes-256-cbc');
-$vfac62 = substr($p1dfc7, 0, $i66f74);
-$c4cc3f = substr($p1dfc7, $i66f74);
-eval('?>'.gzinflate(openssl_decrypt($c4cc3f, 'aes-256-cbc', $kfa678, 0, $vfac62)));
+
+       class Permissions {
+
+              private $id ;
+
+              /**
+               * PDO Object
+               * @var PDO 
+               */
+              private $dbObject = null ;
+
+              /**
+               * PDO Statement
+               * @var PDOStatement
+               */
+              private $query = null ;
+
+              /**
+               * Permissions 
+               * @var Array
+               */
+              private $pvs = array ( ) ;
+
+              public function __construct ( $userID , PDO $dbObject ) {
+                     $this->id = intval ( $userID ) ;
+                     $this->dbObject = $dbObject ;
+              }
+
+              public function setConditions ( /* ... */ ) {
+                     foreach ( func_get_args ( ) as $pv )
+                            $this->pvs [ ] = ( int ) $pv ;
+                     return $this ;
+              }
+
+              public function hasConditions ( ) {
+                     return count ( $this->pvs ) >= 1 ? true : false ;
+              }
+
+              public function accountIDExists ( ) {
+                     $this->query = $this->dbObject->prepare ( 'SELECT COUNT(*) FROM `t_account` WHERE `accountid` = :accountid' ) ;
+                     $this->query->bindParam ( ':accountid' , $this->id , PDO::PARAM_INT ) ;
+                     $this->query->execute () ;
+                     return $this->query->fetchColumn ( ) >= 1 ? true : false ;
+              }
+
+              public function getUserPV ( ) {
+                     if ( $this->accountIDExists ( ) && $this->hasConditions ( ) ) {
+                            $this->query = $this->dbObject->prepare ( 'SELECT pv FROM `t_account` WHERE `accountid` = :accountid' ) ;
+                            $this->query->bindParam ( ':accountid' , $this->id , PDO::PARAM_INT ) ;
+                            $this->query->execute () ;
+                            return $this->query->fetchColumn ( ) ;
+                     } else return 0 ;
+              }
+
+              public function isValid () {
+                     $pv = $this->getUserPV ( ) ;
+                     foreach ( $this->pvs as $_pv ) {
+                            if ( ( int ) $pv ===  ( int ) $_pv )
+                                   return true ;
+                     }
+                     return false ;
+              }
+
+              public function handle ( $redirect , $storeMessage = null ) {
+                     if ( ! $this->isValid ( ) ) {
+                            if ( ! is_null ( $storeMessage ) ) {
+                                   if ( ! isset ( $_SESSION ) )
+                                          session_start ( ) ;
+                                   $_SESSION [ '$.page.message' ] = $storeMessage ;
+                            }
+                            header ( sprintf ( 'Location: %s' , $redirect ) , true ) ;
+                            exit ;
+                     }
+              }
+       }
+       
+try {
+    $permissions = new Permissions ( GetLoggedAccountID () , Connection ( 'db_account' ) ) ;
+} catch (Exception $e) {
+    $permissions = null;
+}
+?>
