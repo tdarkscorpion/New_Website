@@ -7,7 +7,6 @@
 credentials.env
 whitelist.env
 *.env
-/include/config.php
 /config/
 *.key
 *.pem
