@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  # DECODED (Source) - Port 8082
+  web-decoded:
+    build: .
+    restart: always
+    ports:
+      - "8082:80"
+    volumes:
+      - ./decoded:/var/www/html
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=talisman_pwd
+    depends_on:
+      - db
+
+  # ENCODED (Distribution) - Port 8083
+  web-encoded:
+    build: .
+    restart: always
+    ports:
+      - "8083:80"
+    volumes:
+      - ./encoded:/var/www/html
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=talisman_pwd
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    platform: linux/amd64
+    restart: always
+    ports:
+      - "3309:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=talisman_pwd
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./database structure for old website .sql:/docker-entrypoint-initdb.d/init.sql
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8085:8080"
+
+volumes:
+  db_data:
+    external: true
+    name: fortalisman_db_data

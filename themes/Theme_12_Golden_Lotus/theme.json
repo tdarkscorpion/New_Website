@@ -1,0 +1,18 @@
+{
+  "id": "Theme_12_Golden_Lotus",
+  "name": "Golden Lotus Pagoda",
+  "description": "Sacred Buddhist and Daoist monastery ambiance with golden amber relics, lotus petal motifs, and warm temple luminescence.",
+  "version": "1.0.0",
+  "author": "Talisman WebSuite",
+  "canvas_id": "lotus-canvas",
+  "game_focus": "Talisman Online / Warriors of War",
+  "features": [
+    "Full Mobile Responsiveness (375px - 1440px)",
+    "Custom Interactive Particle Engine (lotus-canvas)",
+    "Curated #f59e0b & #d97706 Aesthetic Palette",
+    "Optimized Card Elevation & Glowing Accents"
+  ],
+  "preview": "screenshots/preview.png",
+  "css_file": "css/theme-skin.css",
+  "js_file": "js/theme.js"
+}

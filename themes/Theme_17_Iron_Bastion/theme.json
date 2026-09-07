@@ -1,0 +1,18 @@
+{
+  "id": "Theme_17_Iron_Bastion",
+  "name": "Iron Bastion Forge",
+  "description": "Heavy blacksmith and siege weaponry aesthetic featuring molten copper sparks, steel plate borders, and blacksmith furnace heat.",
+  "version": "1.0.0",
+  "author": "Talisman WebSuite",
+  "canvas_id": "bastion-canvas",
+  "game_focus": "Talisman Online / Warriors of War",
+  "features": [
+    "Full Mobile Responsiveness (375px - 1440px)",
+    "Custom Interactive Particle Engine (bastion-canvas)",
+    "Curated #f97316 & #ea580c Aesthetic Palette",
+    "Optimized Card Elevation & Glowing Accents"
+  ],
+  "preview": "screenshots/preview.png",
+  "css_file": "css/theme-skin.css",
+  "js_file": "js/theme.js"
+}

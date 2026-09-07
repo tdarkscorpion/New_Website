@@ -9,12 +9,61 @@ whitelist.env
 *.env
 /include/config.php
 /config/
+*.key
+*.pem
+*.p12
+*.pfx
+admin_known_hosts
 
-# Backups and Temporary Files
+# .NET / Visual Studio build artifacts
+[Bb]in/
+[Oo]bj/
+[Bb]uild/
+[Dd]ist/
+*.user
+__pycache__/
+*.py[cod]
+.vs/
+.idea/
+.vscode/
+*.code-workspace
+
+# Private Project Subsystems (MUST NEVER BE IN PUBLIC REPO)
+/Admin_Tool/
+/Admin tool/
+/Game_Launcher/
+/new design of launcher/
+/Server_Scripts/
+/host_server_scripts/
+/Database/
+/Docs/
+/How TO work On This/
+/Tools_and_Scratch/
+/Website_Themes/
+/Website_decoded/
+/Website_encoded/
+/Old scrap/
+/Brain/
+/Buyer Designs/
+/scratch/
+/decoded/
+/encoded/
+/Only Backend Decrypted/
+*.bat
+*.ps1
+*.sql
+PROJECT_CONSTITUTION.md
+analyze_tables.php
+append_tables.php
+ragezone*
+build.php
+
+# Backups and Uploads
 *.zip
 *.rar
 *.7z
 /uploads/donations/
+temp_*/
 
 # Logs
 *.log

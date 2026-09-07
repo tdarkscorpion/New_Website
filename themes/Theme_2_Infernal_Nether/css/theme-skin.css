@@ -1,0 +1,134 @@
+/* ==========================================================================
+   Theme 2: Infernal Nether (Blood-Ruby & Obsidian Flames)
+   Talisman Online / Weapons of War Skin Adapter
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Rajdhani:wght@500;600;700&display=swap');
+
+:root {
+  --primary-color: #ff3b30 !important;
+  --secondary-color: #ff9500 !important;
+  --primary-rgb: 255, 59, 48 !important;
+  --nether-ruby: #ff2a44;
+  --nether-flame: #ff7700;
+  --nether-border: rgba(255, 59, 48, 0.4);
+  --nether-bg-card: rgba(22, 6, 8, 0.88);
+}
+
+body {
+  background-color: #0c0203 !important;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(255, 59, 48, 0.18) 0%, transparent 60%),
+    radial-gradient(circle at 80% 50%, rgba(255, 119, 0, 0.12) 0%, transparent 50%),
+    linear-gradient(180deg, #0f0304 0%, #170406 50%, #080102 100%) !important;
+  color: #fde8e8 !important;
+}
+
+section {
+  background-image: 
+    linear-gradient(rgba(15, 3, 4, 0.8), rgba(8, 1, 2, 0.95)),
+    radial-gradient(ellipse at center, rgba(255, 59, 48, 0.15) 0%, transparent 75%) !important;
+}
+
+/* Navbar */
+nav {
+  background: rgba(18, 4, 6, 0.8) !important;
+  border-bottom: 1px solid var(--nether-border) !important;
+  box-shadow: 0 4px 25px rgba(255, 42, 68, 0.2) !important;
+}
+
+ul li a {
+  font-family: 'Rajdhani', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.05rem !important;
+  letter-spacing: 1px !important;
+  color: #ffc9c9 !important;
+}
+
+ul li a:hover,
+ul li:hover {
+  color: #ff7700 !important;
+  text-shadow: 0 0 15px rgba(255, 119, 0, 0.8) !important;
+}
+
+/* Headings */
+.section-header-title, h1, h2, h3, h4 {
+  font-family: 'Cinzel Decorative', 'Rajdhani', serif !important;
+  color: #ff4d4d !important;
+  text-shadow: 0 0 15px rgba(255, 42, 68, 0.5) !important;
+}
+
+/* Hero Info Card */
+.hero-left-card {
+  background: var(--nether-bg-card) !important;
+  border: 1px solid var(--nether-border) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), inset 0 0 25px rgba(255, 42, 68, 0.08) !important;
+  position: relative;
+}
+
+.hero-left-card::before {
+  content: "🔥 NETHERWORLD RAID & PK CITADEL";
+  position: absolute;
+  top: -12px;
+  left: 25px;
+  background: linear-gradient(135deg, #ff2a44, #b30018);
+  color: #fff;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 2px 12px;
+  border-radius: 20px;
+  letter-spacing: 1.5px;
+  box-shadow: 0 0 10px rgba(255, 42, 68, 0.5);
+}
+
+/* Buttons */
+.btn-premium, .button1, .button2, .button-nav-mobile {
+  background: linear-gradient(135deg, #ff2a44 0%, #a30015 100%) !important;
+  color: #ffffff !important;
+  font-family: 'Rajdhani', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 1rem !important;
+  border: 1px solid #ff7700 !important;
+  box-shadow: 0 4px 18px rgba(255, 42, 68, 0.5) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px !important;
+}
+
+.btn-premium:hover, .button1:hover, .button2:hover {
+  background: linear-gradient(135deg, #ff4d64 0%, #c4001a 100%) !important;
+  box-shadow: 0 6px 25px rgba(255, 119, 0, 0.7) !important;
+  transform: translateY(-2px);
+}
+
+/* Server Time & Status Badges */
+.server-time-badge {
+  background: rgba(28, 6, 8, 0.9) !important;
+  border: 1px solid rgba(255, 119, 0, 0.5) !important;
+  color: #ff9500 !important;
+}
+
+/* Modals & Dialogs */
+.modal-content, .glass-panel, .glass-card {
+  background: rgba(18, 4, 6, 0.95) !important;
+  border: 1px solid var(--nether-border) !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9), inset 0 0 30px rgba(255, 42, 68, 0.05) !important;
+  color: #fde8e8 !important;
+}
+
+/* Ranking Table */
+.ranking-table th {
+  background: rgba(255, 42, 68, 0.15) !important;
+  color: #ff8080 !important;
+  font-family: 'Rajdhani', sans-serif !important;
+  letter-spacing: 1px !important;
+  border-bottom: 2px solid var(--nether-border) !important;
+}
+
+.ranking-table tr:hover td {
+  background: rgba(255, 59, 48, 0.1) !important;
+}
+
+.neon-icon {
+  color: #ff3b30 !important;
+}

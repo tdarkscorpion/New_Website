@@ -23,26 +23,25 @@ ErrorDocument 500 /Error/500.php
 ErrorDocument 503 /Error/503.php
 
 # 3. Disable Directory Indexing
-# This prevents hackers from seeing the list of files in your folders
 Options -Indexes
 
 # 4. Security Headers
 <IfModule mod_headers.c>
-    # Prevent the site from being embedded in iframes on other domains (Anti-Clickjacking)
+    # Anti-Clickjacking
     Header set X-Frame-Options "SAMEORIGIN"
 
-    # Block the browser from trying to guess the content type (Security)
+    # Content-Type sniffing protection
     Header set X-Content-Type-Options "nosniff"
 
-    # Enable browser XSS protection
+    # XSS Protection (legacy browsers)
     Header set X-XSS-Protection "1; mode=block"
 
     # Referrer Policy
     Header set Referrer-Policy "strict-origin-when-cross-origin"
 
-    # Content Security Policy (Basic Protection)
-    # Allows scripts from same origin and trusted CDNs
-    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://code.jquery.com https://unpkg.com https://kit.fontawesome.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://kit-free.fontawesome.com; font-src 'self' https://fonts.gstatic.com https://ka-f.fontawesome.com; img-src 'self' data: https:; connect-src 'self' https://ka-f.fontawesome.com;"
+    # Content Security Policy
+    # Trusted CDNs: Cloudflare, Google Fonts, Font Awesome, PayPal, reCAPTCHA, unpkg
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://code.jquery.com https://cdnjs.cloudflare.com https://unpkg.com https://kit.fontawesome.com https://www.google.com https://www.gstatic.com https://www.googletagmanager.com https://www.paypal.com https://www.paypalobjects.com https://ajax.googleapis.com https://www.recaptcha.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://kit-free.fontawesome.com https://use.fontawesome.com https://unpkg.com; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://kit-free.fontawesome.com https://use.fontawesome.com https://unpkg.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://ka-f.fontawesome.com https://kit-free.fontawesome.com https://use.fontawesome.com; img-src 'self' data: blob: https: http:; media-src 'self' blob: https:; frame-src 'self' https://www.google.com https://www.paypal.com https://www.youtube.com https://www.facebook.com https://www.recaptcha.net; connect-src 'self' blob: https://ka-f.fontawesome.com https://unpkg.com https://cdnjs.cloudflare.com https://www.google-analytics.com https://www.paypal.com https://api.paypal.com https://fcm.googleapis.com; object-src 'none'; base-uri 'self'; worker-src 'self' blob:;"
 </IfModule>
 
 # 5. PHP Security Tweaks (If allowed by host)
@@ -51,4 +50,3 @@ Options -Indexes
     php_flag session.cookie_secure on
     php_flag display_errors off
 </IfModule>
-

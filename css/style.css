@@ -376,6 +376,10 @@ footer {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 15px rgba(44, 164, 191, 0.2);
 }
+.container input::placeholder {
+  color: #64748b;
+  opacity: 1;
+}
 
 .sign-up, .sign-in {
   position: absolute;
@@ -799,6 +803,10 @@ footer {
   color: #fff; font-family: inherit; font-size: 1rem;
   transition: all 0.3s ease;
   box-sizing: border-box;
+}
+.modern-form input::placeholder {
+  color: #64748b;
+  opacity: 1;
 }
 .modern-form input:focus { outline: none; border-color: #2ca4bf; background: rgba(0, 0, 0, 0.5); }
 .modern-form label {

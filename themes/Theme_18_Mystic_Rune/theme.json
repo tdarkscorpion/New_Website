@@ -1,0 +1,18 @@
+{
+  "id": "Theme_18_Mystic_Rune",
+  "name": "Mystic Rune Enchanter",
+  "description": "Enchanter's laboratory with glowing esoteric glyphs, amethyst crystal matrixes, and pulsing arcane talisman wards.",
+  "version": "1.0.0",
+  "author": "Talisman WebSuite",
+  "canvas_id": "rune-canvas",
+  "game_focus": "Talisman Online / Warriors of War",
+  "features": [
+    "Full Mobile Responsiveness (375px - 1440px)",
+    "Custom Interactive Particle Engine (rune-canvas)",
+    "Curated #c084fc & #9333ea Aesthetic Palette",
+    "Optimized Card Elevation & Glowing Accents"
+  ],
+  "preview": "screenshots/preview.png",
+  "css_file": "css/theme-skin.css",
+  "js_file": "js/theme.js"
+}

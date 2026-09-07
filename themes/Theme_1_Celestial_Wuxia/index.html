@@ -1,0 +1,215 @@
+<?php
+// Optional Backend Integration
+$backendPath = __DIR__ . '/../../Website/decoded';
+$onlinePlayers = 1420;
+$serverStatus = "ONLINE";
+$activeGuilds = 88;
+
+if (file_exists($backendPath . '/include/config.php')) {
+    @include_once $backendPath . '/include/config.php';
+    @include_once $backendPath . '/Functions/Database.php';
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talisman Online — Celestial Wuxia Edition</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+
+  <div class="wuxia-container">
+    <!-- NAVIGATION -->
+    <header class="navbar">
+      <a href="index.php" class="brand-logo">
+        <div class="brand-crest">⚔</div>
+        <span class="brand-title">TALISMAN ONLINE</span>
+      </a>
+      <ul class="nav-links">
+        <li class="nav-item active"><a href="index.php">Home</a></li>
+        <li class="nav-item"><a href="download.php">Download</a></li>
+        <li class="nav-item"><a href="register.php">Register</a></li>
+        <li class="nav-item"><a href="ranking.php">Rankings</a></li>
+        <li class="nav-item"><a href="dashboard.php">Player Portal</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="register.php" class="btn-wuxia-outline">Create Account</a>
+        <a href="download.php" class="btn-wuxia-primary">Play Now</a>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-tag">Season V • Realm of Ascension</div>
+        <h1 class="hero-title">
+          Forge Your Path 
+          <span>Master The Talisman</span>
+        </h1>
+        <p class="hero-desc">
+          Immerse yourself in the classic Asian martial arts MMORPG. Command ancient relics, ascend the cultivation realms, and lead your guild to legendary supremacy across the mystical continents.
+        </p>
+        <div class="hero-actions">
+          <a href="download.php" class="btn-wuxia-primary">⚡ Download Client v1.6.8</a>
+          <a href="dashboard.php" class="btn-wuxia-outline">🛡️ Player Dashboard</a>
+        </div>
+      </div>
+
+      <!-- SERVER STATUS WIDGET -->
+      <div class="hero-server-status">
+        <div class="status-header">
+          <div class="status-title">Realm Status</div>
+          <div class="status-badge"><?= $serverStatus ?></div>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-box">
+            <div class="stat-value" data-target="1420"><?= number_format($onlinePlayers) ?></div>
+            <div class="stat-label">Online Cultivators</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-value" data-target="88"><?= $activeGuilds ?></div>
+            <div class="stat-label">Active Sects / Guilds</div>
+          </div>
+        </div>
+        <div class="quick-rates">
+          <div>Experience: <span>5x</span></div>
+          <div>Drop Rate: <span>3x</span></div>
+          <div>Energy: <span>5x</span></div>
+          <div>Version: <span>v1.6.8</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLASS SHOWCASE -->
+    <section class="section">
+      <div class="section-header">
+        <div class="section-subtitle">Martial Traditions</div>
+        <h2 class="section-title">Choose Your Calling</h2>
+      </div>
+      <div class="class-grid">
+        <div class="class-card">
+          <div class="class-icon">⚡</div>
+          <div class="class-name">Wizard</div>
+          <div class="class-type">Elemental Ranged</div>
+          <p class="class-desc">Harnesses lightning and heavenly frost to decimate armies from afar with cataclysmic area spells.</p>
+        </div>
+        <div class="class-card">
+          <div class="class-icon">🛡️</div>
+          <div class="class-name">Monk</div>
+          <div class="class-type">Indomitable Tank</div>
+          <p class="class-desc">The stalwart fortress of holy virtue, deflecting lethal strikes with impenetrable golden Buddha halos.</p>
+        </div>
+        <div class="class-card">
+          <div class="class-icon">🗡️</div>
+          <div class="class-name">Assassin</div>
+          <div class="class-type">Lethal Shadow Melee</div>
+          <p class="class-desc">A master of daggers and poison, striking from the shroud of darkness with fatal precision.</p>
+        </div>
+        <div class="class-card">
+          <div class="class-icon">✨</div>
+          <div class="class-name">Fairy</div>
+          <div class="class-type">Healer & Mystic</div>
+          <p class="class-desc">Channels pure lotus grace to mend mortal wounds, purge dark curses, and invigorate fallen allies.</p>
+        </div>
+        <div class="class-card">
+          <div class="class-icon">🏹</div>
+          <div class="class-name">Tamer</div>
+          <div class="class-type">Beastmaster Archer</div>
+          <p class="class-desc">Commands mythical beasts and unleashes venomous piercing volleys with unmatched archery skill.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPLIT: TOP CULTIVATORS & GUILD HONORS -->
+    <section class="section">
+      <div class="split-grid">
+        <!-- RANKING CARD -->
+        <div class="wuxia-card">
+          <div class="card-head">
+            <div class="card-title">🏆 Top Cultivators</div>
+            <a href="ranking.php" class="btn-wuxia-outline" style="padding: 6px 12px; font-size: 11px;">View All</a>
+          </div>
+          <table class="ranking-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Player</th>
+                <th>Class</th>
+                <th>Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="rank-num top1">1</td>
+                <td class="player-name">CloudStriker</td>
+                <td class="player-class">Wizard</td>
+                <td class="player-lvl">Lv. 75</td>
+              </tr>
+              <tr>
+                <td class="rank-num top2">2</td>
+                <td class="player-name">LotusShadow</td>
+                <td class="player-class">Assassin</td>
+                <td class="player-lvl">Lv. 74</td>
+              </tr>
+              <tr>
+                <td class="rank-num top3">3</td>
+                <td class="player-name">IronMonk</td>
+                <td class="player-class">Monk</td>
+                <td class="player-lvl">Lv. 73</td>
+              </tr>
+              <tr>
+                <td class="rank-num">4</td>
+                <td class="player-name">CelestialGrace</td>
+                <td class="player-class">Fairy</td>
+                <td class="player-lvl">Lv. 72</td>
+              </tr>
+              <tr>
+                <td class="rank-num">5</td>
+                <td class="player-name">BeastLord</td>
+                <td class="player-class">Tamer</td>
+                <td class="player-lvl">Lv. 71</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- RECENT SERVER EVENTS -->
+        <div class="wuxia-card">
+          <div class="card-head">
+            <div class="card-title">📜 Realm Proclamations</div>
+            <span style="font-size: 12px; color: var(--accent-jade);">Patch 1.6.8 Active</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div style="padding: 12px; background: rgba(5,13,18,0.5); border-left: 3px solid var(--border-gold); border-radius: 4px;">
+              <div style="font-size: 11px; color: var(--accent-gold); text-transform: uppercase; margin-bottom: 4px;">Grand Tournament • 2026-09-12</div>
+              <div style="font-weight: 700; color: #fff; margin-bottom: 4px;">South Sea Dragon Cave World Boss Awakens</div>
+              <div style="font-size: 13px; color: var(--text-muted);">Assemble your sect to challenge the tidal leviathan. Epic +10 Talisman drops guaranteed.</div>
+            </div>
+            <div style="padding: 12px; background: rgba(5,13,18,0.5); border-left: 3px solid var(--accent-jade); border-radius: 4px;">
+              <div style="font-size: 11px; color: var(--accent-jade); text-transform: uppercase; margin-bottom: 4px;">Weekend Event • Active Now</div>
+              <div style="font-weight: 700; color: #fff; margin-bottom: 4px;">Double eCoins & Triple Energy Gathering</div>
+              <div style="font-size: 13px; color: var(--text-muted);">All energy node gathering multiplied by 3x until Sunday midnight.</div>
+            </div>
+            <div style="padding: 12px; background: rgba(5,13,18,0.5); border-left: 3px solid rgba(255,255,255,0.2); border-radius: 4px;">
+              <div style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; margin-bottom: 4px;">Security Notice</div>
+              <div style="font-weight: 700; color: #fff; margin-bottom: 4px;">Google 2FA Account Protection Live</div>
+              <div style="font-size: 13px; color: var(--text-muted);">Enable 2FA on your dashboard to claim a free Heavenly Fox Mount!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-text">⚔ Talisman Online — Celestial Wuxia Edition • Powered by Secure Decoded Backend Suite</div>
+      <div class="footer-copy">© 2026 Talisman Online Community. All martial trademarks belong to their respective creators.</div>
+    </footer>
+  </div>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>

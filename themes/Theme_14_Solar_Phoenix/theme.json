@@ -1,0 +1,18 @@
+{
+  "id": "Theme_14_Solar_Phoenix",
+  "name": "Solar Phoenix Rebirth",
+  "description": "Radiant solar divinity with immortal phoenix feathers, flaming crimson sunbursts, and ascending heat embers.",
+  "version": "1.0.0",
+  "author": "Talisman WebSuite",
+  "canvas_id": "phoenix-canvas",
+  "game_focus": "Talisman Online / Warriors of War",
+  "features": [
+    "Full Mobile Responsiveness (375px - 1440px)",
+    "Custom Interactive Particle Engine (phoenix-canvas)",
+    "Curated #fbbf24 & #ea580c Aesthetic Palette",
+    "Optimized Card Elevation & Glowing Accents"
+  ],
+  "preview": "screenshots/preview.png",
+  "css_file": "css/theme-skin.css",
+  "js_file": "js/theme.js"
+}

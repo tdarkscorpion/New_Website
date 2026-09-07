@@ -1,0 +1,18 @@
+{
+  "id": "Theme_6_Glacial_Peaks",
+  "name": "Glacial Frost Peak",
+  "description": "Sub-zero frozen mountain wuxia styling with crystalline frost accents, pale ice blue gradients, and falling snow crystals.",
+  "version": "1.0.0",
+  "author": "Talisman WebSuite",
+  "canvas_id": "glacial-canvas",
+  "game_focus": "Talisman Online / Warriors of War",
+  "features": [
+    "Full Mobile Responsiveness (375px - 1440px)",
+    "Custom Interactive Particle Engine (glacial-canvas)",
+    "Curated #38bdf8 & #0284c7 Aesthetic Palette",
+    "Optimized Card Elevation & Glowing Accents"
+  ],
+  "preview": "screenshots/preview.png",
+  "css_file": "css/theme-skin.css",
+  "js_file": "js/theme.js"
+}

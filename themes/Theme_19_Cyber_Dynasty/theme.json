@@ -1,0 +1,18 @@
+{
+  "id": "Theme_19_Cyber_Dynasty",
+  "name": "Cyberpunk Wuxia 2077",
+  "description": "Futuristic neon wuxia crossover with magenta and electric cyan terminal lines, digital rain streams, and cyber HUD brackets.",
+  "version": "1.0.0",
+  "author": "Talisman WebSuite",
+  "canvas_id": "cyber-canvas",
+  "game_focus": "Talisman Online / Warriors of War",
+  "features": [
+    "Full Mobile Responsiveness (375px - 1440px)",
+    "Custom Interactive Particle Engine (cyber-canvas)",
+    "Curated #ec4899 & #06b6d4 Aesthetic Palette",
+    "Optimized Card Elevation & Glowing Accents"
+  ],
+  "preview": "screenshots/preview.png",
+  "css_file": "css/theme-skin.css",
+  "js_file": "js/theme.js"
+}

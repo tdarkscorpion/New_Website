@@ -1,0 +1,117 @@
+<?php
+// Theme 4: Imperial Citadel Royal Fantasy Portal
+$backendPath = __DIR__ . '/../../Website/decoded';
+$onlinePlayers = 1530;
+$serverStatus = "ACTIVE";
+$guildFortresses = 12;
+
+if (file_exists($backendPath . '/include/config.php')) {
+    @include_once $backendPath . '/include/config.php';
+    @include_once $backendPath . '/Functions/Database.php';
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talisman Online — Imperial Citadel Royal Edition</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="citadel-container">
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <a href="index.php" class="brand-shield">
+        <div class="shield-icon">🛡</div>
+        <div class="brand-text">IMPERIAL CITADEL</div>
+      </a>
+      <ul class="nav-links">
+        <li class="nav-item active"><a href="index.php">Grand Gate</a></li>
+        <li class="nav-item"><a href="download.php">Download</a></li>
+        <li class="nav-item"><a href="register.php">Enlistment</a></li>
+        <li class="nav-item"><a href="ranking.php">Hall of Fame</a></li>
+        <li class="nav-item"><a href="dashboard.php">Guild Armory</a></li>
+      </ul>
+      <div style="display: flex; gap: 12px;">
+        <a href="register.php" class="btn-royal-crimson">Join Realm</a>
+        <a href="download.php" class="btn-royal-gold">Play Client</a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="hero-crest-badge">⚔ Royal Decree • Season VI Gilded Era</div>
+        <h1 class="hero-title">
+          DEFEND THE CITADEL.
+          <span>CARVE YOUR LEGEND.</span>
+        </h1>
+        <p class="hero-lead">
+          Heed the royal decree of the High Sovereign. Pledge your sword to glorious knightly guilds, conquer ancient imperial keeps, and claim mythical treasures inscribed in the golden annals of Talisman Online.
+        </p>
+        <div style="display: flex; gap: 18px;">
+          <a href="download.php" class="btn-royal-gold">⚔ Download Imperial Client</a>
+          <a href="dashboard.php" class="btn-royal-crimson">🏰 Enter Citadel Gate</a>
+        </div>
+      </div>
+
+      <!-- CITADEL MONOLITH -->
+      <div class="monolith-card">
+        <div class="monolith-head">
+          <div class="monolith-title">CITADEL WATCHTOWER</div>
+          <div style="color: var(--gold-light); font-size: 13px; font-weight: 800;"><?= $serverStatus ?></div>
+        </div>
+        <div class="monolith-grid">
+          <div class="monolith-box">
+            <div class="monolith-value"><?= number_format($onlinePlayers) ?></div>
+            <div class="monolith-desc">Garrison Knights</div>
+          </div>
+          <div class="monolith-box">
+            <div class="monolith-value" style="color: #f39c12;"><?= $guildFortresses ?></div>
+            <div class="monolith-desc">Claimed Fortresses</div>
+          </div>
+        </div>
+        <div style="padding-top: 14px; border-top: 1px solid rgba(212,175,55,0.2); font-size: 12px; color: var(--text-muted); display: flex; justify-content: space-between;">
+          <div>Realm Tier: <span style="color: var(--gold-light);">Grand Sovereign</span></div>
+          <div>Castle Siege: <span style="color: #ff4d4f; font-weight: 700;">Saturday 20:00</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUILD HALL OF FAME -->
+    <section>
+      <div style="text-align: center; margin-bottom: 48px;">
+        <div style="color: var(--gold-royal); font-family: var(--font-royal-heading); font-size: 13px; letter-spacing: 3px; text-transform: uppercase;">Heraldry & Honor</div>
+        <h2 style="font-family: var(--font-royal-display); font-size: 36px; color: #fff; margin-top: 6px;">SOVEREIGN GUILD ORDERS</h2>
+      </div>
+
+      <div class="hall-grid">
+        <div class="guild-card">
+          <div class="guild-banner">👑</div>
+          <div class="guild-name">RoyalAscension</div>
+          <div class="guild-rank">Grand Duke Order • Rank #1</div>
+          <div class="guild-stats">Holds Blood River Citadel • 140 Knights • +10 Sovereign Talismans</div>
+        </div>
+        <div class="guild-card">
+          <div class="guild-banner">🦅</div>
+          <div class="guild-name">IronVanguard</div>
+          <div class="guild-rank">Baron Order • Rank #2</div>
+          <div class="guild-stats">Holds High Mountain Keep • 128 Knights • Unbeaten Siege Record</div>
+        </div>
+        <div class="guild-card">
+          <div class="guild-banner">🦁</div>
+          <div class="guild-name">GoldenLionSect</div>
+          <div class="guild-rank">Knight Templar • Rank #3</div>
+          <div class="guild-stats">Holds Sunken Palace • 115 Knights • Master Blacksmith Order</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="citadel-footer">
+      <div>🏰 TALISMAN ONLINE • IMPERIAL CITADEL EDITION • CHIVALRY & CONQUEST 🏰</div>
+    </footer>
+  </div>
+</body>
+</html>

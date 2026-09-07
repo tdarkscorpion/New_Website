@@ -1,0 +1,227 @@
+/* ==========================================================================
+   Astral Void & Cosmos — High-Fidelity Custom Game Skin
+   Talisman Online / Warriors of War
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #a855f7 !important;
+  --secondary-color: #6366f1 !important;
+  --accent-color: #c084fc !important;
+  --theme-bg-card: rgba(16, 12, 40, 0.85) !important;
+  --theme-border: rgba(168, 85, 247, 0.4) !important;
+  --theme-glow: rgba(168, 85, 247, 0.5) !important;
+  --theme-btn-radius: 20px !important;
+  --theme-card-radius: 16px !important;
+}
+
+/* Global Body Styling */
+body.theme-Theme_15_Starry_Astral {
+  background-color: #070614 !important;
+  background-image: radial-gradient(ellipse at 50% 15%, rgba(168, 85, 247, 0.2) 0%, transparent 70%), linear-gradient(180deg, #070614 0%, #0f0c29 50%, #04030a 100%) !important;
+  color: #f1f5f9 !important;
+  font-family: 'Poppins', sans-serif !important;
+  overflow-x: hidden !important;
+}
+
+/* Section Layer */
+body.theme-Theme_15_Starry_Astral section {
+  background: transparent !important;
+}
+
+/* Navbar Navigation Bar */
+body.theme-Theme_15_Starry_Astral nav {
+  background: rgba(10, 15, 25, 0.75) !important;
+  border-bottom: 1px solid var(--theme-border) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 15px var(--theme-glow) !important;
+  transition: all 0.3s ease !important;
+}
+
+body.theme-Theme_15_Starry_Astral nav ul li a {
+  font-family: 'Space Grotesk', 'Inter', sans-serif !important;
+  letter-spacing: 0.8px !important;
+  color: #e2e8f0 !important;
+  transition: color 0.25s ease, text-shadow 0.25s ease !important;
+}
+
+body.theme-Theme_15_Starry_Astral nav ul li a:hover,
+body.theme-Theme_15_Starry_Astral nav ul li:hover {
+  color: var(--primary-color) !important;
+  text-shadow: 0 0 10px var(--theme-glow) !important;
+}
+
+/* Section Titles & Game Headers */
+body.theme-Theme_15_Starry_Astral .section-header-title,
+body.theme-Theme_15_Starry_Astral h1, 
+body.theme-Theme_15_Starry_Astral h2, 
+body.theme-Theme_15_Starry_Astral h3, 
+body.theme-Theme_15_Starry_Astral h4 {
+  font-family: 'Space Grotesk', 'Inter', sans-serif !important;
+  color: var(--primary-color) !important;
+  text-shadow: 0 2px 14px var(--theme-glow) !important;
+}
+
+/* Hero Cards & Floating Modules */
+body.theme-Theme_15_Starry_Astral .hero-left-card,
+body.theme-Theme_15_Starry_Astral .hero-card,
+body.theme-Theme_15_Starry_Astral .slider-main-box,
+body.theme-Theme_15_Starry_Astral .hub-tab-panel,
+body.theme-Theme_15_Starry_Astral .quick-stat-box {
+  background: var(--theme-bg-card) !important;
+  border: 1px solid var(--theme-border) !important;
+  border-radius: var(--theme-card-radius) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+body.theme-Theme_15_Starry_Astral .hero-left-card:hover,
+body.theme-Theme_15_Starry_Astral .hero-card:hover,
+body.theme-Theme_15_Starry_Astral .quick-stat-box:hover {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7), 0 0 20px var(--theme-glow) !important;
+}
+
+/* Interactive Buttons */
+body.theme-Theme_15_Starry_Astral .btn-primary,
+body.theme-Theme_15_Starry_Astral .play-now-btn,
+body.theme-Theme_15_Starry_Astral .cta-btn,
+body.theme-Theme_15_Starry_Astral button.submit-btn {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+  color: #060b13 !important;
+  font-weight: 700 !important;
+  border: none !important;
+  border-radius: var(--theme-btn-radius) !important;
+  font-family: 'Space Grotesk', 'Inter', sans-serif !important;
+  box-shadow: 0 4px 18px var(--theme-glow) !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  cursor: pointer !important;
+}
+
+body.theme-Theme_15_Starry_Astral .btn-primary:hover,
+body.theme-Theme_15_Starry_Astral .play-now-btn:hover,
+body.theme-Theme_15_Starry_Astral .cta-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 25px var(--theme-glow), 0 0 20px var(--primary-color) !important;
+  filter: brightness(1.1) !important;
+}
+
+/* Hub Content Tabs */
+body.theme-Theme_15_Starry_Astral .hub-tab-btn {
+  border-radius: var(--theme-btn-radius) !important;
+  border: 1px solid var(--theme-border) !important;
+  background: rgba(15, 23, 42, 0.6) !important;
+  color: #94a3b8 !important;
+  font-family: 'Space Grotesk', 'Inter', sans-serif !important;
+  transition: all 0.25s ease !important;
+}
+
+body.theme-Theme_15_Starry_Astral .hub-tab-btn.active,
+body.theme-Theme_15_Starry_Astral .hub-tab-btn:hover {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+  color: #060b13 !important;
+  border-color: var(--primary-color) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 15px var(--theme-glow) !important;
+}
+
+/* Rankings Table & Rows */
+body.theme-Theme_15_Starry_Astral .ranking-table tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+  transition: background-color 0.2s ease !important;
+}
+
+body.theme-Theme_15_Starry_Astral .ranking-table tr:hover {
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+body.theme-Theme_15_Starry_Astral .ranking-table th {
+  color: var(--primary-color) !important;
+  font-family: 'Space Grotesk', 'Inter', sans-serif !important;
+  border-bottom: 2px solid var(--theme-border) !important;
+}
+
+/* Badges & Pills */
+body.theme-Theme_15_Starry_Astral .server-time-badge,
+body.theme-Theme_15_Starry_Astral .badge-status,
+body.theme-Theme_15_Starry_Astral .tag-pill {
+  background: var(--theme-bg-card) !important;
+  border: 1px solid var(--theme-border) !important;
+  color: var(--primary-color) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Modals */
+body.theme-Theme_15_Starry_Astral .modal-content,
+body.theme-Theme_15_Starry_Astral .modal-dialog-box {
+  background: var(--theme-bg-card) !important;
+  border: 1px solid var(--theme-border) !important;
+  border-radius: var(--theme-card-radius) !important;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.8), 0 0 25px var(--theme-glow) !important;
+}
+
+/* Footer */
+body.theme-Theme_15_Starry_Astral footer {
+  border-top: 1px solid var(--theme-border) !important;
+  background: rgba(5, 8, 15, 0.85) !important;
+  color: #94a3b8 !important;
+}
+
+/* ==========================================================================
+   Mobile & Responsive Layout Optimizations
+   ========================================================================== */
+@media (max-width: 991px) {
+  body.theme-Theme_15_Starry_Astral .hero-wrapper,
+  body.theme-Theme_15_Starry_Astral .main-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  body.theme-Theme_15_Starry_Astral nav ul {
+    background: var(--theme-bg-card) !important;
+    border: 1px solid var(--theme-border) !important;
+    border-radius: var(--theme-card-radius) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body.theme-Theme_15_Starry_Astral {
+    font-size: 14px !important;
+  }
+  body.theme-Theme_15_Starry_Astral h1 {
+    font-size: 1.8rem !important;
+  }
+  body.theme-Theme_15_Starry_Astral h2 {
+    font-size: 1.4rem !important;
+  }
+  body.theme-Theme_15_Starry_Astral .hero-left-card,
+  body.theme-Theme_15_Starry_Astral .hero-card,
+  body.theme-Theme_15_Starry_Astral .hub-tab-panel {
+    padding: 16px !important;
+    margin-bottom: 15px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+  }
+  body.theme-Theme_15_Starry_Astral .btn-primary,
+  body.theme-Theme_15_Starry_Astral .play-now-btn,
+  body.theme-Theme_15_Starry_Astral .cta-btn {
+    width: 100% !important;
+    min-height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1rem !important;
+  }
+  body.theme-Theme_15_Starry_Astral .server-time-badge {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body.theme-Theme_15_Starry_Astral .modal-content {
+    width: 94% !important;
+    margin: 10px auto !important;
+    padding: 14px !important;
+  }
+}

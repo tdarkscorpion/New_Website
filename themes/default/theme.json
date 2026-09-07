@@ -1,0 +1,16 @@
+{
+  "id": "default",
+  "name": "Classic Azure Realm (Default)",
+  "description": "Original cyber-azure Talisman Online aesthetic with deep space backgrounds, cyan crystal accents, and standard game portal layout.",
+  "version": "1.0.0",
+  "author": "Talisman Team",
+  "game_focus": "Talisman Online / Weapons of War",
+  "features": [
+    "Default Character Info Card Styling",
+    "Classic eCoins & T-Points Treasury",
+    "Standard Sect & Level Leaderboards",
+    "Core Game Systems & Scenario Cave Links"
+  ],
+  "preview": "screenshots/preview.png",
+  "css_file": "css/theme-skin.css"
+}

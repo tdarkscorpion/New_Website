@@ -1,0 +1,17 @@
+{
+  "id": "Theme_4_Imperial_Citadel",
+  "name": "Imperial Citadel (Golden Dynasty)",
+  "description": "Grand royal fortress styling with crimson velvet, heavy gilded gold filigree, heraldic guild banners, and legendary dynasty armory prestige.",
+  "version": "1.0.0",
+  "author": "Talisman WebSuite",
+  "game_focus": "Talisman Online / Weapons of War",
+  "features": [
+    "Dynasty Citadel Siege & Castle Battle Styling",
+    "Hero Hall of Fame & Imperial Leaderboards",
+    "Imperial Treasury & Gilded eCoin Vaults",
+    "Legendary Weapon & Armor Armory Showcases"
+  ],
+  "preview": "screenshots/preview.png",
+  "css_file": "css/theme-skin.css",
+  "canvas_id": "citadel-canvas"
+}

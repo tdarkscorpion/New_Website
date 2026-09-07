@@ -1,0 +1,118 @@
+<?php
+// Theme 3: Arcane Nexus Glassmorphism Portal
+$backendPath = __DIR__ . '/../../Website/decoded';
+$onlinePlayers = 1890;
+$serverStatus = "OPERATIONAL";
+$serverUptime = "99.98%";
+
+if (file_exists($backendPath . '/include/config.php')) {
+    @include_once $backendPath . '/include/config.php';
+    @include_once $backendPath . '/Functions/Database.php';
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talisman Online — Arcane Nexus Glass Edition</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="nexus-canvas"></canvas>
+
+  <div class="nexus-container">
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <a href="index.php" class="brand-wrapper">
+        <div class="brand-hexagon">✦</div>
+        <div class="brand-title">ARCANE <span>NEXUS</span></div>
+      </a>
+      <ul class="nav-links">
+        <li class="nav-item active"><a href="index.php">Network</a></li>
+        <li class="nav-item"><a href="download.php">Download Client</a></li>
+        <li class="nav-item"><a href="register.php">Access ID</a></li>
+        <li class="nav-item"><a href="ranking.php">Leaderboards</a></li>
+        <li class="nav-item"><a href="dashboard.php">User Terminal</a></li>
+      </ul>
+      <div>
+        <a href="download.php" class="btn-nexus-glow">Install v1.6.8</a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="hero-pill"><span></span> CLUSTER v1.6.8 • LOW-LATENCY INFRASTRUCTURE</div>
+        <h1 class="hero-title">
+          NEXT-GENERATION
+          <span>MMORPG ECOSYSTEM</span>
+        </h1>
+        <p class="hero-lead">
+          Experience ultra-responsive combat, synchronized cross-server economy, and high-framerate client optimization. Built for competitive players who demand pure precision and zero compromises.
+        </p>
+        <div style="display: flex; gap: 16px;">
+          <a href="download.php" class="btn-nexus-glow">⚡ Download Ultra Client</a>
+          <a href="register.php" class="btn-nexus-glass">Create Free ID</a>
+        </div>
+      </div>
+
+      <!-- HUD TELEMETRY -->
+      <div class="hud-widget">
+        <div class="hud-header">
+          <div class="hud-title">NODE TELEMETRY</div>
+          <div style="font-family: var(--font-tech); font-size: 12px; color: var(--neon-cyan);"><?= $serverStatus ?></div>
+        </div>
+        <div class="hud-stats-grid">
+          <div class="hud-stat-card">
+            <div class="hud-stat-value cyan"><?= number_format($onlinePlayers) ?></div>
+            <div class="hud-stat-lbl">Active Connections</div>
+          </div>
+          <div class="hud-stat-card">
+            <div class="hud-stat-value purple"><?= $serverUptime ?></div>
+            <div class="hud-stat-lbl">Cluster Reliability</div>
+          </div>
+          <div class="hud-stat-card">
+            <div class="hud-stat-value" style="color: #3b82f6;">12ms</div>
+            <div class="hud-stat-lbl">Average Ping</div>
+          </div>
+          <div class="hud-stat-card">
+            <div class="hud-stat-value" style="color: #10b981;">100%</div>
+            <div class="hud-stat-lbl">Anti-Cheat Defense</div>
+          </div>
+        </div>
+        <div style="padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 12px; color: var(--text-secondary); display: flex; justify-content: space-between;">
+          <div>Tick Rate: <span style="color: #fff;">64 Hz</span></div>
+          <div>Location: <span style="color: var(--neon-cyan);">Singapore Cloud</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLASS CARDS HIGHLIGHTS -->
+    <section class="feature-grid">
+      <div class="glass-card">
+        <div class="card-icon">⚡</div>
+        <div class="card-heading">High-Performance Rates</div>
+        <div class="card-text">Tailored 5x Experience and 3x Drops provide instant gratification while preserving hard-earned end-game prestige.</div>
+      </div>
+      <div class="glass-card">
+        <div class="card-icon">💳</div>
+        <div class="card-heading">Automated Payments</div>
+        <div class="card-text">Integrated GCash automated QR scanner and instant PayPal checkout deposit eCoins directly to your inventory in seconds.</div>
+      </div>
+      <div class="glass-card">
+        <div class="card-icon">🛡️</div>
+        <div class="card-heading">Enterprise Security</div>
+        <div class="card-text">Shielded by hardware Anti-DDoS mitigation, automated port-flood nullifiers, and mandatory Google 2FA account binding.</div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="nexus-footer">
+      <div>✦ TALISMAN ONLINE • ARCANE NEXUS GLASS EDITION • HIGH TECH MMORPG SUITE ✦</div>
+    </footer>
+  </div>
+
+  <script src="js/theme.js"></script>
+</body>
+</html>

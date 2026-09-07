@@ -1,0 +1,18 @@
+{
+  "id": "Theme_7_Thunder_Sanctum",
+  "name": "Thunder God Sanctum",
+  "description": "High-voltage celestial storm theme featuring crackling electric arcs, indigo neon gradients, and sharp geometric trims.",
+  "version": "1.0.0",
+  "author": "Talisman WebSuite",
+  "canvas_id": "thunder-canvas",
+  "game_focus": "Talisman Online / Warriors of War",
+  "features": [
+    "Full Mobile Responsiveness (375px - 1440px)",
+    "Custom Interactive Particle Engine (thunder-canvas)",
+    "Curated #00f2fe & #4facfe Aesthetic Palette",
+    "Optimized Card Elevation & Glowing Accents"
+  ],
+  "preview": "screenshots/preview.png",
+  "css_file": "css/theme-skin.css",
+  "js_file": "js/theme.js"
+}

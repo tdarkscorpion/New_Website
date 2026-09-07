@@ -1,0 +1,17 @@
+{
+  "id": "Theme_1_Celestial_Wuxia",
+  "name": "Celestial Wuxia (Heavenly Jade)",
+  "description": "Heavenly midnight jade and radiant gold Cultivation aesthetic inspired by Daoist talisman arts, sacred pagodas, and Chinese martial fantasy.",
+  "version": "1.0.0",
+  "author": "Talisman WebSuite",
+  "game_focus": "Talisman Online / Weapons of War",
+  "features": [
+    "Cultivation Realm & Level 70+ Progression",
+    "Ancient Daoist Talisman & Artifact Glowing Accents",
+    "Sect & Guild Hall of Honor Displays",
+    "Sacred Caves & Scenario Raid Indicators"
+  ],
+  "preview": "screenshots/preview.png",
+  "css_file": "css/theme-skin.css",
+  "canvas_id": "particle-canvas"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "Theme_2_Infernal_Nether",
+  "name": "Infernal Nether (Blood-Ruby)",
+  "description": "Molten volcanic obsidian, flaming netherworld embers, and aggressive blood-ruby styling tailored for hardcore PK, World Boss raids, and Demon Cave conquests.",
+  "version": "1.0.0",
+  "author": "Talisman WebSuite",
+  "game_focus": "Talisman Online / Weapons of War",
+  "features": [
+    "Hardcore PK Arena & Kill Counter Styling",
+    "Netherworld Demon Cave & Boss Raid Alerts",
+    "Blood-Ruby eCoins & Dark Forge Treasury",
+    "Fierce Guild Territory Siege War Boards"
+  ],
+  "preview": "screenshots/preview.png",
+  "css_file": "css/theme-skin.css",
+  "canvas_id": "ember-canvas"
+}

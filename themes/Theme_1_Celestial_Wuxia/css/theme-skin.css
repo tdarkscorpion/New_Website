@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Theme 1: Celestial Wuxia (Heavenly Jade & Radiant Gold)
+   Talisman Online / Weapons of War Skin Adapter
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #2be4a1 !important;
+  --secondary-color: #f5c253 !important;
+  --primary-rgb: 43, 228, 161 !important;
+  --wuxia-gold: #f5c253;
+  --wuxia-gold-border: rgba(229, 169, 60, 0.45);
+  --wuxia-jade: #2be4a1;
+  --wuxia-bg-card: rgba(8, 26, 32, 0.88);
+}
+
+body {
+  background-color: #050d12 !important;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(43, 228, 161, 0.15) 0%, transparent 60%),
+    radial-gradient(circle at 15% 40%, rgba(245, 194, 83, 0.1) 0%, transparent 40%),
+    linear-gradient(180deg, #050d12 0%, #08161d 50%, #04090c 100%) !important;
+  color: #f0f6fc !important;
+}
+
+section {
+  background-image: 
+    linear-gradient(rgba(5, 13, 18, 0.75), rgba(4, 9, 12, 0.9)),
+    radial-gradient(ellipse at center, rgba(43, 228, 161, 0.12) 0%, transparent 70%) !important;
+}
+
+/* Navbar */
+nav {
+  background: rgba(5, 16, 21, 0.75) !important;
+  border-bottom: 1px solid var(--wuxia-gold-border) !important;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6), inset 0 -1px 0 rgba(245, 194, 83, 0.2) !important;
+}
+
+ul li a {
+  font-family: 'Cinzel', serif !important;
+  letter-spacing: 1px !important;
+  color: #d1e5ec !important;
+}
+
+ul li a:hover,
+ul li:hover {
+  color: var(--wuxia-gold) !important;
+  text-shadow: 0 0 12px rgba(245, 194, 83, 0.7) !important;
+}
+
+/* Section Titles & Game Headers */
+.section-header-title, h1, h2, h3, h4 {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif !important;
+  color: #ffd67a !important;
+  text-shadow: 0 2px 10px rgba(245, 194, 83, 0.3) !important;
+}
+
+/* Hero Info Card */
+.hero-left-card {
+  background: var(--wuxia-bg-card) !important;
+  border: 1px solid var(--wuxia-gold-border) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), inset 0 0 25px rgba(43, 228, 161, 0.05) !important;
+  position: relative;
+}
+
+.hero-left-card::before {
+  content: "☯ TALISMAN CULTIVATION REALM";
+  position: absolute;
+  top: -12px;
+  left: 25px;
+  background: linear-gradient(135deg, #f5c253, #c48b24);
+  color: #050d12;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 2px 10px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+}
+
+/* Buttons */
+.btn-premium, .button1, .button2, .button-nav-mobile {
+  background: linear-gradient(135deg, #f5c253 0%, #c48b24 100%) !important;
+  color: #050d12 !important;
+  font-family: 'Cinzel', serif !important;
+  font-weight: 700 !important;
+  border: 1px solid #ffd67a !important;
+  box-shadow: 0 4px 15px rgba(245, 194, 83, 0.4) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+.btn-premium:hover, .button1:hover, .button2:hover {
+  background: linear-gradient(135deg, #ffd67a 0%, #e5a93c 100%) !important;
+  box-shadow: 0 6px 25px rgba(245, 194, 83, 0.6) !important;
+  transform: translateY(-2px);
+}
+
+/* Server Time & Status Badges */
+.server-time-badge {
+  background: rgba(5, 20, 26, 0.85) !important;
+  border: 1px solid rgba(43, 228, 161, 0.4) !important;
+  color: #2be4a1 !important;
+}
+
+/* Modals & Dialogs */
+.modal-content, .glass-panel, .glass-card {
+  background: rgba(6, 20, 26, 0.92) !important;
+  border: 1px solid var(--wuxia-gold-border) !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), inset 0 0 30px rgba(43, 228, 161, 0.04) !important;
+  color: #f0f6fc !important;
+}
+
+/* Ranking Table */
+.ranking-table th {
+  background: rgba(245, 194, 83, 0.1) !important;
+  color: #ffd67a !important;
+  font-family: 'Cinzel', serif !important;
+  border-bottom: 2px solid var(--wuxia-gold-border) !important;
+}
+
+.ranking-table tr:hover td {
+  background: rgba(43, 228, 161, 0.08) !important;
+}
+
+/* Accent Glows */
+.neon-icon {
+  color: #2be4a1 !important;
+}

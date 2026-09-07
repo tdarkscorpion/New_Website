@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg-citadel: #080b12;
+  --bg-velvet: #0e1424;
+  --bg-card: rgba(16, 23, 40, 0.85);
+  --gold-royal: #d4af37;
+  --gold-light: #f5d77f;
+  --gold-dark: #997a15;
+  --gold-gradient: linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #997a15 100%);
+  --crimson-royal: #8b0000;
+  --crimson-glow: rgba(139, 0, 0, 0.5);
+  --border-gold: #d4af37;
+  --border-glow: rgba(212, 175, 55, 0.35);
+  --text-primary: #fdfbf7;
+  --text-muted: #9aa5b9;
+  --font-royal-display: 'Cinzel Decorative', serif;
+  --font-royal-heading: 'Cinzel', serif;
+  --font-body: 'Inter', sans-serif;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-citadel);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.15) 0%, transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(139, 0, 0, 0.12) 0%, transparent 50%),
+    linear-gradient(180deg, #080b12 0%, #0d1322 50%, #05070a 100%);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.citadel-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(14px);
+  z-index: 100;
+}
+
+.brand-shield {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.shield-icon {
+  width: 48px;
+  height: 52px;
+  background: radial-gradient(circle, #8b0000 0%, #200000 100%);
+  border: 2px solid var(--gold-royal);
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: var(--gold-light);
+  box-shadow: 0 0 15px var(--border-glow);
+}
+
+.brand-text {
+  font-family: var(--font-royal-display);
+  font-size: 22px;
+  color: var(--gold-light);
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-item a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-family: var(--font-royal-heading);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: var(--transition);
+  padding: 8px 12px;
+}
+
+.nav-item a:hover, .nav-item.active a {
+  color: var(--gold-light);
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+}
+
+.btn-royal-gold {
+  padding: 12px 28px;
+  background: var(--gold-gradient);
+  border: 1px solid #fff;
+  color: #0b0f19;
+  font-family: var(--font-royal-heading);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-royal-gold:hover {
+  filter: brightness(1.15);
+  box-shadow: 0 6px 30px rgba(212, 175, 55, 0.7);
+  transform: translateY(-2px);
+}
+
+.btn-royal-crimson {
+  padding: 12px 26px;
+  background: rgba(139, 0, 0, 0.6);
+  border: 1px solid var(--gold-royal);
+  color: #fff;
+  font-family: var(--font-royal-heading);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-royal-crimson:hover {
+  background: rgba(139, 0, 0, 0.85);
+  box-shadow: 0 0 20px var(--crimson-glow);
+}
+
+/* HERO SECTION */
+.hero {
+  padding: 90px 0 60px;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-crest-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 6px 16px;
+  border-radius: 4px;
+  color: var(--gold-light);
+  font-family: var(--font-royal-heading);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.hero-title {
+  font-family: var(--font-royal-display);
+  font-size: 54px;
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.hero-title span {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+
+.hero-lead {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 560px;
+}
+
+/* CITADEL MONOLITH WIDGET */
+.monolith-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-gold);
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 0 0 25px var(--border-glow);
+  position: relative;
+}
+
+.monolith-card::before, .monolith-card::after {
+  content: '❖';
+  position: absolute;
+  color: var(--gold-royal);
+  font-size: 14px;
+}
+
+.monolith-card::before { top: 8px; left: 8px; }
+.monolith-card::after { bottom: 8px; right: 8px; }
+
+.monolith-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.monolith-title {
+  font-family: var(--font-royal-heading);
+  font-size: 18px;
+  color: var(--gold-light);
+  letter-spacing: 1.5px;
+}
+
+.monolith-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.monolith-box {
+  background: rgba(8, 11, 18, 0.7);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 6px;
+  padding: 16px;
+  text-align: center;
+}
+
+.monolith-value {
+  font-family: var(--font-royal-heading);
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--gold-light);
+  margin-bottom: 4px;
+}
+
+.monolith-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* GUILD HALL OF FAME */
+.hall-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 60px 0;
+}
+
+.guild-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 8px;
+  padding: 28px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.guild-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold-royal);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px var(--border-glow);
+}
+
+.guild-banner {
+  width: 60px;
+  height: 70px;
+  margin: 0 auto 16px;
+  background: radial-gradient(circle, #8b0000 0%, #1a0000 100%);
+  border: 2px solid var(--gold-royal);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  box-shadow: 0 0 15px var(--border-glow);
+}
+
+.guild-name {
+  font-family: var(--font-royal-heading);
+  font-size: 20px;
+  color: var(--gold-light);
+  margin-bottom: 6px;
+}
+
+.guild-rank {
+  font-size: 12px;
+  color: var(--gold-royal);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.guild-stats {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* FOOTER */
+.citadel-footer {
+  margin-top: 80px;
+  padding: 40px 0;
+  border-top: 2px solid rgba(212, 175, 55, 0.25);
+  text-align: center;
+  font-family: var(--font-royal-heading);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+}

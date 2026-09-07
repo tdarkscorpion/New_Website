@@ -1,0 +1,133 @@
+/* ==========================================================================
+   Theme 4: Imperial Citadel (Golden Dynasty & Royal Crimson)
+   Talisman Online / Weapons of War Skin Adapter
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Uncial+Antiqua&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #d4af37 !important;
+  --secondary-color: #990000 !important;
+  --primary-rgb: 212, 175, 55 !important;
+  --citadel-gold: #d4af37;
+  --citadel-gold-light: #f7e089;
+  --citadel-crimson: #990000;
+  --citadel-border: rgba(212, 175, 55, 0.45);
+  --citadel-bg-card: rgba(18, 14, 22, 0.88);
+}
+
+body {
+  background-color: #0b080e !important;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.15) 0%, transparent 60%),
+    radial-gradient(circle at 85% 40%, rgba(153, 0, 0, 0.12) 0%, transparent 50%),
+    linear-gradient(180deg, #0d0912 0%, #17101f 50%, #07050a 100%) !important;
+  color: #f7f3eb !important;
+}
+
+section {
+  background-image: 
+    linear-gradient(rgba(13, 9, 18, 0.8), rgba(7, 5, 10, 0.95)),
+    radial-gradient(ellipse at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%) !important;
+}
+
+/* Navbar */
+nav {
+  background: rgba(15, 10, 20, 0.82) !important;
+  border-bottom: 2px solid var(--citadel-border) !important;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.7), inset 0 -1px 0 rgba(212, 175, 55, 0.3) !important;
+}
+
+ul li a {
+  font-family: 'Cinzel', serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  color: #edd9a6 !important;
+}
+
+ul li a:hover,
+ul li:hover {
+  color: var(--citadel-gold-light) !important;
+  text-shadow: 0 0 15px rgba(247, 224, 137, 0.8) !important;
+}
+
+/* Headings */
+.section-header-title, h1, h2, h3, h4 {
+  font-family: 'Cinzel', 'Uncial Antiqua', serif !important;
+  color: var(--citadel-gold-light) !important;
+  text-shadow: 0 2px 15px rgba(212, 175, 55, 0.4) !important;
+}
+
+/* Hero Info Card */
+.hero-left-card {
+  background: var(--citadel-bg-card) !important;
+  border: 1px solid var(--citadel-border) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), inset 0 0 30px rgba(212, 175, 55, 0.05) !important;
+  position: relative;
+}
+
+.hero-left-card::before {
+  content: "⚔️ IMPERIAL DYNASTY CITADEL & GUILD HALL";
+  position: absolute;
+  top: -12px;
+  left: 25px;
+  background: linear-gradient(135deg, #d4af37, #990000);
+  color: #ffffff;
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 14px;
+  border-radius: 20px;
+  letter-spacing: 1.2px;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+}
+
+/* Buttons */
+.btn-premium, .button1, .button2, .button-nav-mobile {
+  background: linear-gradient(135deg, #d4af37 0%, #85691c 100%) !important;
+  color: #100a02 !important;
+  font-family: 'Cinzel', serif !important;
+  font-weight: 800 !important;
+  border: 1px solid #f7e089 !important;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.2px !important;
+}
+
+.btn-premium:hover, .button1:hover, .button2:hover {
+  background: linear-gradient(135deg, #f7e089 0%, #c49d29 100%) !important;
+  box-shadow: 0 6px 30px rgba(212, 175, 55, 0.7) !important;
+  transform: translateY(-2px);
+}
+
+/* Server Time & Status Badges */
+.server-time-badge {
+  background: rgba(22, 16, 30, 0.9) !important;
+  border: 1px solid var(--citadel-border) !important;
+  color: var(--citadel-gold-light) !important;
+}
+
+/* Modals & Dialogs */
+.modal-content, .glass-panel, .glass-card {
+  background: rgba(16, 12, 22, 0.94) !important;
+  border: 1px solid var(--citadel-border) !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9), inset 0 0 30px rgba(212, 175, 55, 0.05) !important;
+  color: #f7f3eb !important;
+}
+
+/* Ranking Table */
+.ranking-table th {
+  background: rgba(212, 175, 55, 0.15) !important;
+  color: var(--citadel-gold-light) !important;
+  font-family: 'Cinzel', serif !important;
+  letter-spacing: 1px !important;
+  border-bottom: 2px solid var(--citadel-border) !important;
+}
+
+.ranking-table tr:hover td {
+  background: rgba(212, 175, 55, 0.08) !important;
+}
+
+.neon-icon {
+  color: #d4af37 !important;
+}

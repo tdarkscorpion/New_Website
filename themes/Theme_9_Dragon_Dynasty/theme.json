@@ -1,0 +1,18 @@
+{
+  "id": "Theme_9_Dragon_Dynasty",
+  "name": "Dragon Emperor Dynasty",
+  "description": "Imperial dragon court theme with blazing vermilion, ancient bronze highlights, dragon scale motifs, and floating dragon fire orbs.",
+  "version": "1.0.0",
+  "author": "Talisman WebSuite",
+  "canvas_id": "dragon-canvas",
+  "game_focus": "Talisman Online / Warriors of War",
+  "features": [
+    "Full Mobile Responsiveness (375px - 1440px)",
+    "Custom Interactive Particle Engine (dragon-canvas)",
+    "Curated #f59e0b & #dc2626 Aesthetic Palette",
+    "Optimized Card Elevation & Glowing Accents"
+  ],
+  "preview": "screenshots/preview.png",
+  "css_file": "css/theme-skin.css",
+  "js_file": "js/theme.js"
+}

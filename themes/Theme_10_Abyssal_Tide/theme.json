@@ -1,0 +1,18 @@
+{
+  "id": "Theme_10_Abyssal_Tide",
+  "name": "Abyssal Tide & Ocean",
+  "description": "Deep sea dragon realm with turquoise tide waves, bioluminescent marine plankton, aquatic gradients, and floating bubbles.",
+  "version": "1.0.0",
+  "author": "Talisman WebSuite",
+  "canvas_id": "abyssal-canvas",
+  "game_focus": "Talisman Online / Warriors of War",
+  "features": [
+    "Full Mobile Responsiveness (375px - 1440px)",
+    "Custom Interactive Particle Engine (abyssal-canvas)",
+    "Curated #14b8a6 & #06b6d4 Aesthetic Palette",
+    "Optimized Card Elevation & Glowing Accents"
+  ],
+  "preview": "screenshots/preview.png",
+  "css_file": "css/theme-skin.css",
+  "js_file": "js/theme.js"
+}

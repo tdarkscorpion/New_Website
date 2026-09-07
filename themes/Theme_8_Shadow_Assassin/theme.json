@@ -1,0 +1,18 @@
+{
+  "id": "Theme_8_Shadow_Assassin",
+  "name": "Shadow Assassin Clan",
+  "description": "Stealth assassin guild aesthetic with deep matte obsidian surfaces, toxic poison green edged glows, and swirling dark vapor.",
+  "version": "1.0.0",
+  "author": "Talisman WebSuite",
+  "canvas_id": "shadow-canvas",
+  "game_focus": "Talisman Online / Warriors of War",
+  "features": [
+    "Full Mobile Responsiveness (375px - 1440px)",
+    "Custom Interactive Particle Engine (shadow-canvas)",
+    "Curated #22c55e & #16a34a Aesthetic Palette",
+    "Optimized Card Elevation & Glowing Accents"
+  ],
+  "preview": "screenshots/preview.png",
+  "css_file": "css/theme-skin.css",
+  "js_file": "js/theme.js"
+}

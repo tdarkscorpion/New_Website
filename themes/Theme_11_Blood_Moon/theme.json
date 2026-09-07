@@ -1,0 +1,18 @@
+{
+  "id": "Theme_11_Blood_Moon",
+  "name": "Blood Moon Eclipse",
+  "description": "Menacing celestial eclipse theme with deep vampire ruby tones, dark twilight silver, and rising sanguine mist.",
+  "version": "1.0.0",
+  "author": "Talisman WebSuite",
+  "canvas_id": "bloodmoon-canvas",
+  "game_focus": "Talisman Online / Warriors of War",
+  "features": [
+    "Full Mobile Responsiveness (375px - 1440px)",
+    "Custom Interactive Particle Engine (bloodmoon-canvas)",
+    "Curated #ef4444 & #b91c1c Aesthetic Palette",
+    "Optimized Card Elevation & Glowing Accents"
+  ],
+  "preview": "screenshots/preview.png",
+  "css_file": "css/theme-skin.css",
+  "js_file": "js/theme.js"
+}

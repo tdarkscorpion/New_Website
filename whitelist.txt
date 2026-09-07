@@ -1,5 +1,8 @@
-localhost
-127.0.0.1
+# Talisman Domain Whitelist
 himeshhome.casa
-10.0.0.2
-206.245.165.92 | 28 Nov 2026
+www.himeshhome.casa
+192.168.65.120
+127.0.0.1
+localhost
+10.0.0.2 | 7 May 2026
+103.49.131.225 | 10 May 2026

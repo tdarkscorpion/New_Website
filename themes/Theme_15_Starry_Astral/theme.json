@@ -1,0 +1,18 @@
+{
+  "id": "Theme_15_Starry_Astral",
+  "name": "Astral Void & Cosmos",
+  "description": "Deep cosmos interstellar aesthetic featuring starlight nebulae, violet cosmic dust, and shooting star streaks across deep space.",
+  "version": "1.0.0",
+  "author": "Talisman WebSuite",
+  "canvas_id": "astral-canvas",
+  "game_focus": "Talisman Online / Warriors of War",
+  "features": [
+    "Full Mobile Responsiveness (375px - 1440px)",
+    "Custom Interactive Particle Engine (astral-canvas)",
+    "Curated #a855f7 & #6366f1 Aesthetic Palette",
+    "Optimized Card Elevation & Glowing Accents"
+  ],
+  "preview": "screenshots/preview.png",
+  "css_file": "css/theme-skin.css",
+  "js_file": "js/theme.js"
+}

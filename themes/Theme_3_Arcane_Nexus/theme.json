@@ -1,0 +1,17 @@
+{
+  "id": "Theme_3_Arcane_Nexus",
+  "name": "Arcane Nexus (Astral Sorcery)",
+  "description": "Electric cyan and starlight violet glassmorphism tailored for ultra-fast MMORPG gaming, live server rates, holographic HUD cards, and astral talisman runes.",
+  "version": "1.0.0",
+  "author": "Talisman WebSuite",
+  "game_focus": "Talisman Online / Weapons of War",
+  "features": [
+    "Holographic HUD Character Statistics",
+    "Live Server Rates Matrix (EXP, Drop, Gold)",
+    "Astral Rune Sigils & Violet Nebula Glow",
+    "High-Speed Tournament & PK Arena Dashboards"
+  ],
+  "preview": "screenshots/preview.png",
+  "css_file": "css/theme-skin.css",
+  "canvas_id": "nexus-canvas"
+}

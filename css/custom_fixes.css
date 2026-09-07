@@ -423,3 +423,320 @@ nav ul li {
     .slide-title { font-size: 1.1rem; }
     .news-grid, .streamers-grid { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   MASTER THEME HARMONIZATION SYSTEM
+   Enforces uniform dark cyberpunk / fantasy glassmorphism across all pages,
+   inputs, dropdowns, textareas, tables, scrollbars, and placeholders.
+   ========================================================================== */
+
+/* 1. Global Form Controls (Overrides Bootstrap & Browser Defaults) */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea,
+.form-control,
+.input-modern,
+.select-modern {
+    background: rgba(12, 14, 24, 0.75) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    color: #f8fafc !important;
+    border-radius: 10px !important;
+    font-family: inherit !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-sizing: border-box !important;
+    outline: none !important;
+}
+
+/* Sizing for inputs */
+input[type="text"]:not([size]):not(.small-input),
+input[type="password"]:not([size]):not(.small-input),
+input[type="email"]:not([size]):not(.small-input),
+input[type="number"]:not([size]):not(.small-input),
+input[type="url"]:not([size]):not(.small-input),
+input[type="search"]:not([size]):not(.small-input),
+select:not(.small-select),
+textarea,
+.form-control,
+.input-modern,
+.select-modern {
+    padding: 11px 16px !important;
+    font-size: 0.95rem !important;
+}
+
+/* Focus States across all inputs */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus,
+.form-control:focus,
+.input-modern:focus,
+.select-modern:focus {
+    border-color: #2ca4bf !important;
+    background: rgba(16, 20, 36, 0.92) !important;
+    box-shadow: 0 0 16px rgba(44, 164, 191, 0.35) !important;
+    color: #ffffff !important;
+}
+
+/* 2. Universal Placeholder Styling across all browsers & form elements */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+.form-control::-webkit-input-placeholder {
+    color: #64748b !important;
+    opacity: 1 !important;
+    font-weight: 400 !important;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder,
+.form-control::-moz-placeholder {
+    color: #64748b !important;
+    opacity: 1 !important;
+    font-weight: 400 !important;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+.form-control:-ms-input-placeholder {
+    color: #64748b !important;
+    opacity: 1 !important;
+    font-weight: 400 !important;
+}
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder,
+.form-control::-ms-input-placeholder {
+    color: #64748b !important;
+    opacity: 1 !important;
+    font-weight: 400 !important;
+}
+input::placeholder,
+textarea::placeholder,
+.form-control::placeholder {
+    color: #64748b !important;
+    opacity: 1 !important;
+    font-weight: 400 !important;
+}
+
+/* Disabled & Readonly Form Elements */
+.form-control:disabled,
+.form-control[readonly],
+input:disabled,
+input[readonly],
+select:disabled,
+textarea:disabled {
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    color: #64748b !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    cursor: not-allowed !important;
+}
+
+/* 3. Global Dropdown / Select Enhancements */
+select,
+.select-modern {
+    cursor: pointer !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%232ca4bf'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 14px center !important;
+    background-size: 16px !important;
+    padding-right: 42px !important;
+}
+
+select option,
+.select-modern option {
+    background-color: #12131f !important;
+    color: #f8fafc !important;
+    padding: 10px 14px !important;
+}
+
+/* 4. Universal Checkboxes, Radios, and File Uploads */
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: #2ca4bf !important;
+    cursor: pointer !important;
+}
+
+input[type="file"] {
+    background: rgba(12, 14, 24, 0.6) !important;
+    border: 1px dashed rgba(255, 255, 255, 0.18) !important;
+    border-radius: 10px !important;
+    padding: 10px 14px !important;
+    color: #94a3b8 !important;
+    cursor: pointer !important;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    background: linear-gradient(135deg, #2ca4bf, #1a7185) !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 6px 14px !important;
+    border-radius: 6px !important;
+    margin-right: 12px !important;
+    cursor: pointer !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    transition: all 0.2s !important;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    filter: brightness(1.15) !important;
+}
+
+/* 5. Universal Tables in Action & Dashboard Panels */
+table {
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    color: #e2e8f0 !important;
+}
+
+.legacy-content-container table,
+.admin-content-area table,
+.glass-pane table,
+table.legacy-table,
+.dashboard-table {
+    width: 100% !important;
+    background: rgba(14, 16, 26, 0.45) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    margin: 15px 0 !important;
+}
+
+.legacy-content-container table th,
+.admin-content-area table th,
+.glass-pane table th,
+table.legacy-table th,
+.dashboard-table th {
+    background: rgba(255, 255, 255, 0.04) !important;
+    color: #94a3b8 !important;
+    font-weight: 600 !important;
+    padding: 12px 16px !important;
+    text-transform: uppercase !important;
+    font-size: 0.78rem !important;
+    letter-spacing: 0.6px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.legacy-content-container table td,
+.admin-content-area table td,
+.glass-pane table td,
+table.legacy-table td,
+.dashboard-table td {
+    padding: 12px 16px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    color: #f1f5f9 !important;
+    vertical-align: middle !important;
+}
+
+.legacy-content-container table tr:hover td,
+.admin-content-area table tr:hover td,
+.glass-pane table tr:hover td,
+.dashboard-table tr:hover td {
+    background: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* 6. Form Card, Layout Grids & Buttons in Action Panels */
+.input-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 20px !important;
+}
+
+.form-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 7px !important;
+    margin-bottom: 18px !important;
+}
+
+.form-group label {
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    color: #cbd5e1 !important;
+    letter-spacing: 0.3px !important;
+}
+
+/* Buttons in Legacy & Action Panels */
+input[type="submit"],
+.btn-action-primary {
+    background: linear-gradient(135deg, #2ca4bf 0%, #176577 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 11px 24px !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    font-size: 0.92rem !important;
+    cursor: pointer !important;
+    transition: all 0.25s ease !important;
+    box-shadow: 0 4px 14px rgba(44, 164, 191, 0.3) !important;
+}
+
+input[type="submit"]:hover,
+.btn-action-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(44, 164, 191, 0.5) !important;
+    filter: brightness(1.1) !important;
+}
+
+/* 7. Bootstrap Overrides for Dark Glass Theme */
+.modal-content {
+    background: rgba(13, 16, 26, 0.96) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
+    border-radius: 18px !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7) !important;
+}
+
+.card {
+    background: rgba(18, 20, 32, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+    border-radius: 14px !important;
+}
+
+/* 8. Neutralize Legacy HTML Attributes */
+[bgcolor], td[bgcolor], th[bgcolor], tr[bgcolor] {
+    background: rgba(255, 255, 255, 0.03) !important;
+    color: #f1f5f9 !important;
+}
+
+font[color], font {
+    color: inherit !important;
+}
+
+/* 9. Bootstrap Dropdowns and Alerts */
+.dropdown-menu {
+    background: #0f1322 !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+    border-radius: 12px !important;
+}
+
+.dropdown-item {
+    color: #cbd5e1 !important;
+    transition: 0.2s ease !important;
+}
+
+.dropdown-item:hover {
+    background: rgba(44, 164, 191, 0.15) !important;
+    color: #38bdf8 !important;
+}
+
+.alert-dark, .alert-info, .alert-success, .alert-warning, .alert-danger {
+    border-radius: 12px !important;
+}
+
+
+
