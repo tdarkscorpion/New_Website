@@ -7,6 +7,7 @@
 credentials.env
 whitelist.env
 *.env
+installed.lock
 /config/
 *.key
 *.pem
@@ -51,6 +52,7 @@ __pycache__/
 *.bat
 *.ps1
 *.sql
+!install/talisman_master_setup.sql
 PROJECT_CONSTITUTION.md
 analyze_tables.php
 append_tables.php
