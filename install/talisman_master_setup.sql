@@ -1610,4 +1610,55 @@ INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('menu_re
 INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('menu_security_visible', '1');
 INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('paypal_enabled', '1');
 INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('paypal_mode', 'sandbox');
-INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('test_persist', '123');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('adv_referral_visible', '1');
+
+-- Table structure for `t_creator_clips`
+CREATE TABLE IF NOT EXISTS `t_creator_clips` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `account_id` int(11) NOT NULL DEFAULT '0',
+  `account_name` varchar(64) NOT NULL,
+  `character_name` varchar(64) NOT NULL,
+  `platform` varchar(32) NOT NULL,
+  `video_url` varchar(255) NOT NULL,
+  `reward_gp` int(11) DEFAULT '0',
+  `status` enum('pending','approved','rejected') DEFAULT 'pending',
+  `admin_notes` varchar(255) DEFAULT NULL,
+  `reviewed_by` varchar(64) DEFAULT NULL,
+  `reviewed_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uniq_video_url` (`video_url`),
+  KEY `idx_account` (`account_name`),
+  KEY `idx_status` (`status`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Table structure for `t_referral_ledger`
+CREATE TABLE IF NOT EXISTS `t_referral_ledger` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `referrer_account` varchar(64) NOT NULL,
+  `referred_account` varchar(64) NOT NULL,
+  `referred_char_name` varchar(64) NOT NULL,
+  `milestone_level` int(11) NOT NULL,
+  `gp_awarded` int(11) NOT NULL DEFAULT '0',
+  `ip_address` varchar(64) DEFAULT NULL,
+  `is_flagged_alt` tinyint(1) DEFAULT '0',
+  `flag_reason` varchar(255) DEFAULT NULL,
+  `claimed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uniq_ref_milestone` (`referred_account`,`milestone_level`),
+  KEY `idx_referrer` (`referrer_account`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Table structure for `t_share_boosts`
+CREATE TABLE IF NOT EXISTS `t_share_boosts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `account_name` varchar(64) NOT NULL,
+  `platform` varchar(32) NOT NULL,
+  `gp_awarded` int(11) NOT NULL DEFAULT '1',
+  `claimed_date` date NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uniq_daily_share` (`account_name`,`claimed_date`),
+  KEY `idx_account` (`account_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
