@@ -1612,6 +1612,23 @@ INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('menu_se
 INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('paypal_enabled', '1');
 INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('paypal_mode', 'sandbox');
 INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('adv_referral_visible', '1');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('ref_tier1_level', '40');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('ref_tier1_gp', '5');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('ref_tier1_hours', '1');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('ref_tier2_level', '60');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('ref_tier2_gp', '10');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('ref_tier2_hours', '3');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('ref_tier3_level', '70');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('ref_tier3_gp', '15');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('ref_tier3_hours', '6');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('ref_pyramid_l2_gp', '2');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('ref_daily_share_gp', '1');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('ref_clip_bounty_gp', '50');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('promote_system_enabled', '1');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('show_affiliate_in_nav', '1');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('show_affiliate_in_dashboard', '1');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('show_affiliate_in_legacy', '1');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('db_schema_version', '20260927_02');
 
 -- Table structure for `t_creator_clips`
 CREATE TABLE IF NOT EXISTS `t_creator_clips` (
