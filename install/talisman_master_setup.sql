@@ -1628,7 +1628,8 @@ INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('promote
 INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('show_affiliate_in_nav', '1');
 INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('show_affiliate_in_dashboard', '1');
 INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('show_affiliate_in_legacy', '1');
-INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('db_schema_version', '20260927_02');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('social_share_promo_template', 'Play Talisman Online with [username]! Epic PvP, balanced rates, and active community: [url]');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('db_schema_version', '20260927_03');
 
 -- Table structure for `t_creator_clips`
 CREATE TABLE IF NOT EXISTS `t_creator_clips` (
