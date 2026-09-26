@@ -743,6 +743,10 @@ footer {
 }
 .nav-btn.admin-btn { margin-top: 15px; border-top: 1px solid rgba(255, 255, 255, 0.05); color: #cc6666; }
 .nav-btn.admin-btn:hover { color: #ff4d4d; background: rgba(255, 77, 77, 0.05); }
+.nav-btn.admin-btn.active { color: #ff4d4d; background: rgba(255, 77, 77, 0.12); border-left: 4px solid #ff4d4d; }
+.nav-btn.affiliate-nav-btn { background: rgba(252, 196, 25, 0.04); }
+.nav-btn.affiliate-nav-btn:hover { background: rgba(252, 196, 25, 0.08); }
+.nav-btn.affiliate-nav-btn.active { background: rgba(252, 196, 25, 0.14); border-left: 4px solid #fcc419; }
 
 /* Main Area */
 .dashboard-content-area {
