@@ -1420,6 +1420,20 @@ CREATE TABLE IF NOT EXISTS `t_smtp_settings` (
   PRIMARY KEY (`setting_key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- Table structure for `t_gp_conversions`
+CREATE TABLE IF NOT EXISTS `t_gp_conversions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `account_name` varchar(50) NOT NULL,
+  `account_id` bigint(21) NOT NULL DEFAULT '0',
+  `gp_spent` int(11) NOT NULL,
+  `yield_amount` int(11) NOT NULL,
+  `yield_type` varchar(20) NOT NULL,
+  `converted_at` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `idx_account` (`account_name`),
+  KEY `idx_date` (`converted_at`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 -- Table structure for `t_staff_hide`
 CREATE TABLE IF NOT EXISTS `t_staff_hide` (
   `hid` smallint(6) NOT NULL AUTO_INCREMENT,
@@ -1629,6 +1643,11 @@ INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('show_af
 INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('show_affiliate_in_dashboard', '1');
 INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('show_affiliate_in_legacy', '1');
 INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('social_share_promo_template', 'Play Talisman Online with [username]! Epic PvP, balanced rates, and active community: [url]');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('gp_convert_enabled', '1');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('gp_convert_ratio_tp', '10');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('gp_convert_ratio_ec', '50');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('gp_convert_min_gp', '100');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('gp_convert_max_per_day', '0');
 INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('db_schema_version', '20260927_03');
 
 -- Table structure for `t_creator_clips`
