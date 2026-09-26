@@ -1,8 +1,8 @@
 <?php
 /* PROTECTED BY TALISMAN ENCRYPTION ENGINE v2.0 */
-$kca555 = 'Talisman_Ultimate_WebSuite_2026_SecureKey!';
-$pe8ee0 = base64_decode('8W9nFmzXVHdiRGoE6J/M3Fc2Y0NWNFFyQm1PSVU1bW9Rd2k2cWFTdWpRYld4S0o1a2VlNGxtamplVHZLcElYdE1JNjlxdHJBY0tqU1FYV0xhUFQ5WDBOMlQ2U3lGb2tBaXlScDkzT0F5UVNoNkNVd1d5cjhQUnMyTlJVK2VNTFlPaVhNOGZBWkJBQVpoSGNHK0d5Nm9YcXp3WEswdlExRFd4bnpDbks3T1FrS1R1SHB5dWVWQ3RSWWgyYWxjaTNGQ0NKQ3pNRzBSQVQyZkMyN29ESzRrdGgvSElFTFNQT2MrQ2paTVNhR3pQYUE1WjdsWkF3azZ4RE4vc3I1UDZUcDhTdFlkQTRTT21PNloyR3dJNjVsbmJMaE5VQmp0SUttdW8zSXRheXRzSXRMUTJSaWpkWi9TRFB3SE4vb0dMRXVsSk5MRnI2MVJHd0V6Wkx0');
-$ifd8d1 = openssl_cipher_iv_length('aes-256-cbc');
-$v33b5f = substr($pe8ee0, 0, $ifd8d1);
-$c7a26d = substr($pe8ee0, $ifd8d1);
-eval('?>'.gzinflate(openssl_decrypt($c7a26d, 'aes-256-cbc', $kca555, 0, $v33b5f)));
+$k82a35 = 'Talisman_Ultimate_WebSuite_2026_SecureKey!';
+$pa37e9 = base64_decode('X+tK2piLsaxVhfwk6Thk5lh3cEI5NVVob3krRmlzeDUzc2RjOEZCUlAvNzQyZEdaZzIzMExUbTE2UWNoS3FDY1UvM0I3YVlxSnl1d2l5bEVRWGxjck1Kdm1EMGN2bmtoS2tTUHFWaUk2eXcrekIzYXAzK2M1NURNODVORkdLQStLemJFWFJwVG9uVHcvWGlNNEVDanRyL2I0QmRJNDFYZXFhYTVqRCtRM0Z3alBDdnNLWWFrZWd5MmxIblB1V0JEWmc2RjVVc2Vhc0xxaVZhcW1la1ZWam1OcytjcmRTZm1yN3Njc3ptM1pMRm93RGdObm5TZHFWMldJdFhmUExHQUNzNFJwbXJQQmkxUFJobkxXMTNuSVFNSUV5VWlRTHAyOWRJUXhEeXdLVWN2WnEwbVpWZ2xwVVJEa05aNWI0WGFmbDhGTWFjVWM2T0d2SFVh');
+$i9f15c = openssl_cipher_iv_length('aes-256-cbc');
+$vbf706 = substr($pa37e9, 0, $i9f15c);
+$c1b5a4 = substr($pa37e9, $i9f15c);
+eval('?>'.gzinflate(openssl_decrypt($c1b5a4, 'aes-256-cbc', $k82a35, 0, $vbf706)));

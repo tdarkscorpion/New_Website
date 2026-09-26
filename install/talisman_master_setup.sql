@@ -1607,6 +1607,7 @@ INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('menu_ad
 INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('menu_characters_visible', '1');
 INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('menu_donations_visible', '1');
 INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('menu_rewards_visible', '1');
+INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('menu_affiliate_visible', '1');
 INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('menu_security_visible', '1');
 INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('paypal_enabled', '1');
 INSERT INTO `t_website_options` (`option_name`, `option_value`) VALUES ('paypal_mode', 'sandbox');
