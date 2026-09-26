@@ -78,8 +78,19 @@ function openTab(evt, tabName) {
         navbtns[i].classList.remove("active");
     }
     
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.classList.add("active");
+    var targetTab = document.getElementById(tabName);
+    if (targetTab) {
+        targetTab.style.display = "block";
+    } else {
+        console.warn("[openTab] Target tab not found: " + tabName);
+    }
+
+    if (evt && evt.currentTarget && evt.currentTarget.classList) {
+        evt.currentTarget.classList.add("active");
+    } else if (evt && evt.target) {
+        var btn = evt.target.closest ? evt.target.closest('.nav-btn') : null;
+        if (btn) btn.classList.add("active");
+    }
 
     // Close the mobile sidebar if it's open
     var sidebar = document.getElementById("dashboardSidebar");
