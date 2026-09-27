@@ -34,8 +34,10 @@ CREATE TABLE IF NOT EXISTS `db_valid_ip` (
   `account_name` varchar(50) NOT NULL,
   `wan_ip` varchar(50) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`),
+  KEY `idx_account_wan` (`account_name`, `wan_ip`),
+  KEY `idx_created` (`created_at`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Table structure for `t_account`
 CREATE TABLE IF NOT EXISTS `t_account` (
@@ -848,8 +850,10 @@ CREATE TABLE IF NOT EXISTS `db_valid_ip` (
   `account_name` varchar(50) NOT NULL,
   `wan_ip` varchar(50) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`),
+  KEY `idx_account_wan` (`account_name`, `wan_ip`),
+  KEY `idx_created` (`created_at`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Table structure for `file_checksums`
 CREATE TABLE IF NOT EXISTS `file_checksums` (
