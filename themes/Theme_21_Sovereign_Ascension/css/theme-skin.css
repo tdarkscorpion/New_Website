@@ -1,0 +1,290 @@
+/* ==========================================================================
+   Weapons of War: Sovereign Ascension — Custom Game Skin (Theme 21)
+   Celestial Azure Dragon, Electric Lightning, and Imperial Gold Filigree
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;900&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary-color: #00d4ff !important;
+  --secondary-color: #f5c253 !important;
+  --accent-cyan: #38bdf8 !important;
+  --dragon-blue: #0284c7 !important;
+  --sovereign-gold: #f5c253 !important;
+  --sovereign-gold-border: rgba(245, 194, 83, 0.45) !important;
+  --sovereign-azure-glow: rgba(0, 212, 255, 0.5) !important;
+  --sovereign-card-bg: rgba(6, 16, 36, 0.88) !important;
+  --sovereign-dark: #040814 !important;
+}
+
+/* Global Body & Animated Atmosphere */
+body.theme-Theme_21_Sovereign_Ascension {
+  background-color: #040814 !important;
+  background-image: 
+    linear-gradient(180deg, rgba(4, 8, 20, 0.78) 0%, rgba(6, 16, 36, 0.88) 50%, rgba(3, 6, 15, 0.96) 100%),
+    url('../images/sovereign_banner.jpg') !important;
+  background-size: cover !important;
+  background-position: center top !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  color: #f1f5f9 !important;
+  font-family: 'Poppins', sans-serif !important;
+  overflow-x: hidden !important;
+}
+
+/* Transparent Section Layer for Seamless Backdrop */
+body.theme-Theme_21_Sovereign_Ascension section {
+  background: transparent !important;
+}
+
+/* Floating Acrylic Navigation Bar */
+body.theme-Theme_21_Sovereign_Ascension nav {
+  background: rgba(4, 12, 28, 0.82) !important;
+  border-bottom: 1px solid var(--sovereign-gold-border) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 212, 255, 0.25), inset 0 -1px 0 rgba(245, 194, 83, 0.3) !important;
+}
+
+body.theme-Theme_21_Sovereign_Ascension nav ul li a {
+  font-family: 'Cinzel', serif !important;
+  letter-spacing: 1px !important;
+  color: #dbeafe !important;
+  font-weight: 600 !important;
+  transition: all 0.25s ease !important;
+}
+
+body.theme-Theme_21_Sovereign_Ascension nav ul li a:hover,
+body.theme-Theme_21_Sovereign_Ascension nav ul li:hover {
+  color: var(--secondary-color) !important;
+  text-shadow: 0 0 14px var(--sovereign-azure-glow), 0 0 8px rgba(245, 194, 83, 0.7) !important;
+}
+
+/* Neon Icon Accents */
+body.theme-Theme_21_Sovereign_Ascension .neon-icon {
+  color: #00d4ff !important;
+  filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.8));
+}
+
+/* Titles & Headers */
+body.theme-Theme_21_Sovereign_Ascension .section-header-title,
+body.theme-Theme_21_Sovereign_Ascension h1,
+body.theme-Theme_21_Sovereign_Ascension h2,
+body.theme-Theme_21_Sovereign_Ascension h3,
+body.theme-Theme_21_Sovereign_Ascension h4 {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif !important;
+  color: #fce79a !important;
+  text-shadow: 0 2px 14px rgba(245, 194, 83, 0.4), 0 0 25px rgba(0, 212, 255, 0.35) !important;
+  letter-spacing: 0.8px !important;
+}
+
+/* Sovereign Hero Info Card */
+body.theme-Theme_21_Sovereign_Ascension .hero-left-card {
+  background: var(--sovereign-card-bg) !important;
+  border: 1px solid var(--sovereign-gold-border) !important;
+  border-radius: 16px !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 0 30px rgba(0, 212, 255, 0.15), inset 0 0 25px rgba(245, 194, 83, 0.08) !important;
+  position: relative !important;
+  transition: all 0.3s ease !important;
+}
+
+body.theme-Theme_21_Sovereign_Ascension .hero-left-card:hover {
+  border-color: #00d4ff !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 40px rgba(0, 212, 255, 0.3) !important;
+}
+
+body.theme-Theme_21_Sovereign_Ascension .hero-left-card::before {
+  content: "⚡ WEAPONS OF WAR: SOVEREIGN ASCENSION";
+  position: absolute;
+  top: -13px;
+  left: 25px;
+  background: linear-gradient(135deg, #f5c253 0%, #00d4ff 100%);
+  color: #040814;
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem;
+  font-weight: 900;
+  padding: 3px 14px;
+  border-radius: 20px;
+  letter-spacing: 1.2px;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+}
+
+/* Typer & Tagline */
+body.theme-Theme_21_Sovereign_Ascension .hero-left-card .text2 {
+  color: #e2e8f0 !important;
+  font-family: 'Cinzel', serif !important;
+  font-weight: 700 !important;
+}
+
+body.theme-Theme_21_Sovereign_Ascension .hero-left-card .typer {
+  color: #00d4ff !important;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.8);
+}
+
+body.theme-Theme_21_Sovereign_Ascension .hero-left-card .text3 {
+  color: #cbd5e1 !important;
+  line-height: 1.6 !important;
+}
+
+/* Sovereign Ascension Imperial Buttons */
+body.theme-Theme_21_Sovereign_Ascension .btn-premium,
+body.theme-Theme_21_Sovereign_Ascension .button1,
+body.theme-Theme_21_Sovereign_Ascension .button2,
+body.theme-Theme_21_Sovereign_Ascension .button-nav-mobile,
+body.theme-Theme_21_Sovereign_Ascension .btn-primary {
+  background: linear-gradient(135deg, #f5c253 0%, #c48b24 60%, #855b14 100%) !important;
+  color: #040814 !important;
+  font-family: 'Cinzel', serif !important;
+  font-weight: 800 !important;
+  border: 1px solid #ffd67a !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 18px rgba(245, 194, 83, 0.45), 0 0 10px rgba(0, 212, 255, 0.3) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  cursor: pointer !important;
+}
+
+body.theme-Theme_21_Sovereign_Ascension .btn-premium:hover,
+body.theme-Theme_21_Sovereign_Ascension .button1:hover,
+body.theme-Theme_21_Sovereign_Ascension .button2:hover,
+body.theme-Theme_21_Sovereign_Ascension .btn-primary:hover {
+  background: linear-gradient(135deg, #00d4ff 0%, #0284c7 60%, #0369a1 100%) !important;
+  color: #ffffff !important;
+  border-color: #7dd3fc !important;
+  box-shadow: 0 6px 25px rgba(0, 212, 255, 0.65), 0 0 15px rgba(245, 194, 83, 0.5) !important;
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Secondary & Ghost Buttons */
+body.theme-Theme_21_Sovereign_Ascension .btn-secondary {
+  background: rgba(6, 16, 36, 0.8) !important;
+  color: #38bdf8 !important;
+  border: 1px solid rgba(56, 189, 248, 0.4) !important;
+  border-radius: 8px !important;
+  font-family: 'Cinzel', serif !important;
+  font-weight: 700 !important;
+  transition: all 0.25s ease !important;
+}
+
+body.theme-Theme_21_Sovereign_Ascension .btn-secondary:hover {
+  background: rgba(56, 189, 248, 0.2) !important;
+  color: #fff !important;
+  border-color: #00d4ff !important;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5) !important;
+}
+
+/* Server Time Badge */
+body.theme-Theme_21_Sovereign_Ascension .server-time-badge {
+  background: rgba(4, 12, 28, 0.85) !important;
+  border: 1px solid var(--sovereign-gold-border) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), 0 0 12px rgba(0, 212, 255, 0.25) !important;
+}
+
+/* Slider & Cards Showcase */
+body.theme-Theme_21_Sovereign_Ascension .hero-right-slider,
+body.theme-Theme_21_Sovereign_Ascension .home-section-container,
+body.theme-Theme_21_Sovereign_Ascension .hub-tab-panel,
+body.theme-Theme_21_Sovereign_Ascension .slider-main-box {
+  background: var(--sovereign-card-bg) !important;
+  border: 1px solid var(--sovereign-gold-border) !important;
+  border-radius: 16px !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Modals & Dialog Boxes */
+body.theme-Theme_21_Sovereign_Ascension .modal-content,
+body.theme-Theme_21_Sovereign_Ascension .custom-modal {
+  background: linear-gradient(180deg, #061024 0%, #030814 100%) !important;
+  border: 1px solid var(--sovereign-gold-border) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.9), 0 0 35px rgba(0, 212, 255, 0.25) !important;
+  color: #f1f5f9 !important;
+}
+
+body.theme-Theme_21_Sovereign_Ascension .modal-header {
+  border-bottom: 1px solid var(--sovereign-gold-border) !important;
+  background: rgba(4, 12, 28, 0.75) !important;
+}
+
+body.theme-Theme_21_Sovereign_Ascension .modal-header h4,
+body.theme-Theme_21_Sovereign_Ascension .modal-header h5 {
+  font-family: 'Cinzel Decorative', serif !important;
+  color: #fce79a !important;
+}
+
+/* Form Inputs & Controls */
+body.theme-Theme_21_Sovereign_Ascension input[type="text"],
+body.theme-Theme_21_Sovereign_Ascension input[type="password"],
+body.theme-Theme_21_Sovereign_Ascension input[type="number"],
+body.theme-Theme_21_Sovereign_Ascension select,
+body.theme-Theme_21_Sovereign_Ascension textarea {
+  background: rgba(4, 12, 28, 0.8) !important;
+  border: 1px solid rgba(0, 212, 255, 0.3) !important;
+  color: #f8fafc !important;
+  border-radius: 8px !important;
+  padding: 10px 14px !important;
+  transition: all 0.25s ease !important;
+}
+
+body.theme-Theme_21_Sovereign_Ascension input:focus,
+body.theme-Theme_21_Sovereign_Ascension select:focus,
+body.theme-Theme_21_Sovereign_Ascension textarea:focus {
+  border-color: #00d4ff !important;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.5), inset 0 0 8px rgba(245, 194, 83, 0.2) !important;
+  outline: none !important;
+}
+
+/* Tables & Lists */
+body.theme-Theme_21_Sovereign_Ascension table {
+  border-collapse: separate !important;
+  border-spacing: 0 6px !important;
+}
+
+body.theme-Theme_21_Sovereign_Ascension table th {
+  background: rgba(4, 12, 28, 0.85) !important;
+  color: #f5c253 !important;
+  font-family: 'Cinzel', serif !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 1px !important;
+  border-bottom: 2px solid var(--sovereign-gold-border) !important;
+}
+
+body.theme-Theme_21_Sovereign_Ascension table tr td {
+  background: rgba(7, 18, 38, 0.65) !important;
+  color: #e2e8f0 !important;
+  border-top: 1px solid rgba(0, 212, 255, 0.15) !important;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.15) !important;
+}
+
+body.theme-Theme_21_Sovereign_Ascension table tr:hover td {
+  background: rgba(0, 212, 255, 0.12) !important;
+  color: #fff !important;
+}
+
+/* Tabs Navigation */
+body.theme-Theme_21_Sovereign_Ascension .tab-button,
+body.theme-Theme_21_Sovereign_Ascension .nav-tabs .nav-link {
+  font-family: 'Cinzel', serif !important;
+  color: #94a3b8 !important;
+  border-radius: 8px 8px 0 0 !important;
+  transition: all 0.25s ease !important;
+}
+
+body.theme-Theme_21_Sovereign_Ascension .tab-button.active,
+body.theme-Theme_21_Sovereign_Ascension .nav-tabs .nav-link.active {
+  background: rgba(0, 212, 255, 0.15) !important;
+  color: #00d4ff !important;
+  border-bottom: 2px solid #00d4ff !important;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.6) !important;
+}
+
+/* Footer */
+body.theme-Theme_21_Sovereign_Ascension footer {
+  background: rgba(3, 6, 15, 0.95) !important;
+  border-top: 1px solid var(--sovereign-gold-border) !important;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.7) !important;
+}

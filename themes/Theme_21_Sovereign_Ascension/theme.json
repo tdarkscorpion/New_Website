@@ -1,0 +1,17 @@
+{
+  "id": "Theme_21_Sovereign_Ascension",
+  "name": "Weapons of War: Sovereign Ascension",
+  "description": "Grand Celestial Azure Dragon & Imperial Sovereign Gold theme featuring electric blue lightning, floating Daoist mist pagodas, and acrylic glassmorphic cards.",
+  "version": "1.0.0",
+  "author": "Weapons of War / DarkScorpion",
+  "game_focus": "Weapons of War / Talisman Online",
+  "features": [
+    "Celestial Azure Dragon & Imperial Gold Filigree Styling",
+    "Interactive 60fps Electric Lightning & Spirit Orbs Canvas",
+    "High-Resolution Sovereign Ascension Artwork Integration",
+    "Custom Glassmorphic Cards with Gold & Azure Ambient Glow"
+  ],
+  "preview": "screenshots/preview.jpg",
+  "css_file": "css/theme-skin.css",
+  "canvas_id": "sovereign-canvas"
+}
