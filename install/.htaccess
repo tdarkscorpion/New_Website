@@ -10,7 +10,16 @@ Options -Indexes
     Require all denied
 </FilesMatch>
 
-# 3. Security Headers
+# 3. Permanent Lockout when installed.lock is present
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{DOCUMENT_ROOT}/installed.lock -f [OR]
+    RewriteCond %{REQUEST_FILENAME}/../installed.lock -f [OR]
+    RewriteCond %{REQUEST_FILENAME}/installed.lock -f
+    RewriteRule ^.*$ - [F,L]
+</IfModule>
+
+# 4. Security Headers
 <IfModule mod_headers.c>
     Header set X-Content-Type-Options "nosniff"
     Header set X-Frame-Options "DENY"
