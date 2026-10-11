@@ -126,11 +126,11 @@ function handleAction(action) {
 }
 
 $(document).ready(function() {
-    // Registration
-    $(document).on('click', "#register1", function(e) {
-        e.preventDefault();
-        var btn = this;
-        $(btn).text('Registering...').prop('disabled', true);
+    // Helper function for registration submission
+    function submitRegistration() {
+        var $btn = $("#register1");
+        if ($btn.prop('disabled')) return;
+        $btn.text('Registering...').prop('disabled', true);
         $.ajax({
             type: "POST",
             url: "include/action_register.php",
@@ -139,25 +139,27 @@ $(document).ready(function() {
                 $("#responseMessage").html(res);
                 if (res.toLowerCase().includes("successful")) {
                     $("#registrationForm")[0].reset();
-                    refreshCaptcha();
+                    if (typeof refreshCaptcha === 'function') refreshCaptcha();
                 } else if (res.toLowerCase().includes("captcha")) {
                     // Auto-refresh image on wrong CAPTCHA
-                    refreshCaptcha();
+                    if (typeof refreshCaptcha === 'function') refreshCaptcha();
                 }
             },
             error: function() {
                 $("#responseMessage").html("<span style='color:#f87171;'>Connection error. Please try again.</span>");
             },
             complete: function() {
-                $(btn).text('Register').prop('disabled', false);
+                $btn.text('Register').prop('disabled', false);
             }
         });
-    });
+    }
 
-    // Login
-    $(document).on('click', "#login1", function(e) {
-        e.preventDefault();
+    // Helper function for login submission
+    function submitLogin() {
+        var $btn = $("#login1");
+        if ($btn.prop('disabled')) return;
         console.log("Login attempt initiated...");
+        $btn.text('Logging in...').prop('disabled', true);
         $.ajax({
             type: "POST",
             url: "include/action_login.php",
@@ -175,7 +177,43 @@ $(document).ready(function() {
             },
             error: function() {
                 $("#loginResponseMessage").html("Error connecting to server.");
+            },
+            complete: function() {
+                $btn.text('Log In').prop('disabled', false);
             }
         });
+    }
+
+    // Registration event handlers (Click, Form Submit, Enter keypress)
+    $(document).on('click', "#register1", function(e) {
+        e.preventDefault();
+        submitRegistration();
+    });
+    $(document).on('submit', "#registrationForm", function(e) {
+        e.preventDefault();
+        submitRegistration();
+    });
+    $(document).on('keypress', "#registrationForm input", function(e) {
+        if (e.which === 13 || e.keyCode === 13) {
+            e.preventDefault();
+            submitRegistration();
+        }
+    });
+
+    // Login event handlers (Click, Form Submit, Enter keypress)
+    $(document).on('click', "#login1", function(e) {
+        e.preventDefault();
+        submitLogin();
+    });
+    $(document).on('submit', "#loginForm", function(e) {
+        e.preventDefault();
+        submitLogin();
+    });
+    $(document).on('keypress', "#loginForm input", function(e) {
+        if (e.which === 13 || e.keyCode === 13) {
+            e.preventDefault();
+            submitLogin();
+        }
     });
 });
+
