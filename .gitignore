@@ -14,6 +14,8 @@ installed.lock
 *.p12
 *.pfx
 admin_known_hosts
+.talisman_runtime_vault_*.dat
+.runtime_vault*.dat
 
 # .NET / Visual Studio build artifacts
 [Bb]in/
