@@ -1159,7 +1159,7 @@ CREATE TABLE IF NOT EXISTS `t_password_resets` (
 -- Table structure for `t_payment_packages`
 CREATE TABLE IF NOT EXISTS `t_payment_packages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `type` enum('paypal','gcash') NOT NULL,
+  `type` varchar(32) NOT NULL DEFAULT 'paypal',
   `points` int(11) NOT NULL,
   `price` decimal(10,2) NOT NULL,
   `currency` varchar(10) NOT NULL,
