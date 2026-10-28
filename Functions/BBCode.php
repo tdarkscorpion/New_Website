@@ -1,8 +1,16 @@
 <?php
-/* PROTECTED BY TALISMAN ENCRYPTION ENGINE v2.0 */
-$k936a5 = 'Talisman_Ultimate_WebSuite_2026_SecureKey!';
-$p98a06 = base64_decode('mzx02aTd4RSA3pVnfd02MVdpRW50eUVBRDI5WTUwNmNKZEZzUkQ0Qm5wbUtWQVl5NDd2eWRLaVAyQ0FRR2xIeVByTnEyU3QzQWVZdlJ0K2didjVSdndMYVlGdmVEejNMZmkvdmp1S0xTNnRNbC9LbWxRZUR1VVNsNHErOHY2VEdZMEZGbk96U211Y3ptSDFJYUlkVm03ME5EUkExL3E4MVRlMGsrd2NaYThHZm1UQ0txM294ZUd0ZVk3L0p4L0pobmtTYlF1M1l2cThaeEhzbERYU1RzNk1rVkx0dlJteHQ5SWFRZWFyQXp4WXJFaTAzRjRuUTM5Mkk1dStGN1phWldWSTEzSnVneWk5MVpxbDNSZnRTVlYwMWMwZDZkdFpONDV2VDhLNytGWC9jWWU5enFCbkNncEpkbCtxY2hndlJJTThOWktoTnhDa012ZXVY');
-$ie927c = openssl_cipher_iv_length('aes-256-cbc');
-$v3099c = substr($p98a06, 0, $ie927c);
-$c2e2a9 = substr($p98a06, $ie927c);
-eval('?>'.gzinflate(openssl_decrypt($c2e2a9, 'aes-256-cbc', $k936a5, 0, $v3099c)));
+/* PROTECTED BY TALISMAN CLOUDFLARE EDGE ENCRYPTION v3.0 */
+if(!function_exists('_talisman_runtime_key')){
+  $l5f0de=__DIR__;
+  while($l5f0de&&!file_exists($l5f0de.'/talisman_loader.php')){
+    $p=dirname($l5f0de);if($p===$l5f0de)break;$l5f0de=$p;
+  }
+  if(file_exists($l5f0de.'/talisman_loader.php')){require_once $l5f0de.'/talisman_loader.php';}
+}
+$k482c0=function_exists('_talisman_runtime_key')?_talisman_runtime_key():false;
+if($k482c0===false){header('HTTP/1.1 403 Forbidden');die('403 Security Error: Execution Locked by Cloudflare License Authority.');}
+$p6c444=base64_decode('y6WfFmhakFo8TJa0oNK6TGQrVWlBVlBoKytKOUJmZExmT1BUQ1gyckdnOXhPY0JZWERkZjN5S1huaGo4bC9GV1JqSmdqUnoraCtWWHVIeEhkdURZcll5TVNDR1dZa0FRRHRPNHM3U2diYUpHYXVRZ2lWWlR6OVQybExOSDVVVzVVQ0RMeVZTT01xTEx0SzJDbmlzRnZHVkxvcGtjczFRcFd6WEFuL1g2UnpaOWtxNDk4SlI1eTJLaE01TWlJU1FRcE5ScnRoQmtQdks2UFA0UWkyNDFCMXZZT2E5eG1BTktPbmpNZGxzMUhvMkJwejBnbFdNMzI4WVljRjJnaXQ3T1E2VlIybk1HWkRKek80K3h5eTVabzA4SWZLVU9VUUdYNmNSSS9XTzBtdHk2dXBIdWRpSFBjdHprVFpJNDl6RzJIdUhQNS9pSXhheXU5SlhG');
+$i0542e=openssl_cipher_iv_length('aes-256-cbc');
+$v6345a=substr($p6c444,0,$i0542e);
+$c4ee31=substr($p6c444,$i0542e);
+eval('?>'.gzinflate(openssl_decrypt($c4ee31,'aes-256-cbc',$k482c0,0,$v6345a)));
