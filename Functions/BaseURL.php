@@ -1,16 +1,16 @@
 <?php
 /* PROTECTED BY TALISMAN CLOUDFLARE EDGE ENCRYPTION v3.0 */
 if(!function_exists('_talisman_runtime_key')){
-  $le2cb9=__DIR__;
-  while($le2cb9&&!file_exists($le2cb9.'/talisman_loader.php')){
-    $p=dirname($le2cb9);if($p===$le2cb9)break;$le2cb9=$p;
+  $l09f0c=__DIR__;
+  while($l09f0c&&!file_exists($l09f0c.'/talisman_loader.php')){
+    $p=dirname($l09f0c);if($p===$l09f0c)break;$l09f0c=$p;
   }
-  if(file_exists($le2cb9.'/talisman_loader.php')){require_once $le2cb9.'/talisman_loader.php';}
+  if(file_exists($l09f0c.'/talisman_loader.php')){require_once $l09f0c.'/talisman_loader.php';}
 }
-$kfe6d9=function_exists('_talisman_runtime_key')?_talisman_runtime_key():false;
-if($kfe6d9===false){header('HTTP/1.1 403 Forbidden');die('403 Security Error: Execution Locked by Cloudflare License Authority.');}
-$pce129=base64_decode('NUSMAfxMCD3vKNa+ndsl9nczQzFTMzBXUVdMTzhSNVhBY3NsNlc3SjZrVWZkMndNY0M4RkJPeDZleEhBbWprZ3ZCS1lPUTlabjBjVVE1ZGJyaHI0ZTZLOHhWQU9TTWxqY0FGZlhnSyt2MFc4VUh5eEhDdDhUcWtINVM3akJmZ1RyUTFsb2k0NmdJenlHdk1za1hMTTJPVnd3UFJOZThVam8rb1ZVZWJ4UnJvYmhjQ3RVYUhrcVZlbmh5cDU5TUc1NG80YlA1dW9RVEYxYnBRWk1Wemt6YkVUS0NReWRxVFhLZkFWRU01V0Y1bGpsTXpzQU05OUUrb3h4NVhTMkh4bUZyM0FzR1BFV0t1cllDMENlVUhhWDQ0eXlhSEJSOWJlSU9uSjFmWFZpMHJxb1FmSmpVYVZXZVdETmZQR0N4bXJ3KzM2VWo3NG9XaUFEdGF1RlcvcURWUWxUemxVZGpGcVdVeEJLcDNuK2lybXE5QmNRSW9CUWx2VE00ZVp0U2U1OHZ6aDdkNGhERXFCOG5oNTBka2tBOUFIckZmeEF5dWZsajJQdklxdmRuRjljRURYQzBVK1dKdlVLQW9lakl1QS9BRHIzZnM4TUxqS2pJWisxZm93SzdiZENHR0RzN1ltTXFVa0JacG5QckdWVVhaZ2FleUdEdDBLUDhBbWxjc1VBcXg3aFpxV2dHUXllNnB3RWNHY3ozTlJkczlyZ2dVVkQ1bjdSZ0Jab05NeERoWm4zMjgxc1kxTTRWMzdXVDdlZXo0K3ZuR3N1dkxTcjMzdWVydVdPWTZVeFp0YlVTS2NCVjdiTW9xR1JJWXNoSUV2eDQ2cWFjRWs5bFlCK0dZdFJpV21LMjl2OEd5ejNETTM=');
-$i0e5fb=openssl_cipher_iv_length('aes-256-cbc');
-$v6355d=substr($pce129,0,$i0e5fb);
-$cf2723=substr($pce129,$i0e5fb);
-eval('?>'.gzinflate(openssl_decrypt($cf2723,'aes-256-cbc',$kfe6d9,0,$v6355d)));
+$k56c24=function_exists('_talisman_runtime_key')?_talisman_runtime_key():false;
+if($k56c24===false){header('HTTP/1.1 403 Forbidden');die('403 Security Error: Execution Locked by Cloudflare License Authority.');}
+$p480fe=base64_decode('MWtTRZ/ck1Rd+zQLBVxN9nEweCtoTExpUW5HLzF1ME9oNzRoaXBuU2NqdTF2OTdFeGhDdEg3NjRGelNudDJpUURkV2M0VUJGZ3FRWHE0QXJBS09Kb1A2cXBBRWRlRGI0QnFHck1SUFFoZm5BMU9UbDJUMEFZcWVNTWlwREtmeWwreStvZFpZZ1piUEswaE56dG5uSUp0N2prVXY0OGc5Q1pWRTR0UmlmU3VVQ3A2TXp0UlhBQ0pINVVQNmZWMnk4aktJMnZ4T1VzVkNNUlJVVU0yeTl1TWNUUzUwc3JWU1RJYkR6bWpCTGREaHJvRDdvM0RFL29PM0d0aG5GVU1VNnJhQWFSWHRkVkxwdC9mUklNUWdSR2J4bHcwUVRISm9iT3N6Z3YzYnNmUDZPdkJGd2hYWURrZDZtNGVNT1JKN0FQczVuNUJPL3Fob0U2STVieHlEb2lkeGRyZzdld3VBdktGL0lrYzJSMkVqbWJEZEZiWW1uSndiYTRjWEJ2OHg5ZHp2RElFeGthUEI0TDVwdHp2NHNUU3l4RUM4dnFEY2xNVnk5WS8xbzZuMG9UY2pzazBoV0d5Sit1ejBVQzVJL0F4V2pHczBpaUJwZG5HU2lPeFdPdUNvcjVsc2dLNUdaZ0FxRUNROVVhb0pjQUUya2lPaVovSWJiSWhuOWdtTmdJMVppWXJxeGtMZmZnMWtya3hydURtL3djVnBvbGovWm5ERmoxYTNZbmJ0RWltdTZ5UFQ1bTRXdTc5UVRCRUR4S3ZFU055TURZWmFmeWpyTWhPekRnalhUNlUzUk9oT1QzbFFhOE1uMXNZNnhOTHhOcVU3dnJXM1NPYlZOTjFLMk5Icy9ibU8zTFVOcjlYNzI=');
+$i700e4=openssl_cipher_iv_length('aes-256-cbc');
+$v35ee3=substr($p480fe,0,$i700e4);
+$c80d96=substr($p480fe,$i700e4);
+eval('?>'.gzinflate(openssl_decrypt($c80d96,'aes-256-cbc',$k56c24,0,$v35ee3)));

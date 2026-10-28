@@ -44,7 +44,7 @@ if (!function_exists('_talisman_runtime_key')) {
                         $decrypted = openssl_decrypt($cipher, 'aes-256-cbc', $server_fingerprint, 0, $iv);
                         if ($decrypted) {
                             $payload = json_decode($decrypted, true);
-                            if (is_array($payload) && isset($payload['key'], $payload['expires']) && time() < $payload['expires']) {
+                            if (is_array($payload) && isset($payload['key'], $payload['expires'], $payload['host']) && $payload['host'] === $host && time() < $payload['expires']) {
                                 $runtime_key = $payload['key'];
                                 return $runtime_key;
                             }
@@ -93,7 +93,7 @@ if (!function_exists('_talisman_runtime_key')) {
                             $decrypted = openssl_decrypt($cipher, 'aes-256-cbc', $server_fingerprint, 0, $iv);
                             if ($decrypted) {
                                 $payload = json_decode($decrypted, true);
-                                if (!empty($payload['key'])) {
+                                if (!empty($payload['key']) && isset($payload['host']) && $payload['host'] === $host) {
                                     $runtime_key = $payload['key'];
                                     return $runtime_key;
                                 }
