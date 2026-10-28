@@ -65,7 +65,15 @@ if (!function_exists('_talisman_runtime_key')) {
         $res_key = _talisman_http_get_json($url_key);
 
         if ($res_key && is_array($res_key) && !empty($res_key['valid']) && !empty($res_key['key'])) {
-            $obtained_key = $res_key['key'];
+            if (!empty($res_key['sig'])) {
+                $exp_val = !empty($res_key['expiry']) ? $res_key['expiry'] : 'lifetime';
+                $expected_sig = hash_hmac('sha256', "{$host}|valid|{$exp_val}|key", $worker_secret);
+                if (hash_equals($expected_sig, $res_key['sig'])) {
+                    $obtained_key = $res_key['key'];
+                }
+            } else {
+                $obtained_key = $res_key['key'];
+            }
         }
 
         // Path B: /verify authority gateway fallback (active during worker update transition)
@@ -74,7 +82,15 @@ if (!function_exists('_talisman_runtime_key')) {
             $res_verify = _talisman_http_get_json($url_verify);
 
             if ($res_verify && is_array($res_verify) && !empty($res_verify['valid'])) {
-                $obtained_key = $default_fallback_key;
+                if (!empty($res_verify['sig'])) {
+                    $exp_val = !empty($res_verify['expiry']) ? $res_verify['expiry'] : 'lifetime';
+                    $expected_sig = hash_hmac('sha256', "{$host}|valid|{$exp_val}", $worker_secret);
+                    if (hash_equals($expected_sig, $res_verify['sig'])) {
+                        $obtained_key = $default_fallback_key;
+                    }
+                } else {
+                    $obtained_key = $default_fallback_key;
+                }
             }
         }
 
