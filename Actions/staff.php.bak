@@ -1,0 +1,74 @@
+<?php $permissions->setConditions( 9, 8, 7, 6, 5, 4, 3, 2, 1 )->handle(GetBaseURL()); ?>
+<div class="glass-card" style="padding: 25px;">
+    <h3 class="section-title"><i class="fas fa-user-shield gradient-text"></i> Administrative Staff List</h3>
+    <p style="opacity: 0.7; font-size: 0.9rem; margin-bottom: 20px;">The following accounts have been granted administrative or game master privileges.</p>
+
+    <div class="table-container">
+        <table class="modern-table">
+            <thead>
+                <tr>
+                    <th>Account Name</th>
+                    <th>Staff Title</th>
+                    <th class="desktop-only text-center">Rank ID</th>
+                    <th class="text-right">Profile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
+                      // Get staff from database
+                      $query = $db->prepare('SELECT name, pv FROM db_account.t_account WHERE pv != 0 ORDER BY pv DESC');
+                      $query->execute();
+                      $staff = $query->fetchAll(PDO::FETCH_ASSOC);
+                      
+                      if (count($staff) > 0) {
+                          foreach ($staff as $row) {
+                              $rankTitle = "Staff Member";
+                              $titleClass = "";
+                              
+                              // Translate Rank IDs
+                              switch($row['pv']) {
+                                  case 9: $rankTitle = "Administrator"; $titleClass = "badge-red"; break;
+                                  case 8: $rankTitle = "Game Master"; $titleClass = "badge-blue"; break;
+                                  case 7: $rankTitle = "Trial GM"; $titleClass = "badge-green"; break;
+                                  case 6: $rankTitle = "Moderator"; $titleClass = "badge-purple"; break;
+                              }
+                              
+                              echo '<tr>';
+                              echo '<td><strong class="gradient-text">' . htmlspecialchars($row['name']) . '</strong></td>';
+                              echo '<td><span class="badge ' . $titleClass . '">' . $rankTitle . '</span></td>';
+                              echo '<td class="desktop-only text-center"><span style="opacity:0.6;">' . $row['pv'] . '</span></td>';
+                              echo '<td class="text-right">';
+                              echo '<a href="' . BaseURLConcat('panel/characters?character=' . urlencode($row['name'])) . '" class="btn-action"><i class="fas fa-eye"></i></a>';
+                              echo '</td>';
+                              echo '</tr>';
+                          }
+                      } else {
+                          echo '<tr><td colspan="4" class="text-center">No staff members found.</td></tr>';
+                      }
+                ?>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<style>
+.badge-red { background: rgba(231, 76, 60, 0.15); color: #e74c3c; border: 1px solid rgba(231, 76, 60, 0.3); }
+.badge-blue { background: rgba(52, 152, 219, 0.15); color: #3498db; border: 1px solid rgba(52, 152, 219, 0.3); }
+.badge-green { background: rgba(46, 204, 113, 0.15); color: #2ecc71; border: 1px solid rgba(46, 204, 113, 0.3); }
+.badge-purple { background: rgba(155, 89, 182, 0.15); color: #9b59b6; border: 1px solid rgba(155, 89, 182, 0.3); }
+.badge { display: inline-block; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.modern-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.modern-table th { text-align: left; padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); opacity: 0.6; font-size: 0.8rem; text-transform: uppercase; }
+.modern-table td { padding: 15px 12px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.btn-action { 
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 35px; height: 35px; border-radius: 8px;
+    background: rgba(44, 164, 191, 0.1); color: #2ca4bf;
+    transition: all 0.2s ease;
+}
+.btn-action:hover { background: #2ca4bf; color: #fff; transform: translateY(-2px); }
+</style>
