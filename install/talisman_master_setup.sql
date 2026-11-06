@@ -122,6 +122,9 @@ CREATE TABLE IF NOT EXISTS `t_account` (
   `last_session_id` varchar(255) DEFAULT NULL,
   `profile_photo` varchar(255) DEFAULT NULL,
   `ref_ip` varchar(128) DEFAULT NULL,
+  `web_ac` varchar(128) DEFAULT NULL,
+  `web_ot` int(11) DEFAULT '0',
+  `web_ll` bigint(20) DEFAULT '0',
   PRIMARY KEY (`accountid`),
   UNIQUE KEY `name` (`name`),
   KEY `ll` (`ll`)
