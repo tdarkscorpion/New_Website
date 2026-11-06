@@ -121,6 +121,7 @@ CREATE TABLE IF NOT EXISTS `t_account` (
   `google_2fa_recovery_codes` text,
   `last_session_id` varchar(255) DEFAULT NULL,
   `profile_photo` varchar(255) DEFAULT NULL,
+  `ref_ip` varchar(128) DEFAULT NULL,
   PRIMARY KEY (`accountid`),
   UNIQUE KEY `name` (`name`),
   KEY `ll` (`ll`)
