@@ -130,26 +130,92 @@ $(document).ready(function() {
     function submitRegistration() {
         var $btn = $("#register1");
         if ($btn.prop('disabled')) return;
-        $btn.text('Registering...').prop('disabled', true);
+
+        var username = $.trim($("#reg_username").val() || $("input[name='username']", "#registrationForm").val());
+        var password = $("#reg_password").val() || $("input[name='password']", "#registrationForm").val();
+        var confirmPassword = $("#reg_confirm_password").val() || $("input[name='confirm-password']", "#registrationForm").val();
+        var email = $.trim($("#reg_email").val() || $("input[name='email']", "#registrationForm").val());
+        var sq = $.trim($("#reg_sq").val() || $("input[name='sq']", "#registrationForm").val());
+        var sa = $.trim($("#reg_sa").val() || $("input[name='sa']", "#registrationForm").val());
+        var captcha = $.trim($("#captchaInput").val());
+
+        function scrollRegToTop() {
+            var $form = $(".sign-up form");
+            if ($form.length && $form[0].scrollTo) {
+                $form[0].scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Client-side instant validation
+        if (!username || !email || !password || !confirmPassword || !sq || !sa) {
+            $("#responseMessage").html("<div class='reg-alert reg-alert-error'><i class='fas fa-exclamation-circle'></i> Please fill out all required fields.</div>");
+            scrollRegToTop();
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            $("#responseMessage").html("<div class='reg-alert reg-alert-error'><i class='fas fa-exclamation-circle'></i> Passwords do not match.</div>");
+            scrollRegToTop();
+            return;
+        }
+
+        if (password.length < 6) {
+            $("#responseMessage").html("<div class='reg-alert reg-alert-error'><i class='fas fa-exclamation-circle'></i> Password must be at least 6 characters long.</div>");
+            scrollRegToTop();
+            return;
+        }
+
+        if (!captcha) {
+            $("#responseMessage").html("<div class='reg-alert reg-alert-error'><i class='fas fa-exclamation-circle'></i> Please enter the CAPTCHA code.</div>");
+            scrollRegToTop();
+            return;
+        }
+
+        $btn.html('<i class="fas fa-spinner fa-spin"></i> Registering...').prop('disabled', true);
         $.ajax({
             type: "POST",
             url: "include/action_register.php",
             data: $("#registrationForm").serialize(),
             success: function(res) {
                 $("#responseMessage").html(res);
+                scrollRegToTop();
+
                 if (res.toLowerCase().includes("successful")) {
+                    var createdUser = username;
                     $("#registrationForm")[0].reset();
                     if (typeof refreshCaptcha === 'function') refreshCaptcha();
+
+                    // Automatically transition to Login tab after 1.5s
+                    setTimeout(function() {
+                        var container = document.getElementById('container');
+                        if (container) {
+                            container.classList.remove('active');
+                        }
+                        var $loginUser = $("input[name='username']", "#loginForm");
+                        var $loginPass = $("input[name='password']", "#loginForm");
+                        if ($loginUser.length) {
+                            $loginUser.val(createdUser);
+                        }
+                        if ($loginPass.length) {
+                            $loginPass.focus();
+                        }
+                        $("#loginResponseMessage").html(
+                            "<div class='reg-alert reg-alert-success'><i class='fas fa-check-circle'></i> Account <strong>" + 
+                            safeString(createdUser) + 
+                            "</strong> created successfully! Please enter your password to log in.</div>"
+                        );
+                    }, 1500);
                 } else if (res.toLowerCase().includes("captcha")) {
                     // Auto-refresh image on wrong CAPTCHA
                     if (typeof refreshCaptcha === 'function') refreshCaptcha();
                 }
             },
             error: function() {
-                $("#responseMessage").html("<span style='color:#f87171;'>Connection error. Please try again.</span>");
+                $("#responseMessage").html("<div class='reg-alert reg-alert-error'><i class='fas fa-exclamation-triangle'></i> Connection error. Please try again.</div>");
+                scrollRegToTop();
             },
             complete: function() {
-                $btn.text('Register').prop('disabled', false);
+                $btn.html('Register').prop('disabled', false);
             }
         });
     }
@@ -158,8 +224,7 @@ $(document).ready(function() {
     function submitLogin() {
         var $btn = $("#login1");
         if ($btn.prop('disabled')) return;
-        console.log("Login attempt initiated...");
-        $btn.text('Logging in...').prop('disabled', true);
+        $btn.html('<i class="fas fa-spinner fa-spin"></i> Logging in...').prop('disabled', true);
         $.ajax({
             type: "POST",
             url: "include/action_login.php",
@@ -167,19 +232,20 @@ $(document).ready(function() {
             success: function(res) {
                 if (res.includes("2fa_required")) {
                     $("#2fa-login-container").show();
-                    $("#loginResponseMessage").html("<span style='color:#fcc419;'>2FA Verification Required. Please enter your code.</span>");
+                    $("#loginResponseMessage").html("<div class='reg-alert reg-alert-warning'><i class='fas fa-shield-alt'></i> 2FA Verification Required. Please enter your code.</div>");
                     $("#login2faCode").focus();
                 } else if (res.includes("successful")) {
+                    $("#loginResponseMessage").html("<div class='reg-alert reg-alert-success'><i class='fas fa-check-circle'></i> Logged in! Loading dashboard...</div>");
                     window.location.reload();
                 } else {
-                    $("#loginResponseMessage").html(res);
+                    $("#loginResponseMessage").html("<div class='reg-alert reg-alert-error'><i class='fas fa-exclamation-circle'></i> " + res + "</div>");
                 }
             },
             error: function() {
-                $("#loginResponseMessage").html("Error connecting to server.");
+                $("#loginResponseMessage").html("<div class='reg-alert reg-alert-error'><i class='fas fa-exclamation-triangle'></i> Error connecting to server.</div>");
             },
             complete: function() {
-                $btn.text('Log In').prop('disabled', false);
+                $btn.html('Log In').prop('disabled', false);
             }
         });
     }
