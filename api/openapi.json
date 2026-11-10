@@ -1,0 +1,299 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Talisman Online Universal WebSuite REST API",
+    "description": "High-performance REST API and OpenAPI 3.0 specification for Talisman Online WebSuite, standalone game launchers, mobile applications, and AI agent automation via api-anything.",
+    "version": "2.0.0",
+    "contact": {
+      "name": "Talisman Studio Engineering",
+      "url": "https://www.talismanwarage.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "/",
+      "description": "Relative Server Root"
+    },
+    {
+      "url": "http://localhost:8082",
+      "description": "Local Development Server"
+    },
+    {
+      "url": "http://206.245.165.37",
+      "description": "Live Production Server"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "description": "HMAC-SHA256 authenticated bearer token acquired via `action=login`."
+      }
+    },
+    "schemas": {
+      "ServerInfo": {
+        "type": "object",
+        "properties": {
+          "status": { "type": "string", "example": "success" },
+          "server_name": { "type": "string", "example": "Talisman Of War Age" },
+          "active_theme": { "type": "string", "example": "Theme_1_Celestial_Wuxia" },
+          "theme_name": { "type": "string", "example": "Theme 1 Celestial Wuxia" },
+          "currency_name": { "type": "string", "example": "T-Points" },
+          "currency_short": { "type": "string", "example": "TP" },
+          "online_players": { "type": "integer", "example": 42 },
+          "available_themes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string", "example": "Theme_1_Celestial_Wuxia" },
+                "name": { "type": "string", "example": "Celestial Wuxia" },
+                "author": { "type": "string", "example": "Talisman Studio" },
+                "version": { "type": "string", "example": "2.0.0" }
+              }
+            }
+          }
+        }
+      },
+      "ServerDetails": {
+        "type": "object",
+        "properties": {
+          "ServerName": { "type": "string", "example": "Talisman Of War Age" },
+          "ServerStatus": { "type": "string", "example": "Online" },
+          "ServerRate": { "type": "string", "example": "x10" },
+          "MaxLevel": { "type": "integer", "example": 70 },
+          "MaxPetLevel": { "type": "integer", "example": 70 },
+          "MaxColor": { "type": "string", "example": "+10" },
+          "ClassicSystems": { "type": "string", "example": "Classic 2.0" },
+          "ExpRate": { "type": "string", "example": "x10" },
+          "DropRate": { "type": "string", "example": "x5" },
+          "EnergyRate": { "type": "string", "example": "x5" },
+          "OnlinePlayers": { "type": "integer", "example": 42 },
+          "Timestamp": { "type": "integer", "example": 1794273890 }
+        }
+      },
+      "RankingsResponse": {
+        "type": "object",
+        "properties": {
+          "status": { "type": "string", "example": "success" },
+          "type": { "type": "string", "example": "level" },
+          "rankings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "rank": { "type": "integer", "example": 1 },
+                "name": { "type": "string", "example": "WarriorKing" },
+                "class": { "type": "string", "example": "Monk" },
+                "level": { "type": "integer", "example": 70 },
+                "guild": { "type": "string", "example": "ImmortalDynasty" }
+              }
+            }
+          }
+        }
+      },
+      "NewsResponse": {
+        "type": "object",
+        "properties": {
+          "status": { "type": "string", "example": "success" },
+          "news": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "integer", "example": 12 },
+                "title": { "type": "string", "example": "Grand Opening & Server Rates" },
+                "date": { "type": "string", "example": "2026-11-01" },
+                "summary": { "type": "string", "example": "Welcome to Talisman Of War Age!" }
+              }
+            }
+          }
+        }
+      },
+      "DownloadsResponse": {
+        "type": "object",
+        "properties": {
+          "status": { "type": "string", "example": "success" },
+          "downloads": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string", "example": "Full Client (Mega Mirror)" },
+                "url": { "type": "string", "example": "https://mega.nz/file/sample" },
+                "size": { "type": "string", "example": "1.8 GB" }
+              }
+            }
+          }
+        }
+      },
+      "LoginResponse": {
+        "type": "object",
+        "properties": {
+          "status": { "type": "string", "example": "success" },
+          "token": { "type": "string", "example": "eyJhbGciOi...signature" },
+          "accountid": { "type": "integer", "example": 1001 },
+          "username": { "type": "string", "example": "player1" },
+          "role": { "type": "string", "example": "player" },
+          "points": { "type": "integer", "example": 500 }
+        }
+      },
+      "GenericStatus": {
+        "type": "object",
+        "properties": {
+          "status": { "type": "string", "example": "success" },
+          "message": { "type": "string", "example": "Operation completed successfully." }
+        }
+      }
+    }
+  },
+  "paths": {
+    "/api/app_api.php": {
+      "get": {
+        "summary": "Universal GET Operations (Server Info, Rankings, News, Downloads, Account Overview)",
+        "description": "Executes public and authenticated query actions based on `action` parameter.",
+        "parameters": [
+          {
+            "name": "action",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "server_info",
+                "rankings",
+                "news",
+                "downloads",
+                "account_overview",
+                "characters",
+                "admin_stats",
+                "admin_online_players",
+                "admin_accounts"
+              ]
+            },
+            "description": "API action identifier."
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": ["level", "wealth", "guild"]
+            },
+            "description": "Rankings category when action=rankings."
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 20
+            },
+            "description": "Maximum number of records to return."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Action executed successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    { "$ref": "#/components/schemas/ServerInfo" },
+                    { "$ref": "#/components/schemas/RankingsResponse" },
+                    { "$ref": "#/components/schemas/NewsResponse" },
+                    { "$ref": "#/components/schemas/DownloadsResponse" },
+                    { "$ref": "#/components/schemas/GenericStatus" }
+                  ]
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized access when calling authenticated actions without valid bearer token."
+          }
+        }
+      },
+      "post": {
+        "summary": "Universal POST Actions (Login, Register, Password Change, Gift Redemption, Admin Controls)",
+        "description": "Executes state-mutating actions including account authentication, registration, theme switching, and gift redemption.",
+        "parameters": [
+          {
+            "name": "action",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "login",
+                "register",
+                "change_password",
+                "redeem_gift",
+                "admin_set_theme",
+                "admin_toggle_ban",
+                "admin_grant_points"
+              ]
+            },
+            "description": "API action (can also be passed inside the JSON request body)."
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "action": { "type": "string" },
+                  "username": { "type": "string" },
+                  "password": { "type": "string" },
+                  "email": { "type": "string" },
+                  "totp_code": { "type": "string" },
+                  "theme": { "type": "string" },
+                  "code": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Execution result.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    { "$ref": "#/components/schemas/LoginResponse" },
+                    { "$ref": "#/components/schemas/GenericStatus" }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Launcher/Details.php": {
+      "get": {
+        "summary": "Dynamic Server Rates & Launcher Discovery",
+        "description": "Returns current server rates, max levels, color limits, exp/drop multipliers, and online player counts for game launchers and automation tools.",
+        "responses": {
+          "200": {
+            "description": "Server details JSON",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServerDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
