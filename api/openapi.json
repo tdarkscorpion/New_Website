@@ -16,11 +16,7 @@
     },
     {
       "url": "http://localhost:8082",
-      "description": "Local Development Server"
-    },
-    {
-      "url": "http://206.245.165.37",
-      "description": "Live Production Server"
+      "description": "Local Safe Test Server (Port 8082)"
     }
   ],
   "components": {
@@ -297,3 +293,4 @@
     }
   }
 }
+
